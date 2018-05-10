@@ -2,7 +2,7 @@
 
 买果果-便利购：
 
-代码路径：/alidata1/htdocs/test.mguoguo.cc/app/mobile/view/index
+SFTP代码路径：/alidata1/htdocs/test.mguoguo.cc/app/mobile/view/index
 
 
 参考哈米魔方：
