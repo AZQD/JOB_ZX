@@ -1,0 +1,62 @@
+.wrapper .addressList {
+  font-size: 0.35185185rem;
+  color: #000;
+  margin-top: 0.74074074rem;
+}
+.wrapper .addressList .addressLi {
+  border-top: 1px solid #c2c1c1;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+  margin-bottom: 0.17592593rem;
+  background-color: #fff;
+}
+.wrapper .addressList .addressLi .part {
+  display: flex;
+  align-items: center;
+  padding: 0 0.42592593rem;
+}
+.wrapper .addressList .addressLi .part .item {
+  flex-grow: 1;
+}
+.wrapper .addressList .addressLi .part .right {
+  text-align: right;
+}
+.wrapper .addressList .addressLi .part .operation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.wrapper .addressList .addressLi .part .operation img {
+  width: 0.5rem;
+  margin-right: 0.14814815rem;
+}
+.wrapper .addressList .addressLi .part .operation span {
+  margin-right: 0.31481481rem;
+}
+.wrapper .addressList .addressLi .part1 {
+  padding-top: 0.12962963rem;
+}
+.wrapper .addressList .addressLi .part2 {
+  padding-top: 0.24074074rem;
+  padding-bottom: 0.53703704rem;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .addressList .addressLi .part3 {
+  line-height: 0.85185185rem;
+  background: url("../image/myAddress/notChoose.png") no-repeat 0.42592593rem 0.18518519rem;
+  background-size: 0.44444444rem 0.44444444rem;
+}
+.wrapper .addressList .addressLi .part3 .moRen {
+  color: #c2c1c1;
+  padding-left: 0.61111111rem;
+}
+.wrapper .addressList .addressLi .active {
+  background: url("../image/myAddress/choose.png") no-repeat 0.42592593rem 0.18518519rem;
+  background-size: 0.44444444rem 0.44444444rem;
+}
+.wrapper .addressList .addressLi .active .moRen {
+  color: #ff6600;
+  padding-left: 0.61111111rem;
+}
+.wrapper .addressList .addressLi:last-child {
+  margin-bottom: 0;
+}

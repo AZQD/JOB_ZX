@@ -1,0 +1,105 @@
+@rem : 108rem;
+
+.wrapper{
+  .boxWrap{
+    .orderBox{
+      .orderUl{
+        .orderLi{
+          margin-top: 21/@rem;
+          border-top: 1px solid #c2c1c1;
+          border-bottom: 1px solid #c2c1c1;
+          background-color: #fff;
+          .infoTop{
+            height: 180/@rem;
+            display: flex;
+            border-bottom: 1px solid #757575;
+            .left{
+              width: 180/@rem;
+              display: flex;
+              justify-content:center;
+              align-items:center;
+              img{
+                width: 140/@rem;
+                height: 140/@rem;
+              }
+            }
+            .right{
+              flex-grow: 1;
+              padding-left: 30/@rem;
+              //display: flex;
+              //align-items:center;
+              color: #666666;
+              font-size: 28/@rem;
+              .status{
+                color: #000;
+                font-size: 26/@rem;
+                //padding-top: 4/@rem;
+                .desc{
+                  color: #ff6600;
+                }
+              }
+              .duringTime{
+                //padding-top: 16/@rem;
+              }
+              .endTime{
+                //padding-top: 8/@rem;
+              }
+              .beginTime{
+                //padding-top: 8/@rem;
+              }
+            }
+          }
+          .infoBottom{
+            padding-left: 180/@rem;
+            color: #000;
+            font-size: 38/@rem;
+            height: 90/@rem;
+            display: flex;
+            align-items:center;
+            position: relative;
+            .left{
+              .total{
+                margin-left: 56/@rem;
+              }
+            }
+            .right{
+              position: absolute;
+              right: 34/@rem;
+              top: 16/@rem;
+              color: #fff;
+              font-size: 36/@rem;
+              padding: 4/@rem 28/@rem;
+              border-radius: 14/@rem;
+              background-color: #ff6600;
+            }
+          }
+        }
+      }
+    }
+  }
+  .emptyWrap{
+    text-align: center;
+    .empty_icon{
+      width: 281/@rem;
+      padding-top: 50%;
+    }
+    .tips{
+      font-size: 36/@rem;
+      color: #a4a1a1;
+      padding-top: 60/@rem;
+    }
+    .liJiBtn{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 140/@rem;
+      line-height: 140/@rem;
+      text-align: center;
+      color: #fff;
+      background-color: #ff6600;
+      font-size: 55/@rem;
+    }
+  }
+}

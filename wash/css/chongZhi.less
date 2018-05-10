@@ -1,0 +1,133 @@
+@rem : 108rem;
+
+.wrapper{
+
+  .topBox{
+    text-align: center;
+    font-size: 38/@rem;
+    background-color: #fff;
+    border-bottom: 1/@rem solid #c2c1c1;
+    .top_icon{
+      width: 103/@rem;
+      margin-top: 60/@rem;
+      margin-bottom: 30/@rem;
+    }
+    .top_num{
+      color: #000;
+      margin-bottom: 30/@rem;
+      .number{
+        color: #ff6600;
+      }
+    }
+  }
+
+  .priceBox{
+    padding: 34/@rem 20/@rem;
+    .ipt{
+      width: 100%;
+      color: #939393;
+      height: 86/@rem;
+      line-height: 86/@rem;
+      text-indent: 18/@rem;
+      font-size: 38/@rem;
+      border: none;
+      outline: none;
+      border-radius: 6/@rem;
+      background-color: #c8c8c8;
+    }
+    .priceUl{
+      font-size: 36/@rem;
+      padding: 0 28/@rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .pirceLi{
+        margin-top: 30/@rem;
+        width: 33.33%;
+        line-height: 56/@rem;
+        text-align: center;
+        .part{
+          border-radius: 12/@rem;
+          background-color: #fff;
+          border: 1px solid #bfbfbf;
+          .num2{
+            color: #c2c1c1;
+          }
+        }
+        .active{
+          background: url("../image/chongZhi/checkedBg.png") no-repeat;
+          background-size: 100% 100%;
+          border: none;
+          color: #ff6600;
+          .num2{
+            color: #ff6600;
+          }
+        }
+      }
+      .pirceLi:nth-child(3n){
+        .part{
+          margin-right: 0;
+          margin-left: 44/@rem;
+        }
+      }
+      .pirceLi:nth-child(3n+1){
+        .part{
+          margin-right: 44/@rem;
+        }
+      }
+      .pirceLi:nth-child(3n+2){
+        .part{
+          margin-right: 22/@rem;
+          margin-left: 22/@rem;
+        }
+      }
+    }
+  }
+
+  .menu{
+    color: #000;
+    font-size: 38/@rem;
+    background-color: #fff;
+    .title{
+      height: 90/@rem;
+      line-height: 90/@rem;
+      padding-left: 64/@rem;
+      border-top: 1/@rem solid #c2c1c1;
+      border-bottom: 1/@rem solid #c2c1c1;
+    }
+    .itemWrap{
+      .item{
+        height: 175/@rem;
+        padding: 0 64/@rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1/@rem solid #c2c1c1;
+        .left{
+          display: flex;
+          align-items: center;
+          flex-grow: 1;
+          .item_icon{
+            width: 103/@rem;
+            margin-right: 68/@rem;
+          }
+          .item_name{
+            .number{
+              color: #ff6600;
+            }
+          }
+        }
+        .right{
+          flex-grow: 1;
+          text-align: right;
+          .item_choose{
+            width: 48/@rem;
+          }
+        }
+      }
+      .item:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+}

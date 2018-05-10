@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>orderDetails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta name="format-detection"content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <!--<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>-->
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+    <link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+    <link rel="stylesheet" href="css/bootstraptc.min.css">
+    <link rel="stylesheet" href="css/ppublic.min.css">
+    <link rel="stylesheet" href="css/orderDetails.css">
+</head>
+<body>
+<section class="container">
+    <div class="ns-main">
+
+        <div class="mod-table">
+            <div class="step-region clearfix">
+                <div class="info-region">
+                    <div class="info-div">订单信息<span class="secured-title">担保交易</span></div>
+                    <table class="info-table">
+                        <tbody>
+                        <tr><th>订单编号：</th><td>2018013120420001</td></tr>
+                        <tr style="display: table-row;"><th>订单类型：</th><td>普通订单</td></tr>
+                        <tr><th>付款方式：</th><td>在线支付</td></tr>
+                        <tr><th>买家：</th><td><span>admin</span></td></tr>
+                        </tbody>
+                    </table>
+                    <div class="dashed-line"></div>
+                    <table class="info-table">
+                        <tbody>
+                        <tr><th>配送方式：</th><td>商家配送&nbsp;&nbsp;韵达快运</td></tr>
+                        <tr>
+                            <th>配送时间：</th>
+                            <td>工作日、双休日与节假日均可送货</td>
+                        </tr>
+                        <!-- 物流 -->
+                        <tr>
+                            <th>收货信息：</th>
+                            <td>
+                                <p>测试，15555555555， 广东省&nbsp;河源市&nbsp;和平县广东省&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>买家留言：</th>
+                            <td>此订单没有留言</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="state-region">
+                    <div style="padding: 0px 0px 30px 40px;">
+                        <div class="state-title"><span class="icon info">!</span>订单状态：已关闭</div>
+                        <div class="state-action">
+                            <button class="zent-btn zent-btn-primary test-send-goods" onclick="operation('seller_memo',225)">添加备注</button>
+                            <button class="zent-btn zent-btn-primary test-send-goods" onclick="operation('delete_order',225)">删除订单</button>
+                        </div>
+                    </div>
+                    <div class="state-remind-region">
+                        <div class="dashed-line"></div>
+                        <div class="state-remind"><div class="tixing">Niushop提醒：</div>
+                            <ul><li>如果无法发货，请及时与买家联系并说明情况后进行退款；</li>
+                                <li>买家申请退款后，须征得买家同意后再发货，否则买家有权拒收货物；</li>
+                                <li>买家付款后超过7天仍未发货，将有权申请客服介入发起退款维权；</li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="ui-table ui-table-simple goods-table order-detail-goods-table">
+                <thead>
+                <tr>
+                    <th style="width:8%;">商品图</th>
+                    <th class="cell-10" style="width:40%;">商品</th>
+                    <th style="width:10%;">价格(元)</th>
+                    <th style="width:10%;">数量</th>
+                    <th style="width:10%;">调整金额(元)</th>
+                    <th class="cell-13" style="width:10%;">小计(元)</th>
+                    <th style="width:15%;">配送状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- 待发货商品 -->
+                <tr class="test-item">
+                    <td class="td-goods-image" rowspan="1">
+                        <div class="ui-centered-image" style="width: 48px; height: 48px;">
+                            <img src="images/orderDetails/goodImg.png" style="max-width: 48px; max-height: 48px;">
+                        </div>
+                    </td>
+                    <td class="cell-10" style="width:200px;">
+                        <a href="http://b2c.niuteam.cn/goods/goodsinfo.html?goodsid=34" target="_blank">吉小旺</a>
+                        <p class="c-gray">直接购买 </p>
+                    </td>
+                    <td>172.80</td>
+                    <td>1</td>
+                    <td>0.00</td>
+                    <td><p>172.80</p></td>
+                    <td>
+                        <p>待发货</p>
+                    </td>
+                </tr>
+                <tr><td colspan="9"></td></tr>
+                <!-- 已发货 -->
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="9" class="text-right">
+                        <span>商品总金额：￥172.80，</span>
+
+
+                        <span> 实际需支付：<b class="real-pay c-red">￥172.80</b></span>
+                        <span>（含运费 ￥0.00）</span>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+
+            <table class="ui-table ui-table-simple goods-table order-detail-goods-table" style="border-top:none;">
+                <thead>
+                <tr>
+                    <th>订单日志</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="test-item">
+                    <td class="td-goods-image" colspan="9">
+                        操作备注：&nbsp;&nbsp; admin&nbsp;&nbsp;&nbsp;于&nbsp;&nbsp;&nbsp;2018-01-31 21:11:20&nbsp;&nbsp;&nbsp;【交易关闭】
+                    </td>
+                </tr>
+                <tr class="test-item">
+                    <td class="td-goods-image" colspan="9">
+                        操作备注：&nbsp;&nbsp; admin&nbsp;&nbsp;&nbsp;于&nbsp;&nbsp;&nbsp;2018-01-31 20:10:42&nbsp;&nbsp;&nbsp;【创建订单】
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript" src="js/orderDetails.js"></script>
+</body>
+</html>

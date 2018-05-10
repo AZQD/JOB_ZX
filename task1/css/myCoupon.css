@@ -1,0 +1,50 @@
+body {
+  background-color: #ECECEC;
+}
+/*headerBox*/
+.headerBox {
+  padding: 0.625rem 0.5rem;
+  background-color: #F5BA2E;
+}
+.headerBox .middle {
+  color: #fff;
+  font-size: 1.125rem;
+  text-align: center;
+}
+/*couponsBox*/
+.couponsBox {
+  margin: 0 1.5rem;
+}
+.couponsBox .couponList {
+  background: url("../image/myCoupon/couponBg.png") no-repeat left top;
+  background-size: 100% 100%;
+  margin-top: 0.75rem;
+  min-height: 6.25rem;
+}
+.couponsBox .couponList .leftInfo {
+  text-align: center;
+  line-height: 6.25rem;
+  color: #00396d;
+  font-weight: bold;
+}
+.couponsBox .couponList .leftInfo .priceIcon {
+  font-size: 1rem;
+}
+.couponsBox .couponList .leftInfo .priceText {
+  font-size: 2.75rem;
+}
+.couponsBox .couponList .rightInfo {
+  padding-left: 0.875rem;
+  color: #00396d;
+}
+.couponsBox .couponList .rightInfo .desc1 {
+  padding-top: 1.25rem;
+}
+.couponsBox .couponList .rightInfo .desc2 {
+  color: #fff;
+  margin-right: 0.875rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0.0625rem 0;
+  background-color: #00396d;
+}

@@ -1,0 +1,22 @@
+.wrapper .detail {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 0.07407407rem 1.85185185rem 0.64814815rem 1.85185185rem;
+  background-color: #fff;
+}
+.wrapper .detail .item {
+  width: 25%;
+  font-size: 0.25925926rem;
+}
+.wrapper .detail .item .goodImg {
+  width: 1.08333333rem;
+  margin-top: 0.14814815rem;
+}
+.wrapper .detail .item .name {
+  color: #000;
+  padding: 0.14814815rem 0;
+}
+.wrapper .detail .item .status {
+  width: 0.33333333rem;
+}

@@ -1,0 +1,124 @@
+body {
+  background-color: #F0F0F0;
+}
+/*headerBox*/
+.headerBox {
+  height: 9.375rem;
+  background: url("../image/confirmOrder/headerBg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.headerBox .userInfo {
+  height: 5.125rem;
+  line-height: 5.125rem;
+  position: relative;
+  margin-top: 1rem;
+}
+.headerBox .userInfo .headImg {
+  width: 5.125rem;
+  height: 5.125rem;
+  border-radius: 5.125rem;
+  position: absolute;
+  left: 1.875rem;
+  top: 0;
+}
+.headerBox .userInfo .name {
+  font-size: 1.25rem;
+  color: #fff;
+  padding-left: 7.8125rem;
+}
+/*cartBox*/
+.cartBox {
+  margin: 0 1.1875rem;
+  background-color: #fff;
+  box-shadow: 0 0 0.625rem #808080;
+  border-radius: 0.3125rem;
+  padding-top: 1rem;
+  padding-bottom: 1.375rem;
+  position: relative;
+  top: -2.1875rem;
+}
+.cartBox .good {
+  text-align: center;
+  height: 7.25rem;
+  line-height: 7.25rem;
+}
+.cartBox .good .goodImg {
+  height: 100%;
+}
+.cartBox .desc {
+  height: 7.25rem;
+}
+.cartBox .desc .goodName {
+  color: #202020;
+  font-size: 1rem;
+}
+.cartBox .desc .price {
+  padding-top: 1rem;
+}
+.cartBox .desc .price .newPrice {
+  color: #EA323E;
+  font-size: 1rem;
+}
+.cartBox .desc .price .oldPrice {
+  color: #888;
+  font-size: 0.875rem;
+  padding-left: 0.625rem;
+  text-decoration: line-through;
+}
+.cartBox .desc .price .oldPrice .oldPriceText {
+  text-decoration: line-through;
+}
+.cartBox .desc .changeNum {
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.cartBox .desc .changeNum input {
+  border: none;
+  outline: none;
+  width: 2.8125rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.cartBox .desc .changeNum .reduce {
+  color: #fff;
+  background-color: #EA323E;
+}
+.cartBox .desc .changeNum .nowNum {
+  border: 1px solid #A5A5A5;
+}
+.cartBox .desc .changeNum .add {
+  color: #fff;
+  background-color: #EA323E;
+}
+/*payBox*/
+.payBox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3.6875rem;
+  line-height: 3.6875rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.payBox .payPrice {
+  display: inline-block;
+  width: 52%;
+  height: 100%;
+  color: #202020;
+  border-top: 1px solid #D5D5D5;
+}
+.payBox .payPrice .payPriceText {
+  color: #EA323E;
+}
+.payBox .goToPay {
+  color: #fff;
+  display: inline-block;
+  width: 48%;
+  height: 100%;
+  border-top: 1px solid #3EB736;
+  background-color: #3EB736;
+}

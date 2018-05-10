@@ -1,0 +1,59 @@
+body {
+  font-size: 16px;
+}
+/*headerBox*/
+.headerBox {
+  padding: 0.625rem 0.5rem;
+  background-color: #F8F8F8;
+}
+.headerBox .left img {
+  width: 30px;
+}
+.headerBox .middle {
+  font-size: 1.0625rem;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 2px;
+}
+.headerBox .right {
+  text-align: right;
+}
+.headerBox .right img {
+  width: 30px;
+}
+/*phoneBox*/
+.partBox {
+  height: 54px;
+  line-height: 54px;
+  border-bottom: 1px solid #DCDCDC;
+}
+.hasVerifyIpt {
+  border-radius: 5px 5px 0 0;
+}
+.partBox .left {
+  text-align: center;
+}
+.partBox .middle {
+  line-height: 50px;
+}
+.partBox .phoneIpt {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+/*sendCodeBox*/
+.saveeBox {
+  margin: 0 22px;
+  margin-top: 20px;
+}
+.saveeBox .saveBtn {
+  height: 46px;
+  line-height: 46px;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+}

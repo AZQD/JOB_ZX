@@ -1,0 +1,55 @@
+.wrapper .bottomBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  font-size: 0.33333333rem;
+  color: #000;
+  background-color: #959a9a;
+}
+.wrapper .bottomBox .toggle {
+  position: absolute;
+  top: 0.2962963rem;
+  right: 0.51851852rem;
+  width: 0.62037037rem;
+}
+.wrapper .bottomBox .tips1 {
+  text-align: center;
+  font-size: 0.44444444rem;
+  padding-top: 0.2962963rem;
+}
+.wrapper .bottomBox .tips2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.14814815rem 0;
+}
+.wrapper .bottomBox .tips2 img {
+  width: 1.23148148rem;
+}
+.wrapper .bottomBox .tips2 .time {
+  color: #e47727;
+}
+.wrapper .bottomBox .tips3 {
+  padding-left: 1rem;
+}
+.wrapper .bottomBox .userHead {
+  text-align: center;
+  padding: 0.44444444rem 0;
+}
+.wrapper .bottomBox .userHead img {
+  width: 1.42592593rem;
+}
+.wrapper .bottomBox .userName {
+  text-align: center;
+  padding-bottom: 0.55555556rem;
+}
+.wrapper .bottomBox .bottomBtn {
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  background-color: #ff6600;
+  font-size: 0.50925926rem;
+}

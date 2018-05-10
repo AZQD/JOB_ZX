@@ -1,0 +1,68 @@
+.opacityBg {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 2;
+}
+.wrapper .ewmWrap {
+  text-align: center;
+}
+.wrapper .ewmWrap .ewm_icon {
+  width: 5.55555556rem;
+  padding-top: 3.44444444rem;
+}
+.wrapper .ewmWrap .tips {
+  font-size: 0.44444444rem;
+  color: #a4a1a1;
+  padding-top: 0.64814815rem;
+}
+.wrapper .ewmWrap .shareBtn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  background-color: #ff6600;
+  font-size: 0.50925926rem;
+}
+.wrapper .shareTo {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: #fff;
+}
+.wrapper .shareTo .shareUl {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 0.53703704rem 1.48148148rem 0rem 1.48148148rem;
+}
+.wrapper .shareTo .shareUl .shareItem {
+  width: 25%;
+  font-size: 0.27777778rem;
+}
+.wrapper .shareTo .shareUl .shareItem .share_icon {
+  width: 1.08333333rem;
+}
+.wrapper .shareTo .shareUl .shareItem .share_name {
+  color: #000;
+  padding-top: 0.22222222rem;
+  padding-bottom: 0.46296296rem;
+}
+.wrapper .shareTo .cancelShareBtn {
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  background-color: #B8B6B6;
+  font-size: 0.50925926rem;
+}

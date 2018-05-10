@@ -1,0 +1,73 @@
+.wrapper .part {
+  font-size: 0.35185185rem;
+  color: #000;
+}
+.wrapper .part .title {
+  height: 0.78703704rem;
+  line-height: 0.78703704rem;
+  padding: 0 0.48148148rem;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .part .item {
+  display: flex;
+  align-items: center;
+  height: 1.42592593rem;
+  background-color: #fff;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+  padding: 0 0.48148148rem;
+}
+.wrapper .part .item .left {
+  min-width: 2.22222222rem;
+}
+.wrapper .part .item .right {
+  flex-grow: 1;
+}
+.wrapper .part .item .ipt {
+  border: none;
+  outline: none;
+  padding-left: 1.42592593rem;
+}
+.wrapper .part .item .sex {
+  display: flex;
+  align-items: center;
+  line-height: 1.42592593rem;
+  padding-left: 0.59259259rem;
+}
+.wrapper .part .item .sex img {
+  width: 0.44444444rem;
+  margin-right: 0.14814815rem;
+}
+.wrapper .part .item .sex .male {
+  margin-right: 0.98148148rem;
+}
+.wrapper .part .item .where .address {
+  padding: 0.01851852rem 0.25925926rem;
+  background-color: #d1d1d1;
+}
+.wrapper .part .item .where .home {
+  margin: 0 0.59259259rem;
+}
+.wrapper .part .item .where .active {
+  background-color: #49a1e4;
+}
+.wrapper .part .xiaoQu {
+  position: relative;
+}
+.wrapper .part .xiaoQu .address_icon {
+  width: 0.89814815rem;
+  position: absolute;
+  top: 0.25925926rem;
+  right: 0.77777778rem;
+}
+.wrapper .part .moRen {
+  margin-top: 0.74074074rem;
+  border-top: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .part .moRen .left {
+  display: flex;
+  align-items: center;
+}
+.wrapper .part .moRen .left .moRen_icon {
+  width: 0.44444444rem;
+  margin-right: 0.22222222rem;
+}

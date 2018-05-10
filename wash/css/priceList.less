@@ -1,0 +1,77 @@
+@rem : 108rem;
+
+.wrapper{
+  .menu{
+    display: flex;
+    height: 88/@rem;
+    font-size: 36/@rem;
+    border-bottom: 1px solid #c2c1c1;
+    background-color: #fff;
+    box-shadow: 0 0 6/@rem #000;
+    padding: 40/@rem 0;
+    .menuName{
+      flex-grow: 1;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      color: #d1d1d1;
+      border-right: 3/@rem solid #d1d1d1;
+    }
+    .menuName:last-child{
+      border-right: none;
+    }
+    .active{
+      color: #000;
+    }
+  }
+
+  .listWrap{
+    margin-bottom: 264/@rem;
+    .part{
+      margin: 0 60/@rem;
+      box-shadow: 0 0 6/@rem #000;
+      .title{
+        text-align: center;
+        color: #151515;
+        font-size: 30/@rem;
+        background: url("../image/priceList/titleLine.png") no-repeat left center;
+        background-size: 100%;
+        padding: 32/@rem 0;
+        .titleText{
+          background-color: #E9E9E9;
+          padding: 0 32/@rem;
+        }
+      }
+      .listUl{
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        background-color: #fff;
+        .item{
+          width: 25%;
+          font-size: 30/@rem;
+          .goodImg{
+            width: 160/@rem;
+            margin-top: 32/@rem;
+          }
+          .name{
+            color: #151515;
+            padding: 16/@rem 0;
+          }
+          .price{
+            color: #49a1e4;
+          }
+        }
+      }
+      .listUl2{
+        .item{
+          width: 33.333%;
+          .goodImg{
+            width: 220/@rem;
+          }
+        }
+      }
+    }
+  }
+
+}

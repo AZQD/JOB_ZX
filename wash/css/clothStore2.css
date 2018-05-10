@@ -1,0 +1,64 @@
+.wrapper .boxWrap {
+  padding: 0 0.44444444rem;
+}
+.wrapper .boxWrap .clothUl {
+  display: flex;
+}
+.wrapper .boxWrap .clothUl .clothLi {
+  flex-grow: 1;
+  margin: 0 0.34259259rem;
+  padding-bottom: 0.22222222rem;
+}
+.wrapper .boxWrap .clothUl .clothLi .title {
+  font-size: 0.24074074rem;
+  padding-left: 0.2037037rem;
+  border-radius: 0.2962963rem 0.2962963rem 0 0;
+  background: #f95238 url("../image/clothStore2/titleBg.png") no-repeat left bottom;
+  background-size: 100%;
+  height: 0.51851852rem;
+  line-height: 0.51851852rem;
+}
+.wrapper .boxWrap .clothUl .clothLi .content {
+  background-color: #fff;
+  padding-bottom: 0.22222222rem;
+}
+.wrapper .boxWrap .clothUl .clothLi .content .desc {
+  font-size: 0.22222222rem;
+  padding-left: 0.2037037rem;
+  padding-top: 0.2037037rem;
+}
+.wrapper .boxWrap .clothUl .clothLi .content .desc span {
+  font-size: 0.16666667rem;
+}
+.wrapper .boxWrap .clothUl .clothLi .content .desc2 {
+  color: #ff6600;
+  font-size: 0.16666667rem;
+  padding-top: 0.05555556rem;
+  padding-left: 1.48148148rem;
+}
+.wrapper .boxWrap .clothUl .clothLi .content .clothImg {
+  text-align: center;
+  padding: 0.22222222rem 0.07407407rem;
+  border-top: 1px dotted #c2c1c1;
+}
+.wrapper .boxWrap .clothUl .clothLi .content .clothImg img {
+  width: 70 / rem;
+}
+.wrapper .boxWrap .clothUl .clothLi .content .choose {
+  font-size: initial;
+  padding: 0 0.68518519rem;
+  height: 0.66666667rem;
+  padding-bottom: 0.22222222rem;
+  border-bottom: 1px dotted #c2c1c1;
+}
+.wrapper .boxWrap .clothUl .clothLi .content .choose .btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.33333333rem;
+}
+.wrapper .boxWrap .clothUl .clothLi .content .choose .active {
+  background: #ff6600 url("../image/clothStore2/checked.png") no-repeat center center;
+  background-size: 0.4537037rem;
+}

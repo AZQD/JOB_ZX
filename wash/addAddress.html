@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta name="format-detection"content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <link rel="stylesheet" href="css/ppublic.css">
+    <link rel="stylesheet" href="css/addAddress.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="part">
+        <h3 class="title">联系人</h3>
+        <div class="item">
+            <label class="left" for="ipt1">姓名：</label>
+            <input class="right ipt" type="text" id="ipt1" placeholder="请输入你的名字">
+        </div>
+        <div class="item">
+            <span class="left" for="ipt1">性别：</span>
+            <span class="right sex">
+                <img src="image/chongZhi/choose.png" alt="">
+                <span class="male active">先生</span>
+                <img src="image/chongZhi/notChoose.png" alt="">
+                <span class="famale">女士</span>
+            </span>
+        </div>
+        <div class="item">
+            <label class="left" for="ipt2">联系方式：</label>
+            <input class="right ipt" type="text" id="ipt2" placeholder="请输入你的联系电话">
+        </div>
+    </div>
+    <div class="part">
+        <h3 class="title">联系方式</h3>
+        <div class="item xiaoQu">
+            <img class="address_icon" src="image/mySelf/icon02.png" alt="">
+            <label class="left" for="ipt3">大厦/小区：</label>
+            <input class="right ipt" type="text" id="ipt3" placeholder="请选择或输入大厦/小区">
+        </div>
+        <div class="item">
+            <label class="left" for="ipt4">地址标签：</label>
+            <input class="right ipt" type="text" id="ipt4" placeholder="例如：1号楼101室">
+        </div>
+        <div class="item">
+            <span class="left" for="ipt1">楼号-门牌号：</span>
+            <span class="right where">
+                <span class="address home active">家</span>
+                <span class="address">公司</span>
+            </span>
+        </div>
+        <div class="item moRen">
+            <span class="left" for="ipt1">
+                <img src="image/chongZhi/choose.png" alt="" class="moRen_icon">
+                设为默认地址
+            </span>
+        </div>
+    </div>
+
+    <div class="bottomBtn">保存地址</div>
+</div>
+
+<script type="text/javascript" src="js/flexible.js"></script>
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript" src="js/addAddress.js"></script>
+</body>
+</html>

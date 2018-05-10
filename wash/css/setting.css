@@ -1,0 +1,36 @@
+.wrapper .menu .item {
+  height: 1.40740741rem;
+  font-size: 0.35185185rem;
+  padding: 0 0.2962963rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .menu .item .left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 0.14814815rem;
+}
+.wrapper .menu .item .left .item_name {
+  color: #000;
+}
+.wrapper .menu .item .right {
+  flex-grow: 1;
+  text-align: right;
+}
+.wrapper .menu .item .right .item_more {
+  width: 0.89814815rem;
+}
+.wrapper .menu .item .right .version {
+  color: #b8b6b6;
+  margin-right: 1.16666667rem;
+}
+.wrapper .menu .item .right .size {
+  margin-right: 1.31481481rem;
+}
+.wrapper .menu .item:last-child {
+  border-bottom: none;
+}

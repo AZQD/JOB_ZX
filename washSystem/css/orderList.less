@@ -1,0 +1,199 @@
+body{
+    overflow: auto;
+    background-color: #F6F6F6;
+}
+
+.container{
+    min-width: 1200px;
+    padding-left: 10px;
+    .topBox{
+        padding-bottom: 15px;
+        .title{
+            height: 40px;
+            line-height: 40px;
+            color: #666;
+            font-size: 13px;
+            font-family: "Microsoft YaHei" !important;
+        }
+        .menuUl{
+            overflow: hidden;
+            .menuLi{
+                color: #333333;
+                float: left;
+                background: #ffffff;
+                padding: 10px 20px;
+                position: relative;
+                cursor: pointer;
+                margin-right: 8px;
+                border: 1px solid #E6E5E5;
+            }
+            .active{
+                background: #1C8FEF;
+                color: #fff;
+            }
+        }
+    }
+
+    .contentBox{
+        background-color: #fff;
+        padding-top: 10px;
+        border: 1px solid #E6E5E5;
+        .filter{
+            font-size: 14px;
+            color: #333333;
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            .name{
+                padding-left: 10px;
+            }
+            .ipt{
+                height: 30px;
+                border: 1px solid #D6D6D6;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                text-indent: 8px;
+            }
+            .btn{
+                border: none;
+                outline: none;
+                height: 30px;
+                margin-left: 10px;
+                text-align: center;
+                background: #0072D2;
+                padding: 5px 10px !important;
+                color: #ffffff;
+            }
+            .paySelect{
+                height: 30px;
+            }
+        }
+        .menuBox{
+            border-top: 20px solid #F3F1F1;
+            .menuUl{
+                overflow: hidden;
+                .menuLi{
+                    float: left;
+                    color: #333333;
+                    background: #ffffff;
+                    padding: 15px 8px;
+                    position: relative;
+                    cursor: pointer;
+                    margin-right: 8px;
+                }
+                .active{
+                    color: #1C8FEF;
+                    border-bottom: 2px solid #1C8FEF;
+                }
+                :hover{
+                    color: #1C8FEF;
+                    border-bottom: 2px solid #1C8FEF;
+                }
+            }
+        }
+
+        .tableBox{
+            position: relative;
+            .checkAll{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 41px;
+                line-height: 41px;
+            }
+            .orderTable{
+                width: 100%;
+                .orderHead{
+                    background: #F3F1F1;
+                    tr{
+                        th{
+                            padding: 10px;
+                            border-bottom: 1px solid #e5e5e5;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                .orderBody{
+                    tr{
+                        td{
+                            text-align: center;
+                            border-right: 1px solid #e5e5e5;
+                        }
+                        .title_td{
+                            text-align: left;
+                            background: #e4f2ff;
+                            padding: 8px;
+                            font-size: 12px;
+                            .checkItem{
+                                vertical-align: -2px;
+                            }
+                            .key{
+                                padding-left: 10px;
+                            }
+                        }
+                        .goodName{
+                            position: relative;
+                            .left{
+                                position: absolute;
+                                left: 0;
+                                width: 100px;
+                                top: calc(50% - 30px);
+                                img{
+                                    width: 60px;
+                                    height: 60px;
+                                }
+                            }
+                            .right{
+                                padding-left: 100px;
+                                text-align: left;
+                                .name{
+                                    color: #0072D2;
+                                    cursor: pointer;
+                                }
+                                .param{
+                                    color: #8e8c8c;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        .qingDan{
+                            .tui{
+                                color: #0072D2;
+                                cursor: pointer;
+                            }
+                            .agree{
+                                color: #4CAF50;
+                                cursor: pointer;
+                            }
+                            .refuse{
+                                color: rgb(232, 80, 69);
+                                cursor: pointer;
+                            }
+                        }
+                        .maiJia{
+                            .icon{
+                                width: 16px;
+                                height: 14px;
+                            }
+                        }
+                        .jinE{
+                            .price{
+                                font-weight: bold;
+                            }
+                        }
+                        .operate{
+                            a{
+                                color: #8e8c8c;
+                            }
+                            .details{
+                                color: #0072D2;
+                            }
+                            .delete{
+                                color: #f00;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

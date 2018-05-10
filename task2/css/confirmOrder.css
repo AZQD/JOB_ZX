@@ -1,0 +1,149 @@
+body {
+  background-color: #F8F8F8;
+}
+.listBox {
+  width: 100%;
+  padding: 0 0.9375rem;
+  background-color: #fff;
+}
+.listBox h3 {
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  color: #111;
+  border-bottom: 0.0625rem solid #eeeeee;
+}
+.listBox .cartList .cartLi {
+  padding: 0.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.listBox .cartList .cartLi .left {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #111;
+}
+.listBox .cartList .cartLi .left .goodImg {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+.listBox .cartList .cartLi .right {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0.9375rem;
+}
+.listBox .cartList .cartLi .right .rightNum {
+  font-size: 0.75rem;
+  margin-right: 1.875rem;
+}
+.listBox .cartList .cartLi .right .price .currentPrice {
+  color: #666;
+  font-size: 0.875rem;
+}
+.listBox .cartList .cartLi .right .price .hasYouHui {
+  color: #FF7E3E;
+}
+.listBox .cartList .cartLi .right .price .originPrice {
+  font-size: 0.6875rem;
+  color: #999;
+}
+.listBox .cartList .cartLi .right .price .originPrice .through {
+  text-decoration: line-through;
+}
+.couponBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.9375rem;
+  background-color: #fff;
+  margin: 0.625rem 0;
+}
+.couponBox .right {
+  color: #999;
+}
+.payBox {
+  width: 100%;
+  padding: 0 0.9375rem;
+  background-color: #fff;
+}
+.payBox h3 {
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  color: #111;
+  border-bottom: 0.0625rem solid #eeeeee;
+}
+.payBox .payList .accountPay {
+  opacity: .4;
+}
+.payBox .payList .payLi {
+  padding: 0.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.0625rem solid #eeeeee;
+}
+.payBox .payList .payLi .left {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #111;
+}
+.payBox .payList .payLi .left .payImg {
+  width: 1.25rem;
+  margin-right: 0.5rem;
+}
+.payBox .payList .payLi .right {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0.9375rem;
+}
+.payBox .payList .payLi .right .success {
+  width: 1.25rem;
+}
+.payBox .payList .payLi:last-child {
+  border-bottom: none;
+}
+.footerBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+}
+.footerBox .buyBox {
+  padding: 0.3125rem 0.9375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.0625rem solid #eeeeee;
+}
+.footerBox .buyBox .left {
+  display: flex;
+  align-items: center;
+}
+.footerBox .buyBox .left .part .total {
+  font-size: 1.0625rem;
+  font-weight: bold;
+  color: #111;
+}
+.footerBox .buyBox .left .part .youHui {
+  font-size: 0.6875rem;
+  color: #999;
+}
+.footerBox .buyBox .right {
+  height: 2.5rem;
+  width: 7.5rem;
+  border-radius: 0.125rem;
+  background-color: #fc0;
+  color: #222;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: center;
+}

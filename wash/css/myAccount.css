@@ -1,0 +1,57 @@
+.wrapper .topInfo {
+  text-align: center;
+  height: 3.13888889rem;
+  font-size: 0.44444444rem;
+  background: url("../image/mySelf/headBg.png") no-repeat;
+  background-size: 100%;
+  margin-top: 0.37037037rem;
+}
+.wrapper .topInfo .headImg {
+  width: 1.80555556rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.27777778rem;
+}
+.wrapper .topInfo .name {
+  color: #000;
+}
+.wrapper .menu .item {
+  height: 1.40740741rem;
+  font-size: 0.35185185rem;
+  padding: 0 0.2962963rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .menu .item .left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 0.14814815rem;
+}
+.wrapper .menu .item .left .item_icon {
+  width: 0.9537037rem;
+  margin-right: 0.22222222rem;
+}
+.wrapper .menu .item .left .item_name {
+  color: #000;
+}
+.wrapper .menu .item .left .item_name .number {
+  color: #ff6600;
+}
+.wrapper .menu .item .right {
+  flex-grow: 1;
+  text-align: right;
+}
+.wrapper .menu .item .right .item_more {
+  width: 0.89814815rem;
+}
+.wrapper .menu .item:last-child {
+  border-bottom: none;
+}
+.wrapper .menu .yuEr {
+  margin-top: 0.55555556rem;
+  margin-bottom: 0.22222222rem;
+  border-top: 1px solid #c2c1c1;
+}

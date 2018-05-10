@@ -1,0 +1,81 @@
+@rem : 108rem;
+
+.wrapper{
+  .chooseList{
+    position: relative;
+    .chooseBg{
+      width: 100%;
+    }
+  }
+  .addressInfo{
+    display: flex;
+    font-size: 36/@rem;
+    color: #000;
+    padding: 16/@rem 0 16/@rem 32/@rem;
+    .left{
+      width: 66%;
+      padding: 64/@rem 0;
+      .item{
+        display: flex;
+        align-items: center;
+        height: 92/@rem;
+        padding-left: 122/@rem;
+        span{
+          margin-left: 48/@rem;
+        }
+        .price{
+          color: #fc8339;
+        }
+        img{
+          width: 133/@rem;
+        }
+      }
+      .item1{
+        background: url("../image/fuKuan/addressBg.png") no-repeat left center;
+        background-size: 133/@rem auto;
+      }
+      .item3{
+        background: url("../image/fuKuan/dateBg.png") no-repeat left center;
+        background-size: 133/@rem auto;
+      }
+      .item4{
+        color: #8a8a8a;
+      }
+    }
+    .right{
+      padding: 64/@rem 32/@rem;
+      width: 34px;
+      flex-grow: 1;
+      border-left: 4/@rem solid #8a8a8a;
+      h3{
+        line-height: 92/@rem;
+        padding-bottom: 16/@rem;
+      }
+      .payUl{
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        .payLi{
+          padding-top: 28/@rem;
+          width: 50%;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .bottomBtn {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1.2962963rem;
+    line-height: 1.2962963rem;
+    text-align: center;
+    color: #fff;
+    background-color: #ff6600;
+    font-size: 0.50925926rem;
+  }
+}

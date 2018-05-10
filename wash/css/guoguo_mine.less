@@ -1,0 +1,123 @@
+@rem : 108rem;
+
+body{
+  background-color: #f5f5f5;
+}
+
+.wrapper{
+  position: relative;
+
+  .warningWrap{
+    position: absolute;
+    left: 0;
+    top: 30%;
+    z-index: 1;
+    width: 100%;
+    .warningBox{
+      margin: 0 380/@rem;
+      font-size: 40/@rem;
+      color: #fff;
+      background-color: RGBA(0,0,0,.6);
+      text-align: center;
+      padding: 66/@rem 0;
+      border-radius: 16/@rem;
+      .warningImg{
+        width: 130/@rem;
+        border-radius: 130/@rem;
+      }
+    }
+  }
+
+  .topInfo{
+    font-size: 48/@rem;
+    text-align: center;
+    background-color: #fd7b19;
+    .logoBox{
+      padding: 60/@rem 0;
+      .logoImg{
+        width: 300/@rem;
+      }
+    }
+    .dingWeiBox{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 80/@rem;
+      height: 150/@rem;
+      border-radius: 75/@rem;
+      background-color: #fc892e;
+      .dingWeiImg{
+        width: 70/@rem;
+        margin-right: 50/@rem;
+      }
+      .tip{
+        color: #fff;
+      }
+    }
+    .saoMaBox{
+      padding: 150/@rem 0 180/@rem 0;
+      .saoMaImg{
+        width: 180/@rem;
+      }
+      .tip{
+        color: #fff;
+        padding-top: 30/@rem;
+      }
+    }
+
+  }
+
+  .stepWrap{
+    padding: 118/@rem 0;
+    font-size: 48/@rem;
+    background-color: #fff;
+    .title{
+      text-align: center;
+      color: #f98321;
+      font-size: 52/@rem;
+      padding-bottom: 118/@rem;
+    }
+    .stepBox{
+      display: flex;
+      align-items: center;
+      .part{
+        flex-grow: 1;
+        text-align: center;
+        .stepImg{
+          width: 150/@rem;
+        }
+        .tip{
+          color: #686868;
+          padding-top: 60/@rem;
+        }
+      }
+    }
+  }
+
+  .navBottom{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 36/@rem;
+    display: flex;
+    align-items: center;
+    padding-top: 20/@rem;
+    padding-bottom: 10/@rem;
+    border-top: 1/@rem solid #c1c1c1;
+    .item{
+      flex-grow: 1;
+      text-align: center;
+      .item_icon{
+        width: 55/@rem;
+        margin-bottom: 14/@rem;
+      }
+      .item_name{
+        color: #333333;
+      }
+      .active{
+        color: #f98321;
+      }
+    }
+  }
+}

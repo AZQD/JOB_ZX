@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一条生活馆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta name="format-detection"content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <link rel="stylesheet" href="css/bootstraptc.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/ppublic.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<section class="container">
+
+    <aside class="row headerBox">
+        <div class="col-xs-4 col-sm-4 left"><img src="image/login/back.png" class="backImg"></div>
+        <div class="col-xs-4 col-sm-4 middle">手机号登录</div>
+        <div class="col-xs-4 col-sm-4 right"><img src="image/login/close.png" class="backImg"></div>
+        <div class="col-xs-12 col-sm-12 yiTiao"><img src="image/login/yiTiao.png"></div>
+    </aside>
+
+    <aside class="row phoneBox">
+        <div class="col-xs-2 col-sm-2 left">+86</div>
+        <div class="col-xs-8 col-sm-8 middle"><input type="text" class="phoneIpt" placeholder="请输入您的手机号码"></div>
+        <div class="col-xs-2 col-sm-2 right"><img style="display: none;" src="image/login/delete.png" alt="" class="delete"></div>
+    </aside>
+
+    <aside class="row verifyBox" style="display:none;">
+        <div class="col-xs-7 col-sm-7 left"><input type="text" class="verifyIpt" placeholder="请输入短信验证码"></div>
+        <div class="col-xs-5 col-sm-5 right right1">重新发送(<span class="timeLeft">59</span>s)</div>
+        <div class="col-xs-5 col-sm-5 right right2" style="display: none;">重新发送</div>
+    </aside>
+
+    <aside class="sendCodeBox">
+        <div class="sendBtn">发送验证码</div>
+        <div class="wechatBox"><img src="image/login/wechat.png" alt="" class="wechat">微信</div>
+    </aside>
+
+    <aside class="loginBox" style="display: none;">
+        <div class="loginBtn">登录</div>
+        <div class="tips">若您输入的手机号未注册，将会进入注册流程。注册即视为同意 <span class="tip">一条用户服务协议</span>。</div>
+    </aside>
+
+</section>
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.phoneBox .phoneIpt').bind('input propertychange',function(){
+            var phoneVal = $.trim($(this).val());
+            if(phoneVal != ''){
+                $('.phoneBox .right .delete').show();
+
+                // 15555555555
+                var phoneReg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if(phoneReg.test(phoneVal)){
+                    $('.sendCodeBox .sendBtn').addClass('sendBtnActive').unbind('click').click(function(){
+                        $('.phoneBox').addClass('hasVerifyIpt');
+                        $('.verifyBox').show();
+                        $('.sendCodeBox').hide();
+                        $('.loginBox').show();
+
+                        getCodeFun();
+                        $('.verifyBox .right2').unbind('click').click(function(){
+                            $(this).hide();
+                            $('.verifyBox .right').show();
+                            $('.verifyBox .right .timeLeft').html(59);
+                            getCodeFun();
+                        });
+
+                        function getCodeFun(){
+                            //ajax请求
+                            var timeIndex = 59;
+                            var timer1 = setInterval(function(){
+                                timeIndex --;
+                                if(timeIndex == 0){
+                                    clearInterval(timer1);
+                                    $('.verifyBox .right1').hide();
+                                    $('.verifyBox .right2').show();
+                                }else{
+                                    $('.verifyBox .right .timeLeft').html(timeIndex);
+
+                                    $('.verifyBox .left .verifyIpt').bind('input propertychange', function(){
+                                        if($.trim($('.verifyBox .left .verifyIpt').val()) != ''){
+                                            
+                                            $('.loginBox .loginBtn').addClass('loginBtnActive').unbind('click').click(function(){
+                                               
+                                                //登录ajax
+                                                alert('登录成功！');
+                                                
+                                            });
+                                            
+                                        }else{
+                                            $('.loginBox .loginBtn').removeClass('loginBtnActive').unbind('click');
+                                        }
+                                    });
+
+                                }
+                            }, 1000);
+                        }
+
+
+                    });
+                }else{
+                    $('.sendCodeBox .sendBtn').removeClass('sendBtnActive').unbind('click');
+                }
+
+            }else{
+                $('.phoneBox .right .delete').hide();
+            }
+        });
+        $('.phoneBox .right .delete').unbind('click').click(function(){
+            $('.phoneBox .phoneIpt').val('');
+            $(this).hide();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>orderlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta name="format-detection"content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <!--<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>-->
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+    <link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+    <link rel="stylesheet" href="css/bootstraptc.min.css">
+    <link rel="stylesheet" href="css/ppublic.min.css">
+    <link rel="stylesheet" href="css/orderList.css">
+</head>
+<body>
+<section class="container">
+	
+    <aside class="row topBox">
+        <h3 class="title"><span>Niushop</span> > <span>订单</span> > <span>订单列表</span></h3>
+        <ul class="menuUl">
+            <li class="menuLi active">全部</li>
+            <li class="menuLi">代付款</li>
+            <li class="menuLi">代发货</li>
+            <li class="menuLi">已发货</li>
+            <li class="menuLi">已收货</li>
+            <li class="menuLi">已完成</li>
+            <li class="menuLi">已关闭</li>
+            <li class="menuLi">退款中</li>
+        </ul>
+    </aside>
+
+    <aside class="contentBox">
+
+        <div class="filter filter1">
+            <span class="name">下单时间：</span>
+            <input type="text" class="ipt" id="orderBeginTime" placeholder="请选择开始日期">&nbsp;&nbsp;-&nbsp;&nbsp;
+            <input type="text" class="ipt" id="orderEndTime" placeholder="请选择结束日期">
+
+            <span class="name">订单编号：</span>
+            <input type="text" class="ipt" id="orderId">
+
+            <button class="btn">更多搜索</button>
+            <button class="btn">搜索</button>
+            <button class="btn" id="orderDaoChu">导出数据</button>
+        </div>
+
+        <div class="filter filter2">
+            <span class="name">收货人姓名：</span>
+            <input type="text" class="ipt">
+            <span class="name">收货人手机号：</span>
+            <input type="text" class="ipt">
+            <span class="name">支付方式：</span>
+            <select class="paySelect">
+                <option>全部</option>
+                <option>微信</option>
+                <option>支付宝</option>
+                <option>线下支付</option>
+            </select>
+        </div>
+
+        <div class="menuBox">
+            <ul class="menuUl">
+                <li class="menuLi active">全部</li>
+                <li class="menuLi">代付款</li>
+                <li class="menuLi">代发货</li>
+                <li class="menuLi">已发货</li>
+                <li class="menuLi">已收货</li>
+                <li class="menuLi">已完成</li>
+                <li class="menuLi">已关闭</li>
+                <li class="menuLi">退款中</li>
+            </ul>
+        </div>
+
+        <div class="tableBox">
+            <div class="checkAll">
+                <input type="checkbox" id="check">
+                <label for="check">全选</label>
+            </div>
+            <table class="orderTable">
+                <thead class="orderHead">
+                <tr>
+                    <th>商品信息</th>
+                    <th>商品清单</th>
+                    <th>买家</th>
+                    <th>收货地址</th>
+                    <th>订单金额</th>
+                    <th>交易状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody class="orderBody">
+                <tr>
+                    <td colspan="7" class="title_td">
+                        <input type="checkbox" class="checkItem">
+                        <span class="key">订单编号：</span><span class="value orderId">2018013021350001</span>
+                        <span class="key">交易号：</span><span class="value">151732053587121000</span>
+                        <span class="key">下单时间：</span><span class="value">2018-01-30 21:55:35</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="goodName">
+                        <div class="left">
+                            <img src="images/orderList/goodImg.png" alt="">
+                        </div>
+                        <div class="right">
+                            <span class="name">小米笔记本Air 12.5英寸</span><br/>
+                            <span class="param">颜色 咖色 金属 5.5寸</span>
+                        </div>
+                    </td>
+                    <td class="qingDan">
+                        <span class="price">332.00元</span><br/>
+                        <span class="count">1</span>件<br/>
+                        <span>(调价：<span class="tiaoJia">-200.00</span>元)</span><br/>
+                        <span class="tui">买家申请退款</span><br/>
+                        <span class="agree">同意</span><br/>
+                        <span class="refuse">拒绝</span>
+                    </td>
+                    <td class="maiJia">
+                        <span class="ids">987654321</span><br/>
+                        <img class="icon" src="images/orderList/goodImg.png" alt="">
+                    </td>
+                    <td class="address">
+                        <span>张三</span><br/>
+                        <span>18888888888</span><br/>
+                        <span>广东省河源市和平县广东省河源市和平县</span>
+                    </td>
+                    <td class="jinE">
+                        <span class="price">332.00</span><br/>
+                        <span>(含快递:0.00元)</span><br/>
+                        <span>余额支付</span>
+                    </td>
+                    <td>代发货</td>
+                    <td class="operate">
+                        <a href="###" class="details">订单详情</a><br/>
+                        <a href="###" class="faHuo">发货</a><br/>
+                        <a href="###" class="beiZhu">添加备注</a><br/>
+                        <a href="###" class="modifyAddr">修改地址</a><br/>
+                        <a href="###" class="wuLiu">查看物流</a><br/>
+                        <a href="###" class="delete">删除订单</a><br/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="7" class="title_td">
+                        <input type="checkbox" class="checkItem">
+                        <span class="key">订单编号：</span><span class="value orderId">2018013021350001</span>
+                        <span class="key">交易号：</span><span class="value">151732053587121000</span>
+                        <span class="key">下单时间：</span><span class="value">2018-01-30 21:55:35</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="goodName">
+                        <div class="left">
+                            <img src="images/orderList/goodImg.png" alt="">
+                        </div>
+                        <div class="right">
+                            <span class="name">小米笔记本Air 12.5英寸</span><br/>
+                            <span class="param">颜色 咖色 金属 5.5寸</span>
+                        </div>
+                    </td>
+                    <td class="qingDan">
+                        <span class="price">332.00元</span><br/>
+                        <span class="count">1</span>件<br/>
+                        <span>(调价：<span class="tiaoJia">-200.00</span>元)</span><br/>
+                        <span class="tui">买家申请退款</span><br/>
+                        <span class="agree">同意</span><br/>
+                        <span class="refuse">拒绝</span>
+                    </td>
+                    <td class="maiJia">
+                        <span class="ids">987654321</span><br/>
+                        <img class="icon" src="images/orderList/goodImg.png" alt="">
+                    </td>
+                    <td class="address">
+                        <span>张三</span><br/>
+                        <span>18888888888</span><br/>
+                        <span>广东省河源市和平县广东省河源市和平县</span>
+                    </td>
+                    <td class="jinE">
+                        <span class="price">332.00</span><br/>
+                        <span>(含快递:0.00元)</span><br/>
+                        <span>余额支付</span>
+                    </td>
+                    <td>代发货</td>
+                    <td class="operate">
+                        <a href="###" class="details">订单详情</a><br/>
+                        <a href="###" class="faHuo">发货</a><br/>
+                        <a href="###" class="beiZhu">添加备注</a><br/>
+                        <a href="###" class="modifyAddr">修改地址</a><br/>
+                        <a href="###" class="wuLiu">查看物流</a><br/>
+                        <a href="###" class="delete">删除订单</a><br/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="7" class="title_td">
+                        <input type="checkbox" class="checkItem">
+                        <span class="key">订单编号：</span><span class="value orderId">2018013021350001</span>
+                        <span class="key">交易号：</span><span class="value">151732053587121000</span>
+                        <span class="key">下单时间：</span><span class="value">2018-01-30 21:55:35</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="goodName">
+                        <div class="left">
+                            <img src="images/orderList/goodImg.png" alt="">
+                        </div>
+                        <div class="right">
+                            <span class="name">小米笔记本Air 12.5英寸</span><br/>
+                            <span class="param">颜色 咖色 金属 5.5寸</span>
+                        </div>
+                    </td>
+                    <td class="qingDan">
+                        <span class="price">332.00元</span><br/>
+                        <span class="count">1</span>件<br/>
+                        <span>(调价：<span class="tiaoJia">-200.00</span>元)</span><br/>
+                        <span class="tui">买家申请退款</span><br/>
+                        <span class="agree">同意</span><br/>
+                        <span class="refuse">拒绝</span>
+                    </td>
+                    <td class="maiJia">
+                        <span class="ids">987654321</span><br/>
+                        <img class="icon" src="images/orderList/goodImg.png" alt="">
+                    </td>
+                    <td class="address">
+                        <span>张三</span><br/>
+                        <span>18888888888</span><br/>
+                        <span>广东省河源市和平县广东省河源市和平县</span>
+                    </td>
+                    <td class="jinE">
+                        <span class="price">332.00</span><br/>
+                        <span>(含快递:0.00元)</span><br/>
+                        <span>余额支付</span>
+                    </td>
+                    <td>代发货</td>
+                    <td class="operate">
+                        <a href="###" class="details">订单详情</a><br/>
+                        <a href="###" class="faHuo">发货</a><br/>
+                        <a href="###" class="beiZhu">添加备注</a><br/>
+                        <a href="###" class="modifyAddr">修改地址</a><br/>
+                        <a href="###" class="wuLiu">查看物流</a><br/>
+                        <a href="###" class="delete">删除订单</a><br/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </aside>
+
+</section>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript" src="js/orderlist.js"></script>
+</body>
+</html>

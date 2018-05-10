@@ -1,0 +1,68 @@
+@rem : 108rem;
+
+.wrapper{
+
+  .addressList{
+    font-size: 38/@rem;
+    color: #000;
+    margin-top: 80/@rem;
+    .addressLi{
+      border-top: 1px solid #c2c1c1;
+      border-bottom: 1/@rem solid #c2c1c1;
+      margin-bottom: 19/@rem;
+      background-color: #fff;
+      .part{
+        display: flex;
+        align-items: center;
+        padding: 0 46/@rem;
+        .item{
+          flex-grow: 1;
+        }
+        .right{
+          text-align: right;
+        }
+        .operation{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          img{
+            width: 54/@rem;
+            margin-right: 16/@rem;
+          }
+          span{
+            margin-right: 34/@rem;
+          }
+        }
+      }
+      .part1{
+        padding-top: 14/@rem;
+      }
+      .part2{
+        padding-top: 26/@rem;
+        padding-bottom: 58/@rem;
+        border-bottom: 1/@rem solid #c2c1c1;
+      }
+      .part3{
+        line-height: 92/@rem;
+        background: url("../image/myAddress/notChoose.png") no-repeat 46/@rem 20/@rem;
+        background-size: 48/@rem 48/@rem;
+        .moRen{
+          color: #c2c1c1;
+          padding-left: 66/@rem;
+        }
+      }
+      .active{
+        background: url("../image/myAddress/choose.png") no-repeat 46/@rem 20/@rem;
+        background-size: 48/@rem 48/@rem;
+        .moRen{
+          color: #ff6600;
+          padding-left: 66/@rem;
+        }
+      }
+    }
+    .addressLi:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+}

@@ -1,0 +1,146 @@
+.wrapper .phoneBox{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 0.35185185rem;
+  margin-top: 0.31481481rem;
+}
+.wrapper .phoneBox .part{
+  height: 1.5rem;
+  display: flex;
+}
+.wrapper .phoneBox .left{
+  flex-grow: 1;
+  align-items: center;
+}
+.wrapper .phoneBox .left .phoneIpt{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  text-indent: 0.4rem;
+}
+.wrapper .phoneBox .right{
+  width: 1.9537037rem;
+  justify-content:center;
+  align-items: center;
+  border-left: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .topBox {
+  text-align: center;
+  font-size: 0.35185185rem;
+  background-color: #fff;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .topBox .top_icon {
+  width: 0.9537037rem;
+  margin-top: 0.55555556rem;
+  margin-bottom: 0.27777778rem;
+}
+.wrapper .topBox .top_num {
+  color: #000;
+  margin-bottom: 0.27777778rem;
+}
+.wrapper .topBox .top_num .number {
+  color: #ff6600;
+}
+.wrapper .priceBox {
+  padding: 0.31481481rem 0.18518519rem;
+  padding-top: 0;
+}
+.wrapper .priceBox .ipt {
+  width: 100%;
+  color: #939393;
+  height: 0.7962963rem;
+  line-height: 0.7962963rem;
+  text-indent: 0.16666667rem;
+  font-size: 0.35185185rem;
+  border: none;
+  outline: none;
+  border-radius: 0.05555556rem;
+  background-color: #c8c8c8;
+}
+.wrapper .priceBox .priceUl {
+  font-size: 0.33333333rem;
+  padding: 0 0.25925926rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wrapper .priceBox .priceUl .pirceLi {
+  margin-top: 0.27777778rem;
+  width: 33.33%;
+  line-height: 0.51851852rem;
+  text-align: center;
+}
+.wrapper .priceBox .priceUl .pirceLi .part {
+  border-radius: 0.11111111rem;
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+.wrapper .priceBox .priceUl .pirceLi .part .num2 {
+  color: #c2c1c1;
+}
+.wrapper .priceBox .priceUl .pirceLi .active {
+  background: url("../image/chongZhi/checkedBg.png") no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #ff6600;
+}
+.wrapper .priceBox .priceUl .pirceLi .active .num2 {
+  color: #ff6600;
+}
+.wrapper .priceBox .priceUl .pirceLi:nth-child(3n) .part {
+  margin-right: 0;
+  margin-left: 0.40740741rem;
+}
+.wrapper .priceBox .priceUl .pirceLi:nth-child(3n+1) .part {
+  margin-right: 0.40740741rem;
+}
+.wrapper .priceBox .priceUl .pirceLi:nth-child(3n+2) .part {
+  margin-right: 0.2037037rem;
+  margin-left: 0.2037037rem;
+}
+.wrapper .menu {
+  color: #000;
+  font-size: 0.35185185rem;
+  background-color: #fff;
+}
+.wrapper .menu .title {
+  height: 0.83333333rem;
+  line-height: 0.83333333rem;
+  padding-left: 0.59259259rem;
+  border-top: 0.00925926rem solid #c2c1c1;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .menu .itemWrap .item {
+  height: 1.62037037rem;
+  padding: 0 0.59259259rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.00925926rem solid #c2c1c1;
+}
+.wrapper .menu .itemWrap .item .left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.wrapper .menu .itemWrap .item .left .item_icon {
+  width: 0.9537037rem;
+  margin-right: 0.62962963rem;
+}
+.wrapper .menu .itemWrap .item .left .item_name .number {
+  color: #ff6600;
+}
+.wrapper .menu .itemWrap .item .right {
+  flex-grow: 1;
+  text-align: right;
+}
+.wrapper .menu .itemWrap .item .right .item_choose {
+  width: 0.44444444rem;
+}
+.wrapper .menu .itemWrap .item:last-child {
+  border-bottom: none;
+}

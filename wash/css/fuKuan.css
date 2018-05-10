@@ -1,0 +1,77 @@
+.wrapper .chooseList {
+  position: relative;
+}
+.wrapper .chooseList .chooseBg {
+  width: 100%;
+}
+.wrapper .addressInfo {
+  display: flex;
+  font-size: 0.33333333rem;
+  color: #000;
+  padding: 0.14814815rem 0 0.14814815rem 0.2962963rem;
+}
+.wrapper .addressInfo .left {
+  width: 66%;
+  padding: 0.59259259rem 0;
+}
+.wrapper .addressInfo .left .item {
+  display: flex;
+  align-items: center;
+  height: 0.85185185rem;
+  padding-left: 1.12962963rem;
+}
+.wrapper .addressInfo .left .item span {
+  margin-left: 0.44444444rem;
+}
+.wrapper .addressInfo .left .item .price {
+  color: #fc8339;
+}
+.wrapper .addressInfo .left .item img {
+  width: 1.23148148rem;
+}
+.wrapper .addressInfo .left .item1 {
+  background: url("../image/fuKuan/addressBg.png") no-repeat left center;
+  background-size: 1.23148148rem auto;
+}
+.wrapper .addressInfo .left .item3 {
+  background: url("../image/fuKuan/dateBg.png") no-repeat left center;
+  background-size: 1.23148148rem auto;
+}
+.wrapper .addressInfo .left .item4 {
+  color: #8a8a8a;
+}
+.wrapper .addressInfo .right {
+  padding: 0.59259259rem 0.2962963rem;
+  width: 34px;
+  flex-grow: 1;
+  border-left: 0.03703704rem solid #8a8a8a;
+}
+.wrapper .addressInfo .right h3 {
+  line-height: 0.85185185rem;
+  padding-bottom: 0.14814815rem;
+}
+.wrapper .addressInfo .right .payUl {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrapper .addressInfo .right .payUl .payLi {
+  padding-top: 0.25925926rem;
+  width: 50%;
+}
+.wrapper .addressInfo .right .payUl .payLi img {
+  width: 100%;
+}
+.wrapper .bottomBtn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  background-color: #ff6600;
+  font-size: 0.50925926rem;
+}

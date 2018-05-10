@@ -1,0 +1,69 @@
+.wrapper .menu {
+  display: flex;
+  height: 0.81481481rem;
+  font-size: 0.33333333rem;
+  border-bottom: 1px solid #c2c1c1;
+  background-color: #fff;
+  box-shadow: 0 0 0.05555556rem #000000;
+  padding: 0.37037037rem 0;
+}
+.wrapper .menu .menuName {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d1d1d1;
+  border-right: 0.02777778rem solid #d1d1d1;
+}
+.wrapper .menu .menuName:last-child {
+  border-right: none;
+}
+.wrapper .menu .active {
+  color: #000;
+}
+.wrapper .listWrap {
+  margin-bottom: 2.44444444rem;
+}
+.wrapper .listWrap .part {
+  margin: 0 0.55555556rem;
+  box-shadow: 0 0 0.05555556rem #000000;
+}
+.wrapper .listWrap .part .title {
+  text-align: center;
+  color: #151515;
+  font-size: 0.27777778rem;
+  background: url("../image/priceList/titleLine.png") no-repeat left center;
+  background-size: 100%;
+  padding: 0.2962963rem 0;
+}
+.wrapper .listWrap .part .title .titleText {
+  background-color: #E9E9E9;
+  padding: 0 0.2962963rem;
+}
+.wrapper .listWrap .part .listUl {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.wrapper .listWrap .part .listUl .item {
+  width: 25%;
+  font-size: 0.27777778rem;
+}
+.wrapper .listWrap .part .listUl .item .goodImg {
+  width: 1.48148148rem;
+  margin-top: 0.2962963rem;
+}
+.wrapper .listWrap .part .listUl .item .name {
+  color: #151515;
+  padding: 0.14814815rem 0;
+}
+.wrapper .listWrap .part .listUl .item .price {
+  color: #49a1e4;
+}
+.wrapper .listWrap .part .listUl2 .item {
+  width: 33.333%;
+}
+.wrapper .listWrap .part .listUl2 .item .goodImg {
+  width: 2.03703704rem;
+}

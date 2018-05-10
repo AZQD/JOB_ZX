@@ -1,0 +1,38 @@
+.wrapper .item {
+  height: 1.55555556rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.35185185rem;
+  color: #000;
+  padding: 0 0.37037037rem;
+  background-color: #fff;
+}
+.wrapper .item .part {
+  flex-grow: 1;
+}
+.wrapper .item .right {
+  text-align: right;
+}
+.wrapper .item .right .headImg {
+  width: 1rem;
+}
+.wrapper .item .right .more {
+  width: 0.31481481rem;
+}
+.wrapper .item .right .phoneNum {
+  margin-right: 0.16666667rem;
+}
+.wrapper .headIcon {
+  margin-top: 1.31481481rem;
+  border-top: 1px solid #c2c1c1;
+  border-bottom: 1px solid #c2c1c1;
+}
+.wrapper .realName {
+  border-top: 1px solid #c2c1c1;
+  border-bottom: 1px solid #c2c1c1;
+}
+.wrapper .bindPhone {
+  margin-top: 0.53703704rem;
+  border-top: 1px solid #c2c1c1;
+  border-bottom: 1px solid #c2c1c1;
+}

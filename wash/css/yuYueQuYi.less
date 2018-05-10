@@ -1,0 +1,181 @@
+@rem : 108rem;
+
+.wrapper{
+  .chooseList{
+    position: relative;
+    .chooseBg{
+      width: 100%;
+    }
+    .orderBox{
+      position: absolute;
+      padding: 0 20/@rem;
+      left: 20/@rem;
+      bottom: 0;
+      display: flex;
+      .orderUl{
+        padding-bottom: 40/@rem;
+        background-color: #E9E9E9;
+        .orderLi{
+          margin-top: 40/@rem;
+          border-top: 1px solid #c2c1c1;
+          border-bottom: 1px solid #c2c1c1;
+          background-color: #fff;
+          .infoTop{
+            height: 180/@rem;
+            display: flex;
+            border-bottom: 1px solid #757575;
+            .left{
+              width: 180/@rem;
+              display: flex;
+              justify-content:center;
+              align-items:center;
+              img{
+                width: 140/@rem;
+                height: 140/@rem;
+              }
+            }
+            .right{
+              flex-grow: 1;
+              padding-left: 20/@rem;
+              color: #666666;
+              font-size: 28/@rem;
+              .status{
+                color: #000;
+                font-size: 26/@rem;
+                padding-top: 14/@rem;
+              }
+              .orderId{
+                padding-top: 16/@rem;
+              }
+              .orderDate{
+                padding-top: 8/@rem;
+              }
+            }
+          }
+          .infoBottom{
+            padding-left: 180/@rem;
+            color: #000;
+            font-size: 38/@rem;
+            height: 90/@rem;
+            display: flex;
+            align-items:center;
+            position: relative;
+            .left{
+              .total{
+                margin-left: 56/@rem;
+              }
+            }
+          }
+        }
+      }
+      .imgWrap{
+        margin-left: 16/@rem;
+        margin-top: 36/@rem;
+        .imgUl{
+          padding: 0 16/@rem 28/@rem 16/@rem;
+          background-color: #fff;
+          .imgLi{
+            padding-top: 10px;
+            width: 85/@rem;
+            height: 88/@rem;
+            position: relative;
+            .little{
+              width: 66/@rem;
+              position: absolute;
+              left: 0;
+            }
+            .chooseState{
+              width: 26/@rem;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .chooseData{
+    .line{
+      font-size: 36/@rem;
+    }
+    .line1{
+      margin: 100/@rem 0;
+      display: flex;
+      align-items: center;
+      height: 66/@rem;
+      .yiCang{
+        margin-left: 98/@rem;
+        margin-right: 72/@rem;
+        display: flex;
+        align-items: center;
+        border: none;
+        outline: none;
+        height: 100%;
+        padding: 6/@rem 18/@rem;
+        //line-height: 66/@rem;
+        background: url("../image/yuYue/blueBg.png") no-repeat;
+        background-size: auto 100%;
+        img{
+          width: 53/@rem;
+          margin-right: 18/@rem;
+        }
+      }
+      .number{
+        margin-right: 36/@rem;
+      }
+      .numIpt{
+        height: 65/@rem;
+        width: 134/@rem;
+        outline: none;
+        text-align: center;
+        border-radius: 12/@rem;
+        border: 1px solid #4e4e4e;
+      }
+      select{
+        height: 66/@rem;
+        border-radius: 12/@rem;
+        border: 1px solid #4e4e4e;
+        background: #E9E9E9;
+        option{
+          background: #E9E9E9;
+        }
+      }
+      #select1{
+        width: 134/@rem;
+      }
+      #select2{
+        width: 224/@rem;
+        margin-left: 74/@rem;
+      }
+    }
+    .textareaWrap{
+      margin: 0 134/@rem 34/@rem 134/@rem;
+      textarea{
+        color: #959a9a;
+        width: 100%;
+        resize: none;
+        outline: none;
+        border: none;
+        line-height: 60/@rem;
+        min-height: 306/@rem;
+        font-size: 36/@rem;
+        text-indent: 16/@rem;
+        background-color: #fff;
+      }
+    }
+  }
+  .bottomBtn {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1.2962963rem;
+    line-height: 1.2962963rem;
+    text-align: center;
+    color: #fff;
+    background-color: #ff6600;
+    font-size: 0.50925926rem;
+  }
+}

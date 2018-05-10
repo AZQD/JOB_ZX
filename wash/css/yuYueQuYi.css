@@ -1,0 +1,172 @@
+.wrapper .chooseList {
+  position: relative;
+}
+.wrapper .chooseList .chooseBg {
+  width: 100%;
+}
+.wrapper .chooseList .orderBox {
+  position: absolute;
+  padding: 0 0.18518519rem;
+  left: 0.18518519rem;
+  bottom: 0;
+  display: flex;
+}
+.wrapper .chooseList .orderBox .orderUl {
+  padding-bottom: 0.37037037rem;
+  background-color: #E9E9E9;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi {
+  margin-top: 0.37037037rem;
+  border-top: 1px solid #c2c1c1;
+  border-bottom: 1px solid #c2c1c1;
+  background-color: #fff;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoTop {
+  height: 1.66666667rem;
+  display: flex;
+  border-bottom: 1px solid #757575;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoTop .left {
+  width: 1.66666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoTop .left img {
+  width: 1.2962963rem;
+  height: 1.2962963rem;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoTop .right {
+  flex-grow: 1;
+  padding-left: 0.18518519rem;
+  color: #666666;
+  font-size: 0.25925926rem;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoTop .right .status {
+  color: #000;
+  font-size: 0.24074074rem;
+  padding-top: 0.12962963rem;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoTop .right .orderId {
+  padding-top: 0.14814815rem;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoTop .right .orderDate {
+  padding-top: 0.07407407rem;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoBottom {
+  padding-left: 1.66666667rem;
+  color: #000;
+  font-size: 0.35185185rem;
+  height: 0.83333333rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.wrapper .chooseList .orderBox .orderUl .orderLi .infoBottom .left .total {
+  margin-left: 0.51851852rem;
+}
+.wrapper .chooseList .orderBox .imgWrap {
+  margin-left: 0.14814815rem;
+  margin-top: 0.33333333rem;
+}
+.wrapper .chooseList .orderBox .imgWrap .imgUl {
+  padding: 0 0.14814815rem 0.25925926rem 0.14814815rem;
+  background-color: #fff;
+}
+.wrapper .chooseList .orderBox .imgWrap .imgUl .imgLi {
+  padding-top: 10px;
+  width: 0.78703704rem;
+  height: 0.81481481rem;
+  position: relative;
+}
+.wrapper .chooseList .orderBox .imgWrap .imgUl .imgLi .little {
+  width: 0.61111111rem;
+  position: absolute;
+  left: 0;
+}
+.wrapper .chooseList .orderBox .imgWrap .imgUl .imgLi .chooseState {
+  width: 0.24074074rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.wrapper .chooseData .line {
+  font-size: 0.33333333rem;
+}
+.wrapper .chooseData .line1 {
+  margin: 0.92592593rem 0;
+  display: flex;
+  align-items: center;
+  height: 0.61111111rem;
+}
+.wrapper .chooseData .line1 .yiCang {
+  margin-left: 0.90740741rem;
+  margin-right: 0.66666667rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 0.05555556rem 0.16666667rem;
+  background: url("../image/yuYue/blueBg.png") no-repeat;
+  background-size: auto 100%;
+}
+.wrapper .chooseData .line1 .yiCang img {
+  width: 0.49074074rem;
+  margin-right: 0.16666667rem;
+}
+.wrapper .chooseData .line1 .number {
+  margin-right: 0.33333333rem;
+}
+.wrapper .chooseData .line1 .numIpt {
+  height: 0.60185185rem;
+  width: 1.24074074rem;
+  outline: none;
+  text-align: center;
+  border-radius: 0.11111111rem;
+  border: 1px solid #4e4e4e;
+}
+.wrapper .chooseData .line1 select {
+  height: 0.61111111rem;
+  border-radius: 0.11111111rem;
+  border: 1px solid #4e4e4e;
+  background: #E9E9E9;
+}
+.wrapper .chooseData .line1 select option {
+  background: #E9E9E9;
+}
+.wrapper .chooseData .line1 #select1 {
+  width: 1.24074074rem;
+}
+.wrapper .chooseData .line1 #select2 {
+  width: 2.07407407rem;
+  margin-left: 0.68518519rem;
+}
+.wrapper .chooseData .textareaWrap {
+  margin: 0 1.24074074rem 0.31481481rem 1.24074074rem;
+}
+.wrapper .chooseData .textareaWrap textarea {
+  color: #959a9a;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  line-height: 0.55555556rem;
+  min-height: 2.83333333rem;
+  font-size: 0.33333333rem;
+  text-indent: 0.14814815rem;
+  background-color: #fff;
+}
+.wrapper .bottomBtn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  background-color: #ff6600;
+  font-size: 0.50925926rem;
+}

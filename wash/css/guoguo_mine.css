@@ -1,0 +1,115 @@
+body {
+  background-color: #f5f5f5;
+}
+.wrapper {
+  position: relative;
+}
+.wrapper .warningWrap {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  z-index: 1;
+  width: 100%;
+}
+.wrapper .warningWrap .warningBox {
+  margin: 0 3.51851852rem;
+  font-size: 0.37037037rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 0.61111111rem 0;
+  border-radius: 0.14814815rem;
+}
+.wrapper .warningWrap .warningBox .warningImg {
+  width: 1.2037037rem;
+  border-radius: 1.2037037rem;
+}
+.wrapper .topInfo {
+  font-size: 0.44444444rem;
+  text-align: center;
+  background-color: #fd7b19;
+}
+.wrapper .topInfo .logoBox {
+  padding: 0.55555556rem 0;
+}
+.wrapper .topInfo .logoBox .logoImg {
+  width: 2.77777778rem;
+}
+.wrapper .topInfo .dingWeiBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.74074074rem;
+  height: 1.38888889rem;
+  border-radius: 0.69444444rem;
+  background-color: #fc892e;
+}
+.wrapper .topInfo .dingWeiBox .dingWeiImg {
+  width: 0.64814815rem;
+  margin-right: 0.46296296rem;
+}
+.wrapper .topInfo .dingWeiBox .tip {
+  color: #fff;
+}
+.wrapper .topInfo .saoMaBox {
+  padding: 1.38888889rem 0 1.66666667rem 0;
+}
+.wrapper .topInfo .saoMaBox .saoMaImg {
+  width: 1.66666667rem;
+}
+.wrapper .topInfo .saoMaBox .tip {
+  color: #fff;
+  padding-top: 0.27777778rem;
+}
+.wrapper .stepWrap {
+  padding: 1.09259259rem 0;
+  font-size: 0.44444444rem;
+  background-color: #fff;
+}
+.wrapper .stepWrap .title {
+  text-align: center;
+  color: #f98321;
+  font-size: 0.48148148rem;
+  padding-bottom: 1.09259259rem;
+}
+.wrapper .stepWrap .stepBox {
+  display: flex;
+  align-items: center;
+}
+.wrapper .stepWrap .stepBox .part {
+  flex-grow: 1;
+  text-align: center;
+}
+.wrapper .stepWrap .stepBox .part .stepImg {
+  width: 1.38888889rem;
+}
+.wrapper .stepWrap .stepBox .part .tip {
+  color: #686868;
+  padding-top: 0.55555556rem;
+}
+.wrapper .navBottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.33333333rem;
+  display: flex;
+  align-items: center;
+  padding-top: 0.18518519rem;
+  padding-bottom: 0.09259259rem;
+  border-top: 0.00925926rem solid #c1c1c1;
+}
+.wrapper .navBottom .item {
+  flex-grow: 1;
+  text-align: center;
+}
+.wrapper .navBottom .item .item_icon {
+  width: 0.50925926rem;
+  margin-bottom: 0.12962963rem;
+}
+.wrapper .navBottom .item .item_name {
+  color: #333333;
+}
+.wrapper .navBottom .item .active {
+  color: #f98321;
+}

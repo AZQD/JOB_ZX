@@ -1,0 +1,79 @@
+body {
+  background-color: #ECECEC;
+}
+/*headerBox*/
+.headerBox {
+  padding: 0.625rem 0.5rem;
+  background-color: #F5BA2E;
+}
+.headerBox .middle {
+  color: #fff;
+  font-size: 1.125rem;
+  text-align: center;
+}
+/*orderStateBox*/
+.orderStateBox {
+  background-color: #fff;
+  margin-bottom: 0.0625rem;
+  padding: 0 1rem;
+  height: 2.125rem;
+  line-height: 2.125rem;
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+}
+.orderStateBox .left .stateIcon {
+  vertical-align: -0.125rem;
+  margin-right: 0.5rem;
+}
+.orderStateBox .right {
+  text-align: right;
+}
+/*.goodsBox*/
+.goodsBox {
+  height: 4.125rem;
+  line-height: 4.125rem;
+  padding: 0 1rem;
+  background-color: #fff;
+}
+.goodsBox .left {
+  text-align: center;
+}
+.goodsBox .left .goodImg {
+  width: 3.375rem;
+}
+.goodsBox .middle {
+  font-weight: bold;
+}
+.goodsBox .right {
+  text-align: right;
+}
+.goodsBox .right .more {
+  width: 1rem;
+}
+/*payBox*/
+.payBox {
+  padding: 0 1rem;
+  background-color: #fff;
+}
+.payBox .left {
+  padding-top: 1rem;
+  border-top: 1px solid #ECECEC;
+}
+.payBox .left .payNum {
+  color: #E85A2D;
+}
+.payBox .right {
+  padding: 0.75rem 0;
+  text-align: right;
+  border-top: 1px solid #ECECEC;
+}
+.payBox .right .goToPay {
+  width: 4.5rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  color: #fff;
+  font-size: 0.9375rem;
+  text-align: center;
+  border-radius: 0.3125rem;
+  background-color: #FC5E1E;
+}

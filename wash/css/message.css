@@ -1,0 +1,46 @@
+.wrapper .msgUl .msgLi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.35185185rem;
+  height: 2.50925926rem;
+  text-align: center;
+  margin-bottom: 0.14814815rem;
+  background: #ffffff url("../image/message/msgBg1.png") no-repeat center center;
+  background-size: 8.14814815rem 1.76851852rem;
+  padding-right: 0.09259259rem;
+}
+.wrapper .msgUl .msgLi .item .num {
+  font-family: Myriad Pro;
+  font-size: 0.66666667rem;
+  margin-right: 0.14814815rem;
+}
+.wrapper .msgUl .msgLi .item .rmb {
+  font-family: Myriad Pro;
+  color: #fff;
+  font-size: 0.12962963rem;
+  padding: 0rem 0.09259259rem;
+  background-color: #fa279a;
+}
+.wrapper .msgUl .msgLi .item .rmb2 {
+  background-color: #0a9aff;
+}
+.wrapper .msgUl .msgLi .item .rmb3 {
+  background-color: #fa279a;
+}
+.wrapper .msgUl .msgLi .item .use {
+  font-size: 0.16666667rem;
+  color: #000;
+}
+.wrapper .msgUl .msgLi:last-child {
+  margin-bottom: 0;
+}
+.wrapper .msgUl .style1 {
+  color: #000;
+}
+.wrapper .msgUl .style2 {
+  color: #0a9aff;
+}
+.wrapper .msgUl .style3 {
+  color: #fa279a;
+}

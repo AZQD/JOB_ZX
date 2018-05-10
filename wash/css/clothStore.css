@@ -1,0 +1,81 @@
+.wrapper .boxWrap .orderBox .orderUl .orderLi {
+  margin-top: 0.19444444rem;
+  border-top: 1px solid #c2c1c1;
+  border-bottom: 1px solid #c2c1c1;
+  background-color: #fff;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoTop {
+  height: 1.66666667rem;
+  display: flex;
+  border-bottom: 1px solid #757575;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoTop .left {
+  width: 1.66666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoTop .left img {
+  width: 1.2962963rem;
+  height: 1.2962963rem;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoTop .right {
+  flex-grow: 1;
+  padding-left: 0.27777778rem;
+  color: #666666;
+  font-size: 0.25925926rem;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoTop .right .status {
+  color: #000;
+  font-size: 0.24074074rem;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoTop .right .status .desc {
+  color: #ff6600;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoBottom {
+  padding-left: 1.66666667rem;
+  color: #000;
+  font-size: 0.35185185rem;
+  height: 0.83333333rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoBottom .left .total {
+  margin-left: 0.51851852rem;
+}
+.wrapper .boxWrap .orderBox .orderUl .orderLi .infoBottom .right {
+  position: absolute;
+  right: 0.31481481rem;
+  top: 0.14814815rem;
+  color: #fff;
+  font-size: 0.33333333rem;
+  padding: 0.03703704rem 0.25925926rem;
+  border-radius: 0.12962963rem;
+  background-color: #ff6600;
+}
+.wrapper .emptyWrap {
+  text-align: center;
+}
+.wrapper .emptyWrap .empty_icon {
+  width: 2.60185185rem;
+  padding-top: 50%;
+}
+.wrapper .emptyWrap .tips {
+  font-size: 0.33333333rem;
+  color: #a4a1a1;
+  padding-top: 0.55555556rem;
+}
+.wrapper .emptyWrap .liJiBtn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  background-color: #ff6600;
+  font-size: 0.50925926rem;
+}
