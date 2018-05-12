@@ -1,0 +1,113 @@
+@charset "utf-8";a,b,body,button,dd,div,dl,dt,em,footer,h1,h2,h3,h4,h5,header,img,input,li,nav,ol,option,p,span,strong,table,td,th,tr,ul,var{margin:0;padding:0;outline:0;-webkit-touch-callout:none;-webkit-user-select:text;-moz-user-select:text}html{font-size:16px}@font-face{font-family:Regular;src:url(../font/DIN-Regular.otf)}@font-face{font-family:Bold;src:url(../font/DIN-Bold.otf)}body{width:100%;overflow-x:hidden;word-break:break-word;font-family:Regular,'.PingFang SC','Helvetica Neue',Helvetica,Verdana,Arial,sans-serif;-webkit-tap-highlight-color:rgba(0,0,0,0)}table{border-collapse:collapse;border-spacing:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}li,ol,ul{list-style:none}em,i{font-style:normal}fieldset,img{border:none}img,input{vertical-align:middle}span{display:inline-block}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}a{background:0 0;cursor:pointer}a:active,a:hover{outline:0;text-decoration:none}a:link,a:visited,ins{text-decoration:none}button,textarea{font-size:100%;-webkit-appearance:none}.clear{clear:both;height:0;overflow:hidden}.hidden{display:none}.container,.row{padding:0}.line-1px{width:100%;height:1px;border-bottom:1px solid #d9d9d9;-webkit-transform:scaleY(0.5);-ms-transform:scaleY(0.5);transform:scaleY(0.5);-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0}@media all and (max-width:1200px){html{font-size:18px}}@media all and (max-width:395px){html{font-size:16px}}@media all and (max-width:360px){html{font-size:15px}}@media all and (max-width:330px){html{font-size:14px}}
+
+@rem : 2.5rem;
+/*commonPopBox1弹窗*/
+.commonPopBox1 {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+}
+.commonPopBox1 .commonPop {
+  background-color: #fff;
+  margin: 0 3/@rem;
+  margin-top: 12.375/@rem;
+  line-height: 1.5/@rem;
+  position: relative;
+}
+.commonPopBox1 .commonPop .title {
+  font-size: 0.9375/@rem;
+  text-align: center;
+  padding-top: 1/@rem;
+}
+.commonPopBox1 .commonPop .detailTip {
+  padding: 0 2.5/@rem;
+  font-size: 0.875/@rem;
+  text-align: center;
+}
+.commonPopBox1 .commonPop .detailTip .price{
+  color: #ff6600;
+  padding-left: 1/@rem;
+}
+.commonPopBox1 .commonPop .confirmBox {
+  font-size: 0.8125/@rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1/@rem;
+}
+.commonPopBox1 .commonPop .confirmBox .confirmBtn {
+  flex-grow: 1;
+  font-size: 1.2/@rem;
+  text-align: center;
+  padding: 1/@rem 0;
+  color: #fff;
+  background-color: #ff6600;
+}
+.commonPopBox1 .commonPop .close{
+  position: absolute;
+  right: 0.25/@rem;
+  top: 0.25/@rem;
+  width: 1.2/@rem;
+}
+/*commonPopBox2弹窗*/
+.commonPopBox2 {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+}
+.commonPopBox2 .commonPop {
+  background-color: #fff;
+  margin: 0 3/@rem;
+  margin-top: 12.375/@rem;
+  line-height: 1.5/@rem;
+}
+.commonPopBox2 .commonPop .title {
+  font-size: 0.9375/@rem;
+  text-align: center;
+  padding-top: 1/@rem;
+}
+.commonPopBox2 .commonPop .detailTip {
+  padding: 0 2.5/@rem;
+  font-size: 0.875/@rem;
+  text-align: center;
+}
+.commonPopBox2 .commonPop .confirmBox {
+  font-size: 0.8125/@rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.0625/@rem solid #757575;
+  margin-top: 1/@rem;
+}
+.commonPopBox2 .commonPop .confirmBox .confirmBtn {
+  flex-grow: 1;
+  font-size: 1.2/@rem;
+  text-align: center;
+  padding: 1/@rem 0;
+}
+.commonPopBox2 .commonPop .confirmBox .confirmBtn1{
+  color: #000;
+  background-color: #fff;
+}
+.commonPopBox2 .commonPop .confirmBox .confirmBtn2{
+  color: #fff;
+  background-color: #ff6600;
+}
+
+.bottomBtn{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  background-color: #ff6600;
+  font-size: 0.50925926rem;
+}

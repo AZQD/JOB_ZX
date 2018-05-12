@@ -1,0 +1,61 @@
+.wrapperCheckbox {
+  color: #717171;
+  font-weight: bold;
+  font-size: 0.24074074rem;
+  margin: 0.18518519rem 0.92592593rem;
+}
+.wrapperCheckbox .titleBox {
+  height: 0.61111111rem;
+  margin-bottom: 0.18518519rem;
+}
+.wrapperCheckbox .titleBox .titleIpt {
+  height: 0.61111111rem;
+  margin-left: 0.18518519rem;
+  outline: none;
+  border: 0.00925926rem solid #717171;
+  border-radius: 0.0462963rem;
+  text-indent: 0.0462963rem;
+}
+.wrapperCheckbox .checkBox {
+  display: flex;
+}
+.wrapperCheckbox .checkBox .first {
+  width: 25%;
+}
+.wrapperCheckbox .checkBox .second {
+  flex-grow: 1;
+}
+.wrapperCheckbox .checkBox .second .secondItem {
+  display: flex;
+  width: 100%;
+  border-bottom: 0.00925926rem dotted #e8e8e8;
+  margin-bottom: 0.18518519rem;
+}
+.wrapperCheckbox .checkBox .second .secondItem .left {
+  width: 1.85185185rem;
+}
+.wrapperCheckbox .checkBox .second .secondItem .right {
+  flex-grow: 1;
+}
+.wrapperCheckbox .checkBox .second .secondItem .right .rightItem {
+  width: 50%;
+  display: inline-block;
+}
+.wrapperCheckbox .checkBox .itemName {
+  padding: 0.18518519rem;
+}
+.wrapperCheckbox .saveBox {
+  padding-bottom: 0.18518519rem;
+}
+.wrapperCheckbox .saveBox .saveBtn {
+  width: 0.92592593rem;
+  height: 0.46296296rem;
+  line-height: 0.46296296rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.07407407rem;
+  background-color: #65BD77;
+}

@@ -1,0 +1,66 @@
+@rem : 108rem;
+
+.wrapperCheckbox{
+  color: #717171;
+  font-weight: bold;
+  font-size: 26/@rem;
+  margin: 20/@rem 100/@rem;
+  .titleBox{
+    height: 66/@rem;
+    margin-bottom: 20/@rem;
+    .titleIpt{
+      height: 66/@rem;
+      margin-left: 20/@rem;
+      outline: none;
+      border: 1/@rem solid #717171;
+      border-radius: 5/@rem;
+      text-indent: 5/@rem;
+    }
+  }
+  .checkBox{
+    display: flex;
+    .first{
+      width: 25%;
+      //background-color: paleturquoise;
+    }
+    .second{
+      flex-grow: 1;
+      //background-color: yellow;
+      .secondItem{
+        display: flex;
+        width: 100%;
+        border-bottom: 1/@rem dotted #e8e8e8;
+        margin-bottom: 20/@rem;
+        .left{
+          width: 200/@rem;
+        }
+        .right{
+          flex-grow: 1;
+          .rightItem{
+            width: 50%;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .itemName{
+      padding:20/@rem;
+    }
+  }
+
+  .saveBox{
+    padding-bottom: 20/@rem;
+    .saveBtn{
+      width: 100/@rem;
+      height: 50/@rem;
+      line-height: 50/@rem;
+      text-align: center;
+      border: none;
+      outline: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 8/@rem;
+      background-color: #65BD77;
+    }
+  }
+}
