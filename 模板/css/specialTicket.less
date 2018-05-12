@@ -1,0 +1,163 @@
+@rem:32rem;
+
+body {
+  background-color: #F4F4F4;
+}
+
+.specialTicketBox{
+  .advertising{
+    color: #fff;
+    font-size: 28/@rem;
+    height: 120/@rem;
+    line-height: 120/@rem;
+    padding-left: 30/@rem;
+    background-color: #9B9B9B;
+  }
+  .menuToggle{
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 32/@rem;
+    .part{
+      padding: 13/@rem 0;
+      flex-grow: 1;
+      color: #999999;
+      font-size: 28/@rem;
+      .menuText{
+        display: inline-block;
+        width: 100%;
+        height: 54/@rem;
+        line-height: 54/@rem;
+        text-align: center;
+        border-right: 1/@rem solid #CCCCCC;
+      }
+    }
+    .active{
+      color: #444444;
+      border-bottom: 1/@rem solid #2FD5A9;
+    }
+  }
+  .switchAdd{
+    display: flex;
+    background-color: #fff;
+    .left{
+      height: 200/@rem;
+      width: 87/@rem;
+      .switchIcon{
+        width: 28/@rem;
+        margin-left: 38/@rem;
+        margin-top: 41/@rem;
+      }
+    }
+    .right{
+      flex-grow: 1;
+      .part{
+        height: 50%;
+        font-size: 28/@rem;
+        color: #AAAAAA;
+        .addIpt{
+          width: 100%;
+          height: 100%;
+          border: none;
+          outline: none;
+        }
+        .startAdd{
+          border-bottom: 1/@rem solid #F0F0F0;
+        }
+      }
+    }
+  }
+  .switchDate{
+    background-color: #fff;
+    .date{
+      width: 100%;
+      height: 100/@rem;
+      border: none;
+      outline: none;
+      text-indent: 87/@rem;
+      background:url("../image/specialTicket/calendar-icon.png") no-repeat 38/@rem 32/@rem;
+      background-size: 28/@rem 28/@rem;
+      border-top: 1/@rem solid #F0F0F0;
+    }
+  }
+  .paramsBox{
+    margin: 30/@rem 0;
+    background-color: #fff;
+    .paramsLi{
+      height: 102/@rem;
+      padding: 0 28/@rem;
+      display: flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom: 1/@rem solid #eee;
+      .left{
+        display: flex;
+        align-items:center;
+        font-size: 28/@rem;
+        color: #444444;
+        .paramImg{
+          width: 44/@rem;
+          margin-right: 14/@rem;
+        }
+      }
+      .right{
+        text-align: center;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size: 24/@rem;
+        color: #AAAAAA;
+        .goToMore{
+          width: 32/@rem;
+        }
+      }
+    }
+    .paramsLi:last-child{
+      border-bottom: none;
+    }
+  }
+  .submitBox{
+    padding: 0 30/@rem;
+    .submitBtn{
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 73/@rem;
+      line-height: 73/@rem;
+      text-align: center;
+      font-size: 32/@rem;
+      color: #fff;
+      border-radius: 4/@rem;
+      background-color: #2FD5A9;
+    }
+  }
+  .navBottom{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-top: 1/@rem solid #BFBFBF;
+    .item{
+      flex-grow: 1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100/@rem;
+      border-right: 1/@rem solid #BFBFBF;
+      .item_icon{
+        width: 52/@rem;
+        margin-right: 12/@rem;
+      }
+      .item_name{
+        font-size: 30/@rem;
+        color: #494949;
+      }
+    }
+    .item:last-child{
+      border: none;
+    }
+  }
+}

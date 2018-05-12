@@ -1,0 +1,158 @@
+body {
+  background-color: #F4F4F4;
+}
+.specialTicketBox .advertising {
+  color: #fff;
+  font-size: 0.875rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  padding-left: 0.9375rem;
+  background-color: #9B9B9B;
+}
+.specialTicketBox .menuToggle {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+.specialTicketBox .menuToggle .part {
+  padding: 0.40625rem 0;
+  flex-grow: 1;
+  color: #999999;
+  font-size: 0.875rem;
+}
+.specialTicketBox .menuToggle .part .menuText {
+  display: inline-block;
+  width: 100%;
+  height: 1.6875rem;
+  line-height: 1.6875rem;
+  text-align: center;
+  border-right: 0.03125rem solid #CCCCCC;
+}
+.specialTicketBox .menuToggle .active {
+  color: #444444;
+  border-bottom: 0.03125rem solid #2FD5A9;
+}
+.specialTicketBox .switchAdd {
+  display: flex;
+  background-color: #fff;
+}
+.specialTicketBox .switchAdd .left {
+  height: 6.25rem;
+  width: 2.71875rem;
+}
+.specialTicketBox .switchAdd .left .switchIcon {
+  width: 0.875rem;
+  margin-left: 1.1875rem;
+  margin-top: 1.28125rem;
+}
+.specialTicketBox .switchAdd .right {
+  flex-grow: 1;
+}
+.specialTicketBox .switchAdd .right .part {
+  height: 50%;
+  font-size: 0.875rem;
+  color: #AAAAAA;
+}
+.specialTicketBox .switchAdd .right .part .addIpt {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+.specialTicketBox .switchAdd .right .part .startAdd {
+  border-bottom: 0.03125rem solid #F0F0F0;
+}
+.specialTicketBox .switchDate {
+  background-color: #fff;
+}
+.specialTicketBox .switchDate .date {
+  width: 100%;
+  height: 3.125rem;
+  border: none;
+  outline: none;
+  text-indent: 2.71875rem;
+  background: url("../image/specialTicket/calendar-icon.png") no-repeat 1.1875rem 1rem;
+  background-size: 0.875rem 0.875rem;
+  border-top: 0.03125rem solid #F0F0F0;
+}
+.specialTicketBox .paramsBox {
+  margin: 0.9375rem 0;
+  background-color: #fff;
+}
+.specialTicketBox .paramsBox .paramsLi {
+  height: 3.1875rem;
+  padding: 0 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.03125rem solid #eee;
+}
+.specialTicketBox .paramsBox .paramsLi .left {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #444444;
+}
+.specialTicketBox .paramsBox .paramsLi .left .paramImg {
+  width: 1.375rem;
+  margin-right: 0.4375rem;
+}
+.specialTicketBox .paramsBox .paramsLi .right {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #AAAAAA;
+}
+.specialTicketBox .paramsBox .paramsLi .right .goToMore {
+  width: 1rem;
+}
+.specialTicketBox .paramsBox .paramsLi:last-child {
+  border-bottom: none;
+}
+.specialTicketBox .submitBox {
+  padding: 0 0.9375rem;
+}
+.specialTicketBox .submitBox .submitBtn {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 2.28125rem;
+  line-height: 2.28125rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 0.125rem;
+  background-color: #2FD5A9;
+}
+.specialTicketBox .navBottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-top: 0.03125rem solid #BFBFBF;
+}
+.specialTicketBox .navBottom .item {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.125rem;
+  border-right: 0.03125rem solid #BFBFBF;
+}
+.specialTicketBox .navBottom .item .item_icon {
+  width: 1.625rem;
+  margin-right: 0.375rem;
+}
+.specialTicketBox .navBottom .item .item_name {
+  font-size: 0.9375rem;
+  color: #494949;
+}
+.specialTicketBox .navBottom .item:last-child {
+  border: none;
+}
