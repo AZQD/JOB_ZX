@@ -1,0 +1,33 @@
+.wrapper .inputBox {
+  margin-top: 2.11111111rem;
+  margin-bottom: 1.06481481rem;
+  text-align: center;
+}
+.wrapper .inputBox #content {
+  width: 5.37037037rem;
+  height: 2.59259259rem;
+  color: #3e696c;
+  font-size: 0.33333333rem;
+  text-indent: 0.38888889rem;
+  padding-top: 0.2037037rem;
+  border: none;
+  outline: none;
+  border-radius: 0.11111111rem;
+  background-color: #fff;
+}
+.wrapper .btnBox {
+  text-align: center;
+  font-size: 0;
+}
+.wrapper .btnBox .btnBottom {
+  border: none;
+  outline: none;
+  width: 4.35185185rem;
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.58333333rem;
+  border-radius: 0.11111111rem;
+  background-color: #3e696c;
+}

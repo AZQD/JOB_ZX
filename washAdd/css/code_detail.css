@@ -1,0 +1,58 @@
+.wrapper .toggleBox {
+  display: flex;
+  height: 1.62962963rem;
+  align-items: center;
+  font-size: 0.44444444rem;
+  color: #a5a5a5;
+  background-color: #fff;
+  margin-top: 0.37037037rem;
+  margin-bottom: 0.44444444rem;
+}
+.wrapper .toggleBox .part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border-right: 0.00925926rem solid #bfbfbf;
+}
+.wrapper .toggleBox .part .code_icon {
+  width: 1.18518519rem;
+  margin-right: 0.38888889rem;
+}
+.wrapper .toggleBox .part:last-child {
+  border: none;
+}
+.wrapper .toggleBox .active {
+  color: #3e696c;
+}
+.wrapper .listBox .item {
+  color: #37383b;
+  font-size: 0.33333333rem;
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+}
+.wrapper .listBox .item .title {
+  padding: 0 0.59259259rem;
+  height: 0.92592593rem;
+  line-height: 0.92592593rem;
+  border-top: 0.00925926rem solid #bfbfbf;
+  border-bottom: 0.00925926rem solid #bfbfbf;
+}
+.wrapper .listBox .item .desc {
+  display: flex;
+  padding: 0.32407407rem 0.59259259rem 0.77777778rem;
+}
+.wrapper .listBox .item .desc .left {
+  width: 2.88888889rem;
+}
+.wrapper .listBox .item .desc .left .item_code {
+  width: 2.03703704rem;
+}
+.wrapper .listBox .item .desc .right {
+  padding-top: 0.09259259rem;
+  flex-grow: 1;
+  line-height: 0.55555556rem;
+}
+.wrapper .listBox .item .desc .right .right_info .state {
+  padding-left: 0.42592593rem;
+}

@@ -1,0 +1,150 @@
+.wrapper .topInfo {
+  text-align: center;
+  height: 4.18518519rem;
+  background: url("../image/my_store/headBg.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 0.2037037rem;
+  color: #343434;
+}
+.wrapper .topInfo .headImg {
+  width: 1.71296296rem;
+  margin-top: 0.42592593rem;
+  margin-bottom: 0.48148148rem;
+}
+.wrapper .topInfo .store_name {
+  font-size: 0.44444444rem;
+}
+.wrapper .topInfo .desc {
+  font-size: 0.33333333rem;
+  margin-top: 0.11111111rem;
+}
+.wrapper .menu {
+  margin-top: 0.74074074rem;
+  margin-bottom: 0.14814815rem;
+}
+.wrapper .menu .money {
+  height: 1.40740741rem;
+  font-size: 0.44444444rem;
+  padding-left: 1rem;
+  padding-right: 0.66666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.wrapper .menu .money .left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 0.14814815rem;
+}
+.wrapper .menu .money .left .item_name {
+  color: #343434;
+}
+.wrapper .menu .money .right {
+  flex-grow: 1;
+  text-align: right;
+}
+.wrapper .menu .money .right .item_more {
+  width: 0.89814815rem;
+}
+.wrapper .msgTip {
+  margin-bottom: 0.41666667rem;
+  color: #343434;
+}
+.wrapper .msgTip .title {
+  font-size: 0.44444444rem;
+  height: 1.05555556rem;
+  line-height: 1.05555556rem;
+  background-color: #fff;
+}
+.wrapper .msgTip .title .msg_icon {
+  width: 0.44444444rem;
+  height: 0.2962963rem;
+  margin-left: 0.38888889rem;
+  margin-right: 0.2037037rem;
+}
+.wrapper .msgTip .msgList {
+  margin: 0 1.25925926rem;
+}
+.wrapper .msgTip .msgList .item {
+  position: relative;
+  padding-left: 0.2962963rem;
+  padding-right: 1.18518519rem;
+  background-color: #fff;
+  margin-top: 0.24074074rem;
+  padding-bottom: 0.51851852rem;
+  border-radius: 0.18518519rem;
+}
+.wrapper .msgTip .msgList .item .item_title {
+  font-size: 0.33333333rem;
+  height: 0.83333333rem;
+  line-height: 0.83333333rem;
+  padding-top: 0.07407407rem;
+}
+.wrapper .msgTip .msgList .item .item_info {
+  font-size: 0.22222222rem;
+}
+.wrapper .msgTip .msgList .item .date {
+  position: absolute;
+  top: 0.27777778rem;
+  right: 0.2962963rem;
+  font-size: 0.22222222rem;
+  color: #a9a5a2;
+}
+.wrapper .btnBox {
+  text-align: center;
+  font-size: 0;
+}
+.wrapper .btnBox .btnBottom {
+  border: none;
+  outline: none;
+  width: 4.35185185rem;
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.58333333rem;
+  border-radius: 0.11111111rem;
+  background-color: #3e696c;
+}
+.alertWrap {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+.alertWrap .alertBox {
+  text-align: center;
+  width: 5.72222222rem;
+  margin: 0 auto;
+  font-size: 0.44444444rem;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+  top: 36%;
+  border-radius: 0.18518519rem;
+}
+.alertWrap .alertBox .title {
+  line-height: 1.03703704rem;
+}
+.alertWrap .alertBox .desc {
+  font-size: 0.33333333rem;
+  padding: 0 0.69444444rem;
+}
+.alertWrap .alertBox .btns {
+  display: flex;
+  align-items: center;
+  margin-top: 0.68518519rem;
+  height: 1.09259259rem;
+  line-height: 1.09259259rem;
+  border-top: 0.00925926rem solid #bfbfbf;
+}
+.alertWrap .alertBox .btns .part {
+  flex-grow: 1;
+  width: 50%;
+}
+.alertWrap .alertBox .btns .cancel {
+  border-right: 0.00925926rem solid #bfbfbf;
+}

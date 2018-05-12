@@ -1,0 +1,46 @@
+.wrapper .listBox {
+  margin-bottom: 0.61111111rem;
+}
+.wrapper .listBox .item {
+  padding: 0 0.55555556rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.38888889rem;
+  background-color: #fff;
+}
+.wrapper .listBox .item .part {
+  font-size: 0.33333333rem;
+  flex-grow: 1;
+  color: #000;
+  height: 1.2962963rem;
+  display: flex;
+  align-items: center;
+}
+.wrapper .listBox .item .part .infoId {
+  margin-left: 0.61111111rem;
+}
+.wrapper .listBox .item .part .phone {
+  color: #3e696c;
+}
+.wrapper .listBox .item .middle {
+  justify-content: center;
+}
+.wrapper .listBox .item .right {
+  justify-content: flex-end;
+}
+.wrapper .btnBox {
+  text-align: center;
+  font-size: 0;
+}
+.wrapper .btnBox .btnBottom {
+  border: none;
+  outline: none;
+  width: 4.35185185rem;
+  height: 1.2962963rem;
+  line-height: 1.2962963rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.58333333rem;
+  border-radius: 0.11111111rem;
+  background-color: #3e696c;
+}
