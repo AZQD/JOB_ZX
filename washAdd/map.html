@@ -48,9 +48,9 @@
         map.addOverlay(marker);//添加红色标记
         map.centerAndZoom(point,15);//设定地图的中心点和坐标并将地图显示在地图容器中 (地图级别)
         //缩放地图
-        setTimeout(function(){
+        /*setTimeout(function(){
             map.setZoom(14);
-        }, 2000);  //2秒后放大到14级
+        }, 2000);*/  //2秒后放大到14级
         map.enableScrollWheelZoom(true);
     }
 
@@ -68,6 +68,24 @@
                     '    <p class="item_desc2">'+nearListInfo.surroundingPois[i].address+'</p>\n' +
                     '</div>');
             }
+
+            $('#listBox .list_item').unbind('click').bind('click', function(){
+                var index = $(this).index();
+                console.log(nearListInfo.surroundingPois[index]);
+                var postData = {
+                    address:nearListInfo.surroundingPois[index].address,
+                    lng:nearListInfo.surroundingPois[index].lng,
+                    lat:nearListInfo.surroundingPois[index].lat
+                };
+                $.ajax({
+                    type:'get',
+                    url:'/Wechat/address/get_street',
+                    data:JSON.stringify(postData),
+                    success:function (res) {
+                        console.log(res);
+                    }
+                });
+            });
         },{
             poiRadius:10000,//多少米之内
             numPois:10 //展示数据量
@@ -77,6 +95,7 @@
     //初始化获取当前位置
     geolocation.getCurrentPosition(function(res){
         if(this.getStatus() === BMAP_STATUS_SUCCESS){
+            console.log(res);
             console.log("当前位置坐标：", res.point.lng, res.point.lat);
             drawMap(res.point.lng, res.point.lat);
             getLocation(res.point);
