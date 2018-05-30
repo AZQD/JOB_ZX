@@ -71,20 +71,13 @@
 
             $('#listBox .list_item').unbind('click').bind('click', function(){
                 var index = $(this).index();
-                console.log(nearListInfo.surroundingPois[index]);
+                console.log('选中位置信息：',nearListInfo.surroundingPois[index]);
                 var postData = {
                     address:nearListInfo.surroundingPois[index].address,
-                    lng:nearListInfo.surroundingPois[index].lng,
-                    lat:nearListInfo.surroundingPois[index].lat
+                    lng:nearListInfo.surroundingPois[index].point.lng,
+                    lat:nearListInfo.surroundingPois[index].point.lat
                 };
-                $.ajax({
-                    type:'get',
-                    url:'/Wechat/address/get_street',
-                    data:JSON.stringify(postData),
-                    success:function (res) {
-                        console.log(res);
-                    }
-                });
+                // console.log(postData);
             });
         },{
             poiRadius:10000,//多少米之内
