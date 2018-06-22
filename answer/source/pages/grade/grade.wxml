@@ -1,0 +1,23 @@
+<!--pages/menu/menu.wxml-->
+<view style="text-align:center;padding-bottom:60rx;height:auto;overflow:Hidden;font-size:0;">
+  <image class="menu_tit" src="{{tit_img}}" mode="widthFix"></image>
+     <view class="music_warp"><audio  src="{{sound_url}}" id="myAudio" controls loop></audio> </view>
+ <image class="music_png"  src="{{music_img}}" mode="widthFix" ></image>
+  <view class="menu_con" style="height:{{menu_height}}px;">
+
+    <view class="yxgz">
+      <image src="{{tx}}" mode="widthFix"></image>
+      <view class="name">昵称</view>
+    </view>
+    <view class="clear_top"></view>
+    <view class="menu_btn  yd"><view class="menu_txtl">已答</view><view class="menu_txt">{{answer_num}}</view><view class="menu_txtr">场</view></view>
+    <view class="menu_btn  yd"><view class="menu_txtl">全胜</view><view class="menu_txt">{{all_right}}</view><view class="menu_txtr">场</view></view>
+    <view class="menu_btn  yd"><view class="menu_txtl">胜率</view><view class="menu_txt">{{win_rate}}</view><view class="menu_txtr">%</view></view>
+    <view class="menu_btn  yd"><view class="menu_txtl">超过</view><view class="menu_txt">{{exceed_num}}</view><view class="menu_txtr">参赛者</view></view>
+    <view class="menu_btn  yd"><view class="menu_txtl">分享</view><view class="menu_txt">{{share_question_num}}</view><view class="menu_txtr">道题</view></view>
+ 
+ 
+    <view class="grade_btn btn_l"><image  mode="widthFix" src="{{back}}" bindtap="onClickToIndex" open-type="share" ></image></view>
+    <view class="grade_btn btn_r" ><button open-type="share"></button><image mode="widthFix" src="{{share}}" bindtap="onClickShare"></image></view>
+     </view>
+</view>

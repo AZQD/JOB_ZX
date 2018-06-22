@@ -1,0 +1,169 @@
+/* pages/notice/notice.wxss */
+
+page {
+  font-size: 0;
+  background: #bb1836;
+}
+
+.add_ques_con, .notice_con_tit {
+  display: block;
+  text-align: center;
+}
+
+.notice_con {
+  text-align: center;
+  background: #d93143;
+}
+
+.add_ques_con {
+  width: 100%;
+  text-align: center;
+  height: Auto;
+  overflow: Hidden;
+  background: #d93143;
+}
+
+.add_ques_txt {
+  font-size: 36rpx;
+  width: 70%;
+  padding: 5%;
+  height: 290rpx;
+  background: #fde07e;
+  border-radius: 20rpx;
+  border: 8rpx solid #f4bf48;
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.add_ques_txt textarea {
+  width: 400rpx;
+  margin-left: 100rpx;
+}
+
+.add_ans_txt {
+  font-size: 36rpx;
+  width: 70%;
+  padding: 0 5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fde07e;
+  border-radius: 20rpx;
+  border: 8rpx solid #f4bf48;
+  display: block;
+  margin: 20rpx auto;
+  text-align: left;
+}
+
+.add_ans_result {
+  width: 80%;
+  margin: 50rpx auto 0 auto;
+  height: 86rpx;
+  line-height: 86rpx;
+}
+
+.picker {
+  height: 70rpx;
+  WIDTH: 120rpx;
+  margin-left: 240rpx;
+  line-height: 70rpx;
+  background: #fde07e;
+  text-align: left;
+  border-radius: 20rpx;
+  font-size: 36rpx;
+  padding-left: 70rpx;
+  padding-right: 40rpx;
+  margin-right: 100rpx;
+  border: 8rpx solid #f4bf48;
+}
+
+.sj_icon {
+  width: 32rpx;
+  float: right;
+  margin-top: 24rpx;
+}
+
+.add_ans_result text {
+  width: 200rpx;
+  float: left;
+  font-size: 36rpx;
+}
+
+.add_ques_txt text, .add_ans_txt text {
+  width: 100rpx;
+  float: left;
+}
+
+.add_ans_txt input {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.btn {
+  font-size: 36rpx;
+  color: #6e2702;
+  width: 290rpx;
+  height: 130rpx;
+  background: url(http://ou3tkgwq7.bkt.clouddn.com/btn.png) no-repeat center;
+  background-size: 100%;
+  text-align: center;
+  margin-top: 50rpx;
+  line-height: 130rpx;
+  margin-bottom: 30rpx;
+}
+
+.btn_l {
+  float: left;
+  margin-left: 75rpx;
+}
+
+.btn_r {
+  float: right;
+  margin-right: 75rpx;
+}
+
+.ct_tit {
+  width: 485rpx;
+  height: auto;
+  margin: 50rpx auto;
+}
+
+.add_ques_success {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.68);
+  z-index: 9000;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.add_ques_cover {
+  width: 64%;
+  height: 650rpx;
+  background: #f7b53e;
+  margin-left: 11%;
+  margin-top: 25%;
+  border-radius: 10rpx;
+  padding: 5% 7%;
+  position: relative;
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 60rpx;
+}
+
+.add_success {
+  width: 60%;
+  margin: 45rpx auto;
+}
+
+.add_success_btn {
+  font-size: 36rpx;
+  color: #6e2702;
+  width: 290rpx;
+  height: 130rpx;
+  background: url(http://ou3tkgwq7.bkt.clouddn.com/btn.png) no-repeat center;
+  background-size: 100%;
+  text-align: center;
+  line-height: 130rpx;
+  margin: 0 auto;
+}

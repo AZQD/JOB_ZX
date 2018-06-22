@@ -1,0 +1,38 @@
+<!--pages/SingleAnswer/SingleAnswers.wxml-->
+<view style="width:{{width}}px;height:{{height}}px" class="index_warp">
+   <view class="single_ans_tit"><view class="ques_title">第一题</view><view class="ques_time">时间：20.3s</view></view>
+   <view class="single_ques">
+     <view> 黄帝的手下大将风后发明了什么来破蚩尤的大雾？ </view> 
+   </view>
+    <view class="single_ans">
+      <view class="single_ans_txt">
+        <view><text>A</text>指南针<text></text></view>
+        <view><text>A</text>指南针<text></text></view>
+        <view><text>A</text>指南针<text></text></view>
+      </view>
+   </view>
+</view>
+<view class="pk_success" style="height:{{height}}px;">
+    <image style="width:297rpx;" src="{{pk_success}}" mode="widthFix"></image>
+    <view class="pk_result_con">
+       <view class="pk_result_con_user">
+           <image class="pk_result_con_tx"  src="{{tx_img}}" mode="widthFix"></image>
+           <view>xxxx</view>
+       </view>
+       <view class="pk_result_con_p">在黄帝文化挑战赛中共答对10道题，获得黄帝文化传播小能手称号，让我们一起携手传承优秀传统文化！
+       </view>
+       <view class="btn btn_l" bindtap="onClickSingAns">再玩一局</view>
+       <view class="btn btn_r" bindtap="onClickPkAns">好友pk</view>
+    </view>
+    <view class="bottom_btnW"> 
+       <view class="bottom_btnl bottom_btn"  bindtap="onClickPToAddQues"> 我要出题</view>
+       <view class="bottom_btnr bottom_btn" bindtap="onClickPToAddRang">查看排行榜 </view>
+     </view>
+ </view>
+<!-- <view class="pk_success" style="height:{{height}}px;">
+    <image style="width:355rpx;margin-top:100rpx;margin-bottom:10rpx;" src="{{pk_success}}" mode="widthFix"></image>
+     <view class="add_success_btn" bindtap="onClickSingAns">继续挑战</view>
+     <view class="add_success_btn" bindtap="onClickPkAns">邀请好友pk</view>
+     <view class="add_success_btn" bindtap="onClickPToAddQues">我要出题</view>
+     <view class="add_success_btn" bindtap="onClickPToAddRang">排行榜</view>
+ </view> -->

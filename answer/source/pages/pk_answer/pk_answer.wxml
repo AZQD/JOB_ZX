@@ -1,0 +1,26 @@
+<!--pages/pk_answer/pk_answer.wxml-->
+<view class="pk_warp" style="height:{{height}}px">
+ <view class="music_warp"><audio  src="{{sound_url}}" id="myAudio" controls loop></audio> </view>
+ <image class="music_png"  src="{{music_img}}" mode="widthFix" ></image>
+    <view class="pk_warp_left" animation="{{animationData_1}}" >
+    <view class="pk_warp_left_tx"> <image   src="{{tx_img}}" mode="widthFix" ></image></view> 
+    <!-- <view class="pk_warp_lls">  三连胜  </view> -->
+    <view class="pk_text_left_tx">xxxxxxxxxxxx</view> 
+    </view>
+    
+    <view class="pk_warp_center" animation="{{animationData_3}}"> <image   src="{{pk_img}}" mode="widthFix"  ></image></view>
+
+     <view class="pk_warp_right"  animation="{{animationData_2}}">
+     <view class="pk_warp_right_tx" > <image   src="{{tx_img}}" mode="widthFix"  ></image></view>
+      <!-- <view class="pk_warp_rls">  三连胜  </view> -->
+     <view class="pk_text_right_tx">xxxxxxxxxxxx</view> 
+      </view>
+      <view class="btn_bottom">
+      <view class="btn btn_l" bindtap="onClickStart" >开始</view>
+      <view class="btn btn_r" bindtap="onClickEnd" >放弃</view>
+      </view>
+</view>
+<!-- warn -->
+<!-- <view class="warn">
+  好友已经进入赛场，点击开始按钮即可开赛
+</view> -->

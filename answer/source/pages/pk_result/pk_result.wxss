@@ -1,0 +1,20 @@
+/* pages/pk_result/pk_result.wxss */
+.pk_warp{
+  background:#cc2d45;
+ 
+}
+.pk_result_tx{z-index:2000;margin-top:-250rpx;position:relative}
+.pk_result_tx image{border:8rpx solid #e28eff;border-radius:50%;overflow:Hidden;}
+.pk_result_tx text{position:absolute;left:300rpx; top:50rpx;color:#fff;}
+.pk_result,.pk_resule_m{text-align:center;}
+.pk_resule_t{padding-top:150rpx;height:Auto;position:relative;}
+.pk_result,.pk_resule_m{text-align:center;}
+.pk_resule_t{padding-top:150rpx;height:Auto;position:relative;}
+.pk_resule_m{margin-top:350rpx;margin-bottom:50rpx;}
+.bg_img{top:300rpx;position:absolute;left:200rpx;z-index:1;}
+.result_img{z-index:300;margin-top:-30rpx;}
+.pk_resule_b{padding-top:550rpx;height:Auto;}
+.pk_result_b .bg_img{top:200rpx;}
+.pk_success{width:100%;background:rgba(0,0,0,0.68);z-index:9000;position:fixed;left:0;top:0;text-align:center;}
+.add_success_btn{font-size:36rpx;color:#6e2702;width:290rpx;height:130rpx;background:url(http://ou3tkgwq7.bkt.clouddn.com/btn.png) no-repeat center;background-size:100%;text-align:center;line-height:130rpx;margin:15rpx auto 0 auto;}
+

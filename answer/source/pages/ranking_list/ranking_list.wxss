@@ -1,0 +1,10 @@
+/* pages/ranking_list/ranking list.wxss */
+.rang_warp{
+  background:url(http://ou3tkgwq7.bkt.clouddn.com/index_bg.jpg) no-repeat center;
+  background-size:100%;
+text-align:center;
+}
+.rang_con{width:64%;height:750rpx;background:url(https://www.youbei.mobi/Picture/dati/rang.png) no-repeat center;background-size:100%;margin-left:11%;margin-top:2%;border-radius:10rpx;padding:5% 7%;display:flex;font-size:40rpx;line-height:60rpx;  text-align:center;flex-direction:column;position: relative}
+.rang_con view{padding-top:40rpx;}
+.page_size{margin-bottom:0;position:absolute;bottom:80rpx;left:30%;}
+.page_size text{display:inline-block;width:100rpx;text-align:center;}

@@ -1,0 +1,22 @@
+page{
+  background:#cc2d45;
+}
+.menu_tit{width:500rpx;margin:60rpx auto 0rpx auto;}
+.menu_con{width:640rpx;background:url("http://ou3tkgwq7.bkt.clouddn.com/menu_bg.png") no-repeat center;text-align:center;background-size:100%;margin:0 auto;
+position:relative;
+}
+.yxgz{position:absolute;top:110rpx;left:259rpx;width:120rpx;height:120rpx;text-align:center; border:6rpx solid #da380f;border-radius:50%;}
+.yxgz image{width:100%;}
+.menu_btn{margin:0rpx auto 10rpx auto;text-align:center;border-radius:16rpx;width:300rpx;height:60rpx;position:relative;font-size:36rpx;display:flex;justify-content:space-between;
+}
+.menu_btn  image{width:80%;margin-top:16rpx;}
+.name{margin-top:20rpx;font-size:36rpx;}
+.clear_top{padding-top:360rpx;}
+.grade_btn{margin:40rpx auto 10rpx auto;width:219rpx;height:71rpx;border:8rpx solid #f7b53e;text-align:center;background:#fee27f;border-radius:16rpx;}
+.btn_l{float:left;margin-left:80rpx;}
+.btn_r{float:right;margin-right:80rpx;position:relative;}
+.btn_l image{width:70%;margin-top:20rpx;}
+.btn_r image{width:90%;margin-top:20rpx;}
+.menu_txt{position:absolute;top:0;left:0;width:100%;height:60rpx;line-height:60rpx;text-align:center;font-size:48rpx;color:#cc2d45;text-decoration: underline}
+.menu_txtl{width:auto;float:left;}
+.btn_r button{position:absolute;left:0;top:0;width:100%;height:80rpx;opacity:0}

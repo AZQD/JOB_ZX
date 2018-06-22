@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about_1/about_1",
+    "pages/pk_wait/pk_wait",
+    "pages/pk_answer/pk_answer",
+    "pages/pk_result/pk_result",
+    "pages/pk_answer_in/pk_answer_in",
+    "pages/SingleAnswer/SingleAnswers",
+    "pages/grade/grade",
+    "pages/ranking_list/ranking_list",
+    "pages/SingleAnswer_fail/SingleAnswers",
+    "pages/add_question/add_question",
+    "pages/add_question_success/add_question_success",
+    "pages/rules/rules",
+    "pages/notice/notice",
+    "pages/about_3/about_3",
+    "pages/about_4/about_4",
+    "pages/about_2/about_2"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "黄帝文化挑战赛",
+    "navigationBarTextStyle": "black"
+  },
+  "enablePullDownRefresh": true
+  
+}

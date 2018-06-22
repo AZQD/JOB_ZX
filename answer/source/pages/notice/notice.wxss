@@ -1,0 +1,83 @@
+/* pages/notice/notice.wxss */
+
+page {
+  font-size: 0;
+  background: #bb1836;
+}
+
+.notice_con .notice_con_tit {
+  position: absolute;
+  top: 60rpx;
+  left: 50%;
+  right: 50%;
+  width: 360rpx;
+  height: 90rpx;
+  background: #fde07e;
+  border-radius: 20rpx;
+  border: 8rpx solid #303030;
+  display: block;
+  text-align: center;
+}
+
+.notice_con {
+  width: 100%;
+  background: #d93143;
+  text-align: center;
+}
+
+.notice_con view image {
+  width: 80%;
+  margin-top: 10rpx;
+}
+
+.notice_con_txt {
+  height: 80%;
+  text-align: center;
+}
+
+.tzs_tit {
+  width: 300rpx;
+  margin: 15% auto 5% auto;
+}
+
+.notice_con_txt {
+  padding: 2%;
+  width: 65%;
+  background: #fdd770;
+  margin: 0 13%;
+  border-radius: 20rpx;
+  border: 16rpx solid #7b191a;
+  position: relative;
+}
+
+.jj_position {
+  position: absolute;
+  right: 0rpx;
+  bottom: 0rpx;
+  width: 60rpx;
+  height: 88rpx;
+}
+
+.notice_con_r {
+  width: 70rpx;
+  height: 136rpx;
+  float: right;
+  padding: 40rpx 20rpx;
+}
+.btn_l{position:relative;}
+.btn_l button{position:absolute;left:0;top:0;opacity: 0}
+.btn_r button{position:absolute;left:0;top:0;opacity: 0}
+.notice_con_l {
+  width: 274rpx;
+  height: 440rpx;
+  float: left;
+  border: 6rpx solid #f4bf48;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.notice_con_warp {
+  margin-top: 30rpx;
+}
+.btn{font-size:36rpx;color:#6e2702;width:290rpx;height:130rpx;background:url(http://ou3tkgwq7.bkt.clouddn.com/btn.png) no-repeat center;background-size:100%;text-align:center;margin-top:100rpx;line-height:130rpx;} 
+.btn_l{float:left;margin-left:75rpx;}
+.btn_r{float:right;margin-right:75rpx;position:relative;}

@@ -1,0 +1,9 @@
+/* pages/abut_1/about_1.wxss */
+.index_warp{
+  background:url(http://ou3tkgwq7.bkt.clouddn.com/index_bg.jpg) no-repeat center;
+  background-size:100%;
+}
+.ab_tg image{width:253rpx;height:66rpx;float:right;position:absolute;top:80rpx;right:160rpx;}
+.ab_pic{text-align:center;padding-top:30%; }
+.ab_txt{padding-top:10%;text-align:center;}
+.ab_pic image,.ab_txt image{width:65%;text-align:center;opacity:0;}

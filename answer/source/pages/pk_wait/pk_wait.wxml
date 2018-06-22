@@ -1,0 +1,45 @@
+<!--pages/pk_wait/pk_wait.wxml-->
+<view style="height:{{height}}px">
+   <view class="wait_title">
+      <image style="width:167rpx;" src="{{pk_img}}" mode="widthFix"></image>
+       <view class="music_warp"><audio  src="{{sound_url}}" id="myAudio" controls loop></audio> </view>
+ <image class="music_png"  src="{{music_img}}" mode="widthFix" ></image>
+    </view>
+ <view class="pk_con">
+   <view class="pk_wait_l wait_con">
+     <view class="pk_wait_tx">
+      <image src="{{tx_img}}" mode="widthFix"></image>
+     </view>
+     <view class="pk_wait_fq txt">发起者</view>
+    </view>
+    <view class="pk_wait_m"><text>{{time}}
+    </text>
+    <!-- :<text><text></text>00</text> -->
+    </view>
+     <view class="pk_wait_r wait_con">
+     <view class="pk_wait_tx">
+      <image src="{{tx_img}}" mode="widthFix"></image>
+     </view>
+      <view class="pk_wait_tz txt">发起者</view>
+    </view>
+  </view>
+  <block wx:if="{{again_flag}}">
+  <view class="wait_warn_con">
+  <view class="wait_warn">该挑战已过期</view>
+  <view class="wait_warn_btn" bindtap="onClickPkAnswer">再来一局</view>
+  </view>
+  </block>
+  <block wx:else>
+  <view class="wait_warn_con">
+  <view class="wait_warn">等待发起者确认</view>
+  <view class="wait_warn_btn" bindtap="onClickGiveUp">放弃</view>
+  </view>
+  </block>
+
+  <!-- <view class="pk_success" style="height:{{height}}px;">
+    <image style="width:355rpx;margin-top:300rpx;margin-bottom:10rpx;" src="{{no_net}}" mode="widthFix"></image>
+    
+ </view> -->
+</view>
+
+

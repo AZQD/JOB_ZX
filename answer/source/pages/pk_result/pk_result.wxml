@@ -1,0 +1,45 @@
+<!--pages/pk_result/pk_result.wxml-->
+
+<view style="width:{{width}}px;height:{{height}}px" class="pk_warp">
+
+  <view class="pk_resule_t pk_result">
+   <view class="music_warp"><audio  src="{{sound_url}}" id="myAudio" controls loop></audio> </view>
+ <image class="music_png"  src="{{music_img}}" mode="widthFix" ></image>
+    <view class="bg_img">
+
+      <image style="width:376rpx;margin-top:-30rpx;" src="{{bg_img}}" mode="widthFix"></image>
+      <view class="result_img">
+        <image style="width:106rpx;" src="{{success_img}}" mode="widthFix"></image>
+      </view>
+      <view class="pk_result_tx">
+
+        <image style="width:167rpx;" src="{{tx_img}}" mode="widthFix"></image>
+        <text>1000</text>
+        </view>
+      </view>
+   </view>
+  <view class="pk_resule_m">
+    <image style="width:167rpx;" src="{{pk_img}}" mode="widthFix"></image>
+  </view>
+ <view class="pk_resule_t pk_result pk_result_b" style="padding-top:0">
+    <view class="bg_img">
+
+      <image style="width:406rpx;margin-top:-30rpx;" src="{{bg_img}}" mode="widthFix"></image>
+      <view class="result_img">
+        <image style="width:106rpx;" src="{{success_img}}" mode="widthFix"></image>
+      </view>
+      <view class="pk_result_tx">
+
+        <image style="width:167rpx;" src="{{tx_img}}" mode="widthFix"></image>
+        <text>1000</text>
+        </view>
+      </view>
+   </view>
+</view>
+<view class="pk_success" style="height:{{height}}px;">
+    <image style="width:355rpx;margin-top:100rpx;margin-bottom:10rpx;" src="{{pk_success}}" mode="widthFix"></image>
+      <view class="add_success_btn" bindtap="onClickPkAns">继续挑战</view>
+     <view class="add_success_btn"  bindtap="onClickSingAns">单人模式</view>
+     <view class="add_success_btn" bindtap="onClickPToAddQues">我要出题</view>
+     <view class="add_success_btn" bindtap="onClickPToAddRang">排行榜</view>
+ </view>

@@ -1,0 +1,14 @@
+/* pages/menu/menu.wxss */
+page{
+  background:#cc2d45;
+}
+.menu_tit{width:500rpx;margin:60rpx auto 0rpx auto;}
+.menu_con{width:640rpx;background:url("http://ou3tkgwq7.bkt.clouddn.com/menu_bg.png") no-repeat center;text-align:center;background-size:100%;margin:0 auto;
+
+}
+.yxgz{margin:0rpx auto;width:141rpx;height:33rpx;text-align:center;padding-top:250rpx; }
+.yxgz_con{padding-top:50rpx;width:430rpx;height:269rpx;text-align:center;margin:0 auto;}
+
+.yxgz image,.yxgz_con image{width:100%;}
+.menu_btn{margin:40rpx auto 10rpx auto;width:239rpx;height:71rpx;border:8rpx solid #f7b53e;text-align:center;background:#fee27f;border-radius:16rpx;}
+.menu_btn  image{width:80%;margin-top:16rpx;}

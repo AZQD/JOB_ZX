@@ -1,0 +1,23 @@
+<!--pages/abut_1/about_1.wxml-->
+<!--pages/abut_1/介绍1-->
+
+<scroll-view scroll-y="true"  style="width:{{width}}px;height:{{height}}px" class="index_warp" scroll-top="{{scrollTop}}" bindscrolltolower="topLoad" bindscroll="scroll"  > 
+ <view style="height:{{height}}px;overflow:Hidden;">
+  <view class="ab_tg">
+    <image src="{{ab_tg}}" mode="widthFix" bindtap="onClickToRule"></image>
+    <!-- <view class="music_warp">
+      <audio src="{{sound_url}}" id="myAudio" controls loop></audio>
+    </view>
+    <image class="music_png" src="{{music_img}}" mode="widthFix"></image> -->
+  </view>
+  <view class="ab_pic">
+    <image src="{{ab_img}}" mode="widthFix" animation="{{animationData_1}}"></image>
+  </view>
+  <view class="ab_txt">
+    <image src="{{ab_txt}}" mode="widthFix" animation="{{animationData_2}}"></image>
+  </view>
+  </view>
+  <view class="black_height">
+ 
+  </view>
+ </scroll-view> 
