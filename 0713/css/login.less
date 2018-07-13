@@ -1,0 +1,37 @@
+@rem: 16rem;
+body{
+  font-family: '微软雅黑';
+  background-color: #F6F6F6;
+}
+
+.container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #loginForm{
+    width: 100%;
+    padding: 0 64/@rem;
+    .part{
+      display: flex;
+      font-size: 16/@rem;
+      padding-bottom: 16/@rem;
+      label{
+        height: 30/@rem;
+        width: 64/@rem;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+      }
+      input{
+        flex-grow: 1;
+        width: 0;
+        outline: none;
+        height: 30/@rem;
+        text-indent: 4/@rem;
+        border: 1/@rem solid #999;
+        border-radius: 4/@rem;
+      }
+    }
+  }
+}
