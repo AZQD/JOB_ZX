@@ -1,0 +1,21 @@
+body {
+  font-family: '微软雅黑';
+  background-color: #F6F6F6;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container #codeBox {
+  width: 100%;
+  padding: 0 4rem;
+}
+.container #codeBox .codeBtn {
+  width: 100%;
+  outline: none;
+  height: 2.5rem;
+  border: 0.0625rem solid #999;
+  border-radius: 0.25rem;
+}

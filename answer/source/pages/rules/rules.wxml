@@ -1,0 +1,17 @@
+<!--pages/menu/menu.wxml-->
+<view style="text-align:center;padding-bottom:60rx;height:auto;overflow:Hidden;font-size:0;">
+  <image class="menu_tit" src="{{tit_img}}" mode="widthFix"></image>
+  <view class="menu_con" style="height:{{menu_height}}px;">
+   <view class="music_warp"><audio  src="{{sound_url}}" id="myAudio" controls loop></audio> </view>
+ <image class="music_png"  src="{{music_img}}" mode="widthFix" ></image>
+    <view class="yxgz">
+      <image src="{{yxgz_img}}" mode="widthFix"></image>
+    </view>
+    <view class="yxgz_con">
+      <image mode="widthFix" src="{{yxgz_con_img}}"></image>
+    </view>
+    <view class="menu_btn"><image mode="widthFix" src="{{drdt}}" bindtap="onClickToSinglePk"></image></view>
+    <view class="menu_btn"><image style="width:60%;" mode="widthFix" bindtap="onClickToFindPk" src="{{hypk_img}}"></image></view>
+    <view class="menu_btn"><image mode="widthFix" src="{{wdzj_img}}" bindtap="onClickToMygrade"></image></view>
+  </view>
+</view>

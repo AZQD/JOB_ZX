@@ -1,0 +1,30 @@
+<!--pages/notice/notice.wxml-->
+
+ <view style="height:{{height}}px;">
+ <image style="width:750rpx"  src="{{ t_img}}" mode="widthFix" ></image>
+ 
+ <view class="music_warp"><audio  src="{{sound_url}}" id="myAudio" controls loop></audio> </view>
+ <image class="music_png"  src="{{music_img}}" mode="widthFix" ></image>
+  <view class="notice_con" style="height:800rpx;">
+    <view  class="notice_con_tit" style="left:{{margin_left}}px"><image   src="{{hdwh_img}}" mode="widthFix" ></image></view>
+  
+      <image class="tzs_tit"   src="{{tzs_Img}}" mode="widthFix" ></image>
+  <view class="notice_con_txt"  style="height:620rpx">
+      <view class="notice_con_warp">
+        <view >
+           <image class="notice_con_l" style="width:274rpx;height:440rpx;"   src="{{gg_con}}" mode="widthFix" ></image>
+        </view>
+       
+        <image class="notice_con_r" style="width:70rpx;height:136rpx; " src="{{gg_tit}}" mode="widthFix" ></image>
+
+      </view>
+      <image class="jj_position" style="width:79rpx;height:92rpx;"   src="{{jj_img}}" mode="widthFix" ></image>
+    </view>
+ </view>
+ <view>
+   <view class="btn btn_l" bindtap="onClickToRule">参与挑战 <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户昵称</button></view>
+    <view class="btn btn_r"  bindtap="onClickToAddQues">我要出题<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户昵称</button></view>
+ </view>
+ </view>
+
+

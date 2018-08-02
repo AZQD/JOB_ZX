@@ -1,0 +1,35 @@
+body {
+  font-family: '微软雅黑';
+  background-color: #F6F6F6;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container #loginForm {
+  width: 100%;
+  padding: 0 4rem;
+}
+.container #loginForm .part {
+  display: flex;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+.container #loginForm .part label {
+  height: 1.875rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+.container #loginForm .part input {
+  flex-grow: 1;
+  width: 0;
+  outline: none;
+  height: 1.875rem;
+  text-indent: 0.25rem;
+  border: 0.0625rem solid #999;
+  border-radius: 0.25rem;
+}

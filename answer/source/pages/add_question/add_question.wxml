@@ -1,0 +1,45 @@
+<!--pages/notice/notice.wxml-->
+ <view style="height:{{height}}px;">
+ <image style="width:750rpx"  src="{{t_img}}" mode="widthFix" ></image>
+ <view class="notice_con" style="height:1100rpx;">
+   <image class="ct_tit" src="{{ct_tit}}" mode="widthFix" ></image>
+    <view class="music_warp"><audio  src="{{sound_url}}" id="myAudio" controls loop></audio> </view>
+ <image class="music_png"  src="{{music_img}}" mode="widthFix" ></image>
+    <view class="add_ques_con">
+        <view class="add_ques_txt">
+          <text>题目:</text><textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+        </view>
+         <view class="add_ans_txt">
+          <text>A:</text><input type="text" bindinput="bindKeyInputA"  />
+        </view>
+         <view class="add_ans_txt">
+          <text>B:</text><input type="text"  bindinput="bindKeyInputB" />
+        </view>
+        <view class="add_ans_txt">
+          <text>C:</text><input type="text" bindinput="bindKeyInputC" />
+        </view>
+        <view class="add_ans_result">
+          <text>正确答案是:</text> <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+    {{array[index]}}
+     <image class="sj_icon" src="{{jj_img}}" mode="widthFix" ></image>
+    </view>
+  </picker>
+        </view>
+   </view>
+ </view>
+ <view>
+   <view class="btn btn_l" bindtap="onClickBack">返回挑战</view>
+    <view class="btn btn_r" bindtap="onClickConfirmSub">确认出题</view>
+ </view>
+ </view>
+  <view class="add_ques_success" style="height:{{height}}px;display:{{cover_show ? 'block':'none'}}">
+     <view class="add_ques_cover">
+          <image class="add_success" src="{{add_success}}" mode="widthFix" ></image>
+          <view style="text-align:left;margin-bottom:30rpx;">感谢您对黄帝文化传播所做的贡献！</view>
+          <view class="add_success_btn"  bindtap="onClickToAnswerQues">返回答题</view>
+           <view class="add_success_btn" bindtap="onClickToAddQues">再出一道</view>
+     </view>
+ </view> 
+
+

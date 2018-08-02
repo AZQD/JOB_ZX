@@ -1,0 +1,46 @@
+@rem: 37.5rem;
+
+body{
+  background-color: #fff;
+}
+.searchBox{
+  display: flex;
+  height: 40/@rem;
+  line-height: 40/@rem;
+  font-size: 16/@rem;
+  .left{
+    font-size: 0;
+    flex-grow: 1;
+    .ipt{
+      width: 100%;
+      height: 100%;
+      text-indent: 10/@rem;
+      border: 1/@rem solid #E8E8E8;
+      background-color: #E8E8E8;
+    }
+  }
+  .right{
+    width: 3rem;
+    text-align: center;
+    background-color: #fff;
+  }
+}
+#mapBox{
+  width: 100%;
+  height: 50vh;
+}
+#listBox{
+  padding: 0 15/@rem;
+  .list_item{
+    padding: 10/@rem;
+    border-bottom: 1/@rem solid #f8f8f8;
+    .item_desc1{
+      padding-bottom: 6/@rem;
+      font-size: 16/@rem;
+    }
+    .item_desc2{
+      font-size: 12/@rem;
+      color: #999;
+    }
+  }
+}

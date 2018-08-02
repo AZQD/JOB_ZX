@@ -1,0 +1,193 @@
+/* pages/SingleAnswer/SingleAnswers.wxss */
+
+.index_warp {
+  background: url(http://ou3tkgwq7.bkt.clouddn.com/index_bg.jpg) no-repeat center;
+  background-size: 100%;
+}
+
+.single_ans_tit {
+  text-align: center;
+}
+
+.ques_title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #6e2702;
+  padding-top: 40rpx;
+  margin-bottom: 15rpx;
+}
+
+.ques_time {
+  color: #6e2702;
+}
+
+.single_ques {
+  width: 85%;
+  height: 500rpx;
+  overflow: Hidden;
+  background: url(https://www.youbei.mobi/Picture/dati/ques.png) no-repeat center;
+  background-size: 100%;
+  margin: -40rpx auto 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.single_ques view {
+  width: 70%;
+  margin: 0 auto;
+  text-align: Center;
+  line-height: 60rpx;
+}
+
+.single_ans {
+  width: 55%;
+  height: 560rpx;
+  overflow: Hidden;
+  background: url(https://www.youbei.mobi/Picture/dati/ans.png) no-repeat center;
+  background-size: 100%;
+  margin: -2rpx auto 0 auto;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+.single_ans view {
+  width: 100%;
+  line-height: 100rpx;
+}
+
+.single_ans view view {
+  text-align: center;
+  width: 100%;
+}
+
+.single_ans_txt {
+  margin-top: 120rpx;
+}
+
+.single_ans text {
+  margin-right: 50rpx;
+}
+
+.pk_success {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.68);
+  z-index: 9000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+
+.pk_result_con {
+  width: 71%;
+  height: 650rpx;
+  background: url(https://www.youbei.mobi/Picture/dati/pk_result.png) no-repeat center;
+  background-size: 100%;
+  margin-left: 9%;
+  margin-top: 4%;
+  border-radius: 10rpx;
+  padding: 5% 7%;
+  position: relative;
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 60rpx;
+}
+
+.pk_result_con_user {
+  width: 85%;
+  margin: 10rpx auto;
+  padding: 0 7%;
+  height: 160rpx;
+  overflow: HIden;
+}
+
+.pk_result_con_user image {
+  float: left;
+}
+
+.pk_result_con_user view {
+  float: left;
+  padding-left: 20rpx;
+  padding-top: 70rpx;
+}
+
+.pk_result_con_p {
+  width: 85%;
+  padding: 0 7%;
+  text-align: left;
+}
+
+.pk_result_con_tx {
+  width: 140rpx;
+  border: 2px solid #5e5046;
+  height: 140rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.btn {
+  font-size: 36rpx;
+  color: #6e2702;
+  width: 220rpx;
+  height: 130rpx;
+  background: url(http://ou3tkgwq7.bkt.clouddn.com/btn.png) no-repeat center;
+  background-size: 100%;
+  text-align: center;
+  margin-top: 0rpx;
+  line-height: 130rpx;
+}
+
+.btn_l {
+  float: left;
+  margin-left: 15rpx;
+}
+
+.btn_r {
+  float: right;
+  margin-right: 45rpx;
+}
+
+.pk_success {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.68);
+  z-index: 9000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+
+.add_success_btn {
+  font-size: 36rpx;
+  color: #6e2702;
+  width: 290rpx;
+  height: 130rpx;
+  background: url(http://ou3tkgwq7.bkt.clouddn.com/btn.png) no-repeat center;
+  background-size: 100%;
+  text-align: center;
+  line-height: 130rpx;
+  margin: 15rpx auto 0 auto;
+}
+
+.bottom_btn {
+  font-size: 36rpx;
+  color: #fcdc45;
+  width: 220rpx;
+  height: 130rpx;
+  text-align: center;
+  text-decoration:underline;
+  margin-top: 0rpx;
+  line-height: 100rpx;
+}
+
+.bottom_btnl {
+  float: left;
+  margin-left: 15rpx;
+}
+
+.bottom_btnr {
+  float: right;
+  margin-right: 45rpx;
+}
+.bottom_btnW{position:relative;width:80%;margin:0 auto;height:auto;margin-top:-40rpx;}

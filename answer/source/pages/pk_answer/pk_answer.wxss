@@ -1,0 +1,166 @@
+/* pages/pk_answer/pk_answer.wxss */
+
+/* .pk_warp_left_tx{width:148rpx;height:148rpx;border-radius:50%;border:8rpx solid #fff;overflow:Hidden;left:280rpx;position:absolute;top:150rpx;text-align:center;}
+.pk_warp_right_tx{width:148rpx;bottom:280rpx;height:148rpx;border-radius:50%;border:8rpx solid #fff;overflow:Hidden;right:220rpx;text-align:center;position:absolute;} */
+
+page {
+  background: #cc2d45;
+}
+
+.pk_warp {
+  text-align: center;
+}
+
+.pk_warp_center {
+  width: 349rpx;
+  height: 222rpx;
+  z-index: 6;
+  position: absolute;
+  top: 30%;
+  left: -349rpx;
+}
+
+.pk_warp_center image {
+  width: 100%;
+}
+
+.pk_warp_left {
+  width: 512rpx;
+  height: 478rpx;
+  position: relative;
+  margin-top: 20rpx;
+  background: url(https://www.youbei.mobi/Picture/dati/pk_1.png) no-repeat center;
+  background-size: 100%;
+  float: left;
+  margin-left: -512rpx;
+}
+
+.pk_warp_right {
+  width: 512rpx;
+  height: 478rpx;
+  position: relative;
+  margin-top: -30rpx;
+  background: url(https://www.youbei.mobi/Picture/dati/pk_2.png) no-repeat center;
+  background-size: 100%;
+  float: right;
+  margin-right: -512rpx;
+}
+
+.pk_warp_left_tx {
+  width: 148rpx;
+  height: 148rpx;
+  border-radius: 50%;
+  border: 8rpx solid #fff;
+  overflow: Hidden;
+  left: 280rpx;
+  position: absolute;
+  top: 150rpx;
+  text-align: center;
+}
+
+.pk_warp_right_tx {
+  width: 148rpx;
+  bottom: 280rpx;
+  height: 148rpx;
+  border-radius: 50%;
+  border: 8rpx solid #fff;
+  overflow: Hidden;
+  right: 220rpx;
+  text-align: center;
+  position: absolute;
+}
+
+.pk_warp_left_tx image, .pk_warp_right_tx image {
+  width: 100%;
+}
+
+.pk_text_left_tx {
+  left: 80rpx;
+  position: absolute;
+  top: 280rpx;
+  text-align: center;
+}
+
+.pk_text_right_tx {
+  left: 140rpx;
+  position: absolute;
+  bottom: 220rpx;
+  text-align: center;
+}
+
+.btn_bottom {
+  width: 100%;
+  height: 100rpx;
+  z-index: 300;
+  position: absolute;
+  left: 0;
+  bottom: 120rpx;
+}
+
+.btn {
+  font-size: 36rpx;
+  color: #666;
+  width: 190rpx;
+  height: 80rpx;
+  background: #f7b53d;
+  text-align: center;
+  margin-top: 100rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.btn_l {
+  float: left;
+  margin-left: 125rpx;
+}
+
+.btn_r {
+  float: right;
+  margin-right: 125rpx;
+}
+
+.warn {
+  position: fixed;
+  width: 60%;
+  height: 120rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  left: 15%;
+  top: 40%;
+  z-index: 3000;
+  padding: 5%;
+  font-size: 36rpx;
+  line-height: 65rpx;
+}
+.pk_warp_lls{
+width:200rpx;
+padding-left:40rpx;
+height:148rpx;
+border-radius:50%;
+background:url("https://www.youbei.mobi/Picture/dati/label_r.png") no-repeat center center;
+background-size:100%;
+overflow:Hidden;
+left:60rpx;
+font-size:30rpx;
+line-height:168rpx;
+position:absolute;
+top:160rpx;
+text-align:left;
+}
+.pk_warp_rls{
+width:200rpx;
+padding-right:40rpx;
+height:148rpx;
+font-size:30rpx;
+line-height:150rpx;
+border-radius:50%;
+background:url("https://www.youbei.mobi/Picture/dati/label_l.png") no-repeat center center;
+background-size:100%;
+overflow:Hidden;
+right:20rpx;
+position:absolute;
+top:100rpx;
+text-align:right;
+
+
+}
