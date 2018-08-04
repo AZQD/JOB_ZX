@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=1200, initial-scale=device-width/1200, maximum-scale=1.0">
+    <title>充值</title>
+    <link rel="stylesheet" href="./css/exuan_css.css">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+<body>
+<div class="recharge-wrapper m">
+    <div class="recharge-title">
+        渲染币优惠套餐充值
+    </div>
+    <div class="recharge-item">
+        <ul>
+            <li class="taocan active">
+                <div class="item-top">套餐A</div>
+                <div class="price"><span class="red">200</span>元</div>
+                <div class="details">
+                    <span>包含：210渲染币</span>
+                    <span>额外赠送：20金点</span>
+                </div>
+            </li>
+            <li class="taocan ">
+                <div class="item-top">套餐B</div>
+                <div class="price"><span class="red">500</span>元</div>
+                <div class="details">
+                    <span>包含：530渲染币</span>
+                    <span>额外赠送：50金点</span>
+                </div>
+            </li>
+            <li class="taocan ">
+                <div class="item-top">套餐C</div>
+                <div class="price"><span class="red">1000</span>元</div>
+                <div class="details">
+                    <span>包含：1100渲染币</span>
+                    <span>额外赠送：100金点</span>
+                </div>
+            </li>
+            <li class="taocan ">
+                <div class="item-top">套餐D</div>
+                <div class="price"><span class="red">2000</span>元</div>
+                <div class="details">
+                    <span>包含：2300渲染币</span>
+                    <span>额外赠送：200金点</span>
+                </div>
+            </li>
+            <li>
+                <div class="item-top">小额充值</div>
+                <div class="small-amount">
+                    <ul>
+                        <li class="item1"><span class="value">50</span>元 （小额充值）</li>
+                        <li class="item1"><span class="value">100</span>元 （小额充值）</li>
+                        <li>
+                            <input type="text" class="text-box" name="chongzhijine" placeholder="输入充值金额"
+                                   id="chongzhijine" autocomplete="off" onkeyup="value=this.value.replace(/[^\d]/g,'')">
+                            <span class="org">1元=1渲染币</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="recharge-title2">
+        支付方式
+    </div>
+    <div class="recharge-payway">
+        <ul class="payList">
+            <li class="active">
+                <i class="icon icon-wx"></i>
+                <span>微信支付</span>
+            </li>
+            <li class="">
+                <i class="icon icon-zhifubao-vr"></i>
+                <span>支付宝支付</span>
+            </li>
+            <li>
+                <i class="icon icon-yb"></i>
+                <span>易宝支付</span>
+            </li>
+        </ul>
+    </div>
+    <form action="###" method="post" id="doPay" autocomplete="off">
+        <div class="paywaybtn" style="margin-bottom: 20px">
+            <input type="hidden" name="goodsid" id="goodsid" value="1">
+            <input type="hidden" name="money" id="money" value="200">
+            <input type="hidden" name="pay" id="pay" value="3">
+            <input type="hidden" name="nowLoginName" id="nowLoginName" value="">
+            <a href="javascript:;" class="btn btn-lg btn-org" id="submit_pay">立即充值</a>
+        </div>
+        <div class="btn-cz" style="margin-top: 10px; font-size: 16px; text-align: center;"><a href="###" class="org"
+                                                                                              target="_blank">7.27日E渲云渲染核数调整测试公告&gt;&gt;</a>
+        </div>
+    </form>
+</div>
+<div class="content2 b-bg">
+    <div class="m">
+        <div class="recharge-title">
+            计费方式
+            <h4 class="org">渲染单价低至0.18元/核小时</h4>
+        </div>
+        <div class="pics">
+            <img src="./images/pay/exuan-01.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="content2">
+    <div class="m">
+        <div class="recharge-title">
+            渲染优势
+        </div>
+        <div class="pics">
+            <img src="./images/pay/exuan-02.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="content2 b-bg">
+    <div class="m">
+        <div class="recharge-title">
+            常见问题
+        </div>
+        <div class="question">
+            <h4>Q1：渲染币如何使用？充值后有哪些限制？</h4>
+            答：渲染币可用于E渲云渲染服务，1渲染币=1元，渲染币永久有效，在线充值没有时间限制，充值后不支持退款。
+            <h4>Q2：充值后渲染币没有到账怎么办？</h4>
+            答：联系在线客服QQ:4006002507，提供充值订单号，协助您一起解决。
+            <h4>Q3：充值是否可以开发票？</h4>
+            答：充值满300元即可开票（一年内可累计），普通增值税发票，内容为设计服务费。下单时需填写完整的开票信息（包括发票抬头、税号、地址、电话、开户行、银行账号）
+            不备注默认不开票。如果需要开票请联系在线客服：4006002507，运费自理。
+            <h4>Q4：如何联系我们？</h4>
+            答：点击右侧悬浮窗口联系客服，您也可以添加E渲云渲染交流群：524420605。
+        </div>
+    </div>
+</div>
+<div class="e-xuan-img">
+</div>
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var payNum = 0;//支付金额
+        var payWay = 0;//支付方式
+        $('.taocan').unbind('click').bind('click', function () {
+            var index = $(this).index();
+            $('.taocan').removeClass('active').eq(index).addClass('active');
+            payNum = $(this).find('.red').html();
+            console.log(payNum);
+        });
+        $('.small-amount .item1').unbind('click').bind('click', function () {
+            var index = $(this).index();
+            $('.small-amount .item1').removeClass('active').eq(index).addClass('active');
+            payNum = $(this).find('.value').html();
+            console.log(payNum);
+        });
+        $('.payList li').unbind('click').bind('click', function () {
+            var index = $(this).index();
+            $('.payList li').removeClass('active').eq(index).addClass('active');
+            payWay = index;
+            console.log(payWay);
+        });
+        $('#chongzhijine').on('input', function () {
+            payNum = $(this).val();
+            console.log(payNum);
+        });
+
+        $('#submit_pay').unbind('click').bind('click', function () {
+            var postData = {
+                payNum,
+                payWay
+            };
+            console.log(postData);
+            alert('支付成功！');
+            /*$.ajax({
+                type: 'get',
+                url: '',
+                data: JSON.stringify(postData),
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });*/
+
+        });
+
+    });
+</script>
+</body>
+</html>
