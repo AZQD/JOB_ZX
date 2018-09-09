@@ -40,8 +40,8 @@
       margin-right: 14rpx;
       margin-top: 15rpx;
       height: 159rpx;
-      background: url("../../images/index/item01.png") no-repeat center;
-      background-size: cover;
+      border-radius:9rpx;
+      box-shadow:0rpx 9rpx 14rpx 2rpx rgba(0,153,255,0.03);
       .desc_item{
         padding-top: 40rpx;
         padding-left: 20rpx;
@@ -57,6 +57,30 @@
           margin-top: 10rpx;
         }
       }
+    }
+    .good_item01{
+      background: url(https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/index/item01.png) no-repeat center;
+      background-size: cover;
+    }
+    .good_item02{
+      background: url(https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/index/item02.png) no-repeat center;
+      background-size: cover;
+    }
+    .good_item03{
+      background: url(https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/index/item03.png) no-repeat center;
+      background-size: cover;
+    }
+    .good_item04{
+      background: url(https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/index/item04.png) no-repeat center;
+      background-size: cover;
+    }
+    .good_item05{
+      background: url(https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/index/item05.png) no-repeat center;
+      background-size: cover;
+    }
+    .good_item06{
+      background: url(https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/index/item06.png) no-repeat center;
+      background-size: cover;
     }
     .good_item:nth-child(2n){
       margin-right: 0;
@@ -78,69 +102,69 @@
 </style>
 
 <template>
-  <view class="wrapper">
+  <view class="wrapper" wx:if="{{domin}}">
 
     <view class="headerBox">
-      <image class="bannerImg" src="../../images/index/banner.png"></image>
+      <image class="bannerImg" src="{{domin}}/index/banner.png"></image>
     </view>
     <view class="menuBox">
       <view class="menu_item">
-        <image class="menu_item_icon" src="../../images/index/menu_icon01.png"></image>
+        <image class="menu_item_icon" src="{{domin}}/index/menu_icon01.png"></image>
         <text class="menu_item_name">价格表</text>
       </view>
       <view class="menu_item">
-        <image class="menu_item_icon" src="../../images/index/menu_icon02.png"></image>
+        <image class="menu_item_icon" src="{{domin}}/index/menu_icon02.png"></image>
         <text class="menu_item_name">我的账户</text>
       </view>
       <view class="menu_item">
-        <image class="menu_item_icon" src="../../images/index/menu_icon03.png"></image>
+        <image class="menu_item_icon" src="{{domin}}/index/menu_icon03.png"></image>
         <text class="menu_item_name">推荐有奖</text>
       </view>
       <view class="menu_item">
-        <image class="menu_item_icon" src="../../images/index/menu_icon04.png"></image>
+        <image class="menu_item_icon" src="{{domin}}/index/menu_icon04.png"></image>
         <text class="menu_item_name">衣仓</text>
       </view>
       <view class="menu_item">
-        <image class="menu_item_icon" src="../../images/index/menu_icon05.png"></image>
+        <image class="menu_item_icon" src="{{domin}}/index/menu_icon05.png"></image>
         <text class="menu_item_name">验证码</text>
       </view>
     </view>
 
     <view class="goodsBox">
-      <view class="good_item" style="background-image: url('../../images/index/item01.png')">
+      <view class="good_item good_item01">
         <view class="desc_item">
-          <view class="desc1">洗家具</view>
-          <view class="desc2">Wash the furniture</view>
+          <view class="desc1">洗衣</view>
+          <view class="desc2">LAUNDRY</view>
         </view>
       </view>
-      <view class="good_item" style="background-image: url('../../images/index/item01.png')">
+      <view class="good_item good_item02">
         <view class="desc_item">
-          <view class="desc1">洗家具</view>
-          <view class="desc2">Wash the furniture</view>
+          <view class="desc1">洗家居</view>
+          <view class="desc2">WASH THE FURNITURE</view>
         </view>
       </view>
-      <view class="good_item" style="background-image: url('../../images/index/item01.png')">
+      <view class="good_item good_item03">
         <view class="desc_item">
-          <view class="desc1">洗家具</view>
-          <view class="desc2">Wash the furniture</view>
+          <view class="desc1">洗包</view>
+          <view class="desc2">WASH BAG</view>
         </view>
       </view>
-      <view class="good_item" style="background-image: url('../../images/index/item01.png')">
+      <view class="good_item good_item04">
         <view class="desc_item">
-          <view class="desc1">洗家具</view>
-          <view class="desc2">Wash the furniture</view>
+          <view class="desc1">配件</view>
+          <view class="desc2">ACCESSORIES</view>
         </view>
       </view>
-      <view class="good_item" style="background-image: url('../../images/index/item01.png')">
+      <view class="good_item good_item05">
         <view class="desc_item">
-          <view class="desc1">洗家具</view>
-          <view class="desc2">Wash the furniture</view>
+          <view class="desc1">活动</view>
+          <view class="desc2">ACTIVITY</view>
         </view>
       </view>
-      <view class="good_item" style="background-image: url('../../images/index/item01.png')">
+      <view class="good_item good_item06">
         <view class="desc_item">
-          <view class="desc1">洗家具</view>
-          <view class="desc2">Wash the furniture</view>
+          <view class="desc1">洗鞋</view>
+          <view class="desc2">WASHOVER SHOE</view>
         </view>
       </view>
     </view>
@@ -152,6 +176,7 @@
 
 <script>
   import wepy from 'wepy'
+  import {globalData} from '../../utils/globalData'
 
   export default class Index extends wepy.page {
     config = {
@@ -164,7 +189,7 @@
     mixins = []
 
     data = {
-
+      domin:globalData.domin
     }
 
     computed = {
@@ -180,7 +205,7 @@
     }
 
     onLoad() {
-      let self = this
+      let that = this
     }
   }
 </script>

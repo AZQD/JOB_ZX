@@ -28,6 +28,7 @@
     config = {
       pages: [
         'pages/index/index',
+        'pages/order/order',
         'pages/test/test'
       ],
       window: {
@@ -49,7 +50,7 @@
             selectedIconPath: './images/index/tabbar_index_active.png'
           },
           {
-            pagePath: 'pages/test/test',
+            pagePath: 'pages/order/order',
             text: '我的订单',
             iconPath: './images/index/tabbar_order.png',
             selectedIconPath: './images/index/tabbar_order_active.png'
