@@ -1,47 +1,189 @@
 <style lang="less">
 
+  .wrapper{
+    padding-top: 15rpx;
+  }
   .menuBox{
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
     padding: 0 30rpx;
-    margin-top: 100rpx;
+    margin-bottom: 15rpx;
     display:flex;
     .menu_item{
       font-size:30rpx;
       color:#999;
       line-height: 29rpx;
-      padding: 35rpx 0;
+      padding: 35rpx 12rpx;
+      border-bottom: 5rpx solid transparent;
+    }
+    .active{
+      color: #078FEE;
+      border-bottom: 5rpx solid #078FEE;
+    }
+  }
+
+  .listBox{
+    .good-item{
+      margin-bottom: 27rpx;
+
+      .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 0 30rpx;
+        height: 69rpx;
+        font-size:26rpx;
+        .infoId{
+          color:#666;
+        }
+        .status{
+          color:#078FEE;
+        }
+      }
+      .middle{
+        padding: 18rpx 30rpx;
+        display: flex;
+        .left{
+          margin-right: 18rpx;
+          background-color: #fff;
+          .good_img{
+            width: 140rpx;
+            height: 140rpx;
+          }
+        }
+        .right{
+          flex-grow: 1;
+          .desc1{
+            color: #000;
+            font-size: 26rpx;
+          }
+          .desc2{
+            font-size:24rpx;
+            color: #666;
+            padding-top: 16rpx;
+          }
+        }
+      }
+      .bottom{
+        background-color: #fff;
+        padding-left: 30rpx;
+        text-align: right;
+        .price{
+          color: #000;
+          padding-right: 30rpx;
+          padding-top: 20rpx;
+          padding-bottom: 24rpx;
+          border-bottom: 2rpx solid #E3E3E3;
+          font-size:26rpx;
+          .num{
+            padding-left: 53rpx;
+            background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/order/money_icon.png) no-repeat left 10rpx center;
+            background-size: 34rpx 34rpx;
+          }
+        }
+        .ctrls{
+          padding: 24rpx 30rpx;
+          font-size: 30rpx;
+          .ctrl{
+            display: inline-block;
+            text-align: center;
+            width: 155rpx;
+            height:60rpx;
+            line-height: 60rpx;
+            border-radius:9rpx;
+            margin-right: 28rpx;
+          }
+          .ctrl:last-child{
+            margin-right: 0;
+          }
+          .blueBtn{
+            color: #078FEE;
+            border:2rpx solid #078FEE;
+          }
+          .greyBtn{
+            color: #666;
+            border:2rpx solid #666;
+          }
+        }
+      }
     }
   }
 
 </style>
 
 <template>
-  <view class="wrapper">
+  <view class="wrapper" wx:if="{{domin}}">
 
     <view class="menuBox">
-      <view class="menu_item">
-        价格表
+      <view catchtap="stateToggle(0)" class="{{activeMenu==0?'menu_item active':'menu_item'}}">全部</view>
+      <view catchtap="stateToggle(1)" class="{{activeMenu==1?'menu_item active':'menu_item'}}">待支付</view>
+      <view catchtap="stateToggle(2)" class="{{activeMenu==2?'menu_item active':'menu_item'}}">洗护中</view>
+      <view catchtap="stateToggle(3)" class="{{activeMenu==3?'menu_item active':'menu_item'}}">已完成</view>
+      <view catchtap="stateToggle(4)" class="{{activeMenu==4?'menu_item active':'menu_item'}}">取衣</view>
+    </view>
+    <view class="listBox">
+      <view class="good-item">
+        <view class="top">
+          <view class="infoId">订单编号 : 201807230003</view>
+          <view class="status">等待洗货小哥确认</view>
+        </view>
+        <view class="middle">
+          <view class="left">
+            <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          </view>
+          <view class="right">
+            <view class="desc1">待评价的衣服</view>
+            <view class="desc2">下单时间: 2018年07月23日 14:30:46</view>
+          </view>
+        </view>
+        <view class="bottom">
+          <view class="price">
+            共1件商品<text class="num">预约额:￥0.01</text>
+          </view>
+          <view class="ctrls">
+            <text class="ctrl greyBtn">取消</text>
+            <text class="ctrl blueBtn">洗货小哥</text>
+            <!--<text class="ctrl blueBtn">评价</text>-->
+            <!--<text class="ctrl blueBtn">查看物流</text>-->
+          </view>
+        </view>
       </view>
-      <view class="menu_item">
-        价格表
-      </view>
-      <view class="menu_item">
-        价格表
-      </view>
-      <view class="menu_item">
-        价格表
-      </view>
-      <view class="menu_item">
-        价格表
+      <view class="good-item">
+        <view class="top">
+          <view class="infoId">订单编号 : 201807230003</view>
+          <view class="status">等待洗货小哥确认</view>
+        </view>
+        <view class="middle">
+          <view class="left">
+            <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          </view>
+          <view class="right">
+            <view class="desc1">待评价的衣服</view>
+            <view class="desc2">下单时间: 2018年07月23日 14:30:46</view>
+          </view>
+        </view>
+        <view class="bottom">
+          <view class="price">
+            共1件商品<text class="num">预约额:￥0.01</text>
+          </view>
+          <view class="ctrls">
+            <text class="ctrl greyBtn">取消</text>
+            <text class="ctrl blueBtn">洗货小哥</text>
+            <!--<text class="ctrl blueBtn">评价</text>-->
+            <!--<text class="ctrl blueBtn">查看物流</text>-->
+          </view>
+        </view>
       </view>
     </view>
+
   </view>
 </template>
 
 <script>
   import wepy from 'wepy'
+  import {globalData} from '../../utils/globalData'
 
   export default class Index extends wepy.page {
     config = {
@@ -54,7 +196,8 @@
     mixins = []
 
     data = {
-
+      domin:globalData.domin,
+      activeMenu:0
     }
 
     computed = {
@@ -62,7 +205,9 @@
     }
 
     methods = {
-
+      stateToggle(type){
+        this.activeMenu = type;
+      }
     }
 
     events = {
