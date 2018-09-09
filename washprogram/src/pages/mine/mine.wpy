@@ -1,0 +1,235 @@
+<style lang="less">
+  .headerBox{
+    background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/mine/header_bg.png) no-repeat;
+    background-size: 100% 100%;
+    .avatar{
+      padding: 0 30rpx;
+      padding-top: 46rpx;
+      padding-bottom: 24rpx;
+      display:flex;
+      align-items: center;
+      &_icon{
+         width:122rpx;
+         height:122rpx;
+         border-radius:50%;
+         margin-right: 22rpx;
+       }
+      &_name{
+         font-size:36rpx;
+         color:#FEFEFE;
+       }
+    }
+    .account{
+      padding: 0 30rpx;
+      color: #F2FAFF;
+      font-size: 28rpx;
+      padding-right: 66rpx;
+      background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/mine/view_icon.png) no-repeat right center;
+      background-size: 37rpx 25rpx;
+    }
+    .recharge{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16rpx;
+      padding-left: 30rpx;
+      color: #fff;
+      .left{
+        font-size:46rpx;
+      }
+      .right{
+        padding: 12rpx 25rpx;
+        padding-right: 30rpx;
+        font-size:28rpx;
+        background:linear-gradient(90deg,rgba(88,147,255,1),rgba(83,99,240,1));
+        border-radius:30rpx 0 0 30rpx;
+        display: flex;
+        align-items: center;
+        .money_icon{
+          width: 31rpx;
+          height: 30rpx;
+        }
+        .text{
+          padding: 0 12rpx;
+        }
+        .more_white{
+          width: 14rpx;
+          height: 26rpx;
+        }
+      }
+    }
+    .tabs{
+      padding-top: 50rpx;
+      padding-bottom: 36rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size:30rpx;
+      .left{
+        flex-grow: 1;
+        text-align: center;
+        border-right: 4rpx solid #fff;
+      }
+      .right{
+        flex-grow: 1;
+        text-align: center;
+      }
+    }
+  }
+  .menuBox{
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 32rpx 30rpx;
+    display:flex;
+    .menu_item{
+      align-items: center;
+      flex-direction: column;
+      display:flex;
+      &_icon{
+         width: 70rpx;
+         height: 70rpx;
+       }
+      &_name{
+         font-size:26rpx;
+         color:#333333;
+         margin-top: 12rpx;
+       }
+    }
+  }
+
+  .footerBox{
+    color: #333;
+    background-color: #fff;
+    margin-top: 30rpx;
+    .item{
+      display: flex;
+      align-items: center;
+      .left{
+        padding-left: 30rpx;
+        padding-right: 36rpx;
+        .item_icon{
+          width: 48rpx;
+          height: 48rpx;
+        }
+      }
+      .right{
+        padding: 38rpx 0;
+        flex-grow: 1;
+        font-size:30rpx;
+        border-bottom: 2rpx solid #E3E3E3;
+        background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/mine/more_black.png) no-repeat right 30rpx center;
+        background-size: 14rpx 26rpx;
+      }
+    }
+    .item:last-child{
+      .right{
+        border-bottom: 0;
+      }
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="headerBox">
+      <view class="avatar">
+        <image class="avatar_icon" src="{{domin}}/mine/head_img.png"></image>
+        <text class="avatar_name">加菲猫</text>
+      </view>
+      <text class="account">账户余额</text>
+      <view class="recharge">
+        <view class="left">666666</view>
+        <view class="right">
+          <image class="money_icon" src="{{domin}}/mine/money_icon.png"></image>
+          <text class="text">在线充值</text>
+          <image class="more_white" src="{{domin}}/mine/more_white.png"></image>
+        </view>
+      </view>
+      <view class="tabs">
+        <view class="left">代他人充值</view>
+        <view class="right">申请发票</view>
+      </view>
+    </view>
+
+    <view class="menuBox">
+      <view class="menu_item">
+        <image class="menu_item_icon" src="{{domin}}/mine/order_icon.png"></image>
+        <text class="menu_item_name">我的订单</text>
+      </view>
+      <view class="menu_item">
+        <image class="menu_item_icon" src="{{domin}}/mine/address_icon.png"></image>
+        <text class="menu_item_name">我的地址</text>
+      </view>
+      <view class="menu_item">
+        <image class="menu_item_icon" src="{{domin}}/mine/deliver_icon.png"></image>
+        <text class="menu_item_name">派送招募</text>
+      </view>
+      <view class="menu_item">
+        <image class="menu_item_icon" src="{{domin}}/mine/service_icon.png"></image>
+        <text class="menu_item_name">在线客服</text>
+      </view>
+    </view>
+
+    <view class="footerBox">
+      <view class="item">
+        <view class="left">
+          <image class="item_icon" src="{{domin}}/mine/bag.png"></image>
+        </view>
+        <view class="right">我的环保袋</view>
+      </view>
+      <view class="item">
+        <view class="left">
+          <image class="item_icon" src="{{domin}}/mine/storage.png"></image>
+        </view>
+        <view class="right">衣仓</view>
+      </view>
+      <view class="item">
+        <view class="left">
+          <image class="item_icon" src="{{domin}}/mine/setting.png"></image>
+        </view>
+        <view class="right">设置</view>
+      </view>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '../../utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '我的'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>

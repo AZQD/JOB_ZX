@@ -29,6 +29,7 @@
       pages: [
         'pages/index/index',
         'pages/order/order',
+        'pages/mine/mine',
         'pages/test/test'
       ],
       window: {
@@ -56,7 +57,7 @@
             selectedIconPath: './images/index/tabbar_order_active.png'
           },
           {
-            pagePath: 'pages/test/test',
+            pagePath: 'pages/mine/mine',
             text: '我的',
             iconPath: './images/index/tabbar_mine.png',
             selectedIconPath: './images/index/tabbar_mine_active.png'
