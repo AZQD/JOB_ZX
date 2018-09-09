@@ -1,7 +1,7 @@
 <style lang="less">
   .headerBox{
     color: deeppink;
-    .bannerImg{
+    .slide-image{
       width: 100%;
       height: 283rpx;
     }
@@ -105,7 +105,11 @@
   <view class="wrapper" wx:if="{{domin}}">
 
     <view class="headerBox">
-      <image class="bannerImg" src="{{domin}}/index/banner.png"></image>
+      <swiper duration="500" circular>
+        <swiper-item>
+          <image class="slide-image" src="{{domin}}/index/banner.png" />
+        </swiper-item>
+      </swiper>
     </view>
     <view class="menuBox">
       <view class="menu_item">
