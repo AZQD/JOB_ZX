@@ -1,0 +1,79 @@
+.wrapper .cardBox {
+  margin-bottom: 0.41666667rem;
+  color: #666;
+  padding: 0.2962963rem;
+}
+.wrapper .cardBox .cardList .card_item {
+  background-color: #fff;
+  border-radius: 0.18518519rem;
+  font-size: 0.33333333rem;
+  margin-bottom: 0.2962963rem;
+  padding: 0.18518519rem 0.2962963rem;
+  line-height: 0.51851852rem;
+}
+.wrapper .cardBox .add_card {
+  font-size: 0;
+  height: 1.05555556rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 0.11111111rem;
+}
+.wrapper .cardBox .add_card .add_icon {
+  width: 0.44444444rem;
+  height: 0.44444444rem;
+  margin-right: 0.2037037rem;
+}
+.wrapper .cardBox .add_card .add_text {
+  font-size: 0.44444444rem;
+}
+.alertWrap {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+.alertWrap .alertBox {
+  text-align: center;
+  margin: 0 0.92592593rem;
+  font-size: 0.44444444rem;
+  background-color: #fff;
+  position: relative;
+  top: 36%;
+  color: #666;
+  border-radius: 0.18518519rem;
+}
+.alertWrap .alertBox .title {
+  line-height: 1.03703704rem;
+  padding-top: 0.38888889rem;
+}
+.alertWrap .alertBox .iptBox {
+  font-size: 0.33333333rem;
+  padding: 0.11111111rem 0.69444444rem;
+}
+.alertWrap .alertBox .iptBox .cardIpt {
+  outline: none;
+  width: 100%;
+  padding: 0.18518519rem 0;
+  border: 0.01388889rem solid #666;
+  border-radius: 0.11111111rem;
+  text-indent: 0.22222222rem;
+}
+.alertWrap .alertBox .btns {
+  display: flex;
+  align-items: center;
+  margin-top: 0.68518519rem;
+  height: 1.09259259rem;
+  line-height: 1.09259259rem;
+  color: #77D2EC;
+  border-top: 0.00925926rem solid #bfbfbf;
+}
+.alertWrap .alertBox .btns .part {
+  flex-grow: 1;
+  width: 50%;
+}
+.alertWrap .alertBox .btns .cancel {
+  border-right: 0.00925926rem solid #bfbfbf;
+}

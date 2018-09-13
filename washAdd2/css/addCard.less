@@ -1,0 +1,88 @@
+@rem : 108rem;
+
+.wrapper{
+
+  .cardBox{
+    margin-bottom: 45/@rem;
+    color: #666;
+    padding: 32/@rem;
+    .cardList{
+      .card_item{
+        background-color: #fff;
+        border-radius: 20/@rem;
+        font-size: 36/@rem;
+        margin-bottom: 32/@rem;
+        padding: 20/@rem 32/@rem;
+        line-height: 56/@rem;
+      }
+    }
+    .add_card{
+      font-size: 0;
+      height: 114/@rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 12/@rem;
+      .add_icon{
+        width: 48/@rem;
+        height: 48/@rem;
+        margin-right: 22/@rem;
+      }
+      .add_text{
+        font-size: 48/@rem;
+      }
+    }
+  }
+
+}
+
+.alertWrap{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background: RGBA(0,0,0,.6);
+  .alertBox{
+    text-align: center;
+    margin: 0 100/@rem;
+    font-size: 48/@rem;
+    background-color: #fff;
+    position: relative;
+    top: 36%;
+    color: #666;
+    border-radius: 20/@rem;
+    .title{
+      line-height: 112/@rem;
+      padding-top: 42/@rem;
+    }
+    .iptBox{
+      font-size: 36/@rem;
+      padding: 12/@rem 75/@rem;
+      .cardIpt{
+        outline: none;
+        width: 100%;
+        padding: 20/@rem 0;
+        border: 1.5/@rem solid #666;
+        border-radius: 12/@rem;
+        text-indent: 24/@rem;
+      }
+    }
+    .btns{
+      display: flex;
+      align-items: center;
+      margin-top: 74/@rem;
+      height: 118/@rem;
+      line-height: 118/@rem;
+      color: #77D2EC;
+      border-top: 1/@rem solid #bfbfbf;
+      .part{
+        flex-grow: 1;
+        width: 50%;
+      }
+      .cancel{
+        border-right: 1/@rem solid #bfbfbf;
+      }
+    }
+  }
+}
