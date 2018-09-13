@@ -11,6 +11,24 @@ $(function(){
 
         var cardIpt = $.trim($('#cardIpt').val());
         console.log(cardIpt);
+        
+        /*$.ajax({
+            type: 'get',
+            url: '',
+            data: '',
+            success: function (data) {
+                console.log(data);
+                if(true){
+                    
+                }else {
+                    alert('兑换失败');
+                }
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });*/
+        
         $('.wrapper .cardBox .cardList').append(
             '<div class="card_item">\n' +
             '    <div class="item_id">卡号：66666666666</div>\n' +
