@@ -1,0 +1,85 @@
+<style lang="less">
+    .guideBox{
+        .swiper-item{
+            font-size: 20rpx;
+            color:rgba(102,102,102,1);
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+        }
+        .gotoIndex{
+
+        }
+        .rightSelect{
+            position: relative;
+        }
+        .rightSelect::after{
+            content: " ";
+            display: inline-block;
+            height: 6rpx;
+            width: 6rpx;
+            border-width: 2rpx 2rpx 0 0;
+            border-color:rgba(102,102,102,1);
+            border-style: solid;
+            -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+            transform: matrix(.71,.71,-.71,.71,0,0);
+            position: absolute;
+            top: calc(50% - 6rpx);
+            right: -12rpx;
+        }
+    }
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="guideBox">
+        <swiper duration="500" class="swiper-item">
+            <swiper-item>
+                <text class="rightSelect">跳过</text>
+                <image class="menu_item_icon" src="{{domin}}/mine/order_icon.png"></image>
+            </swiper-item>
+            <swiper-item>
+                <view>4445566</view>
+            </swiper-item>
+        </swiper>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '../../utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '我的'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>
