@@ -6,26 +6,48 @@
             width: 100vw;
             height: 100vh;
             background-color: #fff;
-        }
-        .gotoIndex{
-
-        }
-        .rightSelect{
-            position: relative;
-        }
-        .rightSelect::after{
-            content: " ";
-            display: inline-block;
-            height: 6rpx;
-            width: 6rpx;
-            border-width: 2rpx 2rpx 0 0;
-            border-color:rgba(102,102,102,1);
-            border-style: solid;
-            -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
-            transform: matrix(.71,.71,-.71,.71,0,0);
-            position: absolute;
-            top: calc(50% - 6rpx);
-            right: -12rpx;
+            .jumpWrap{
+                padding-top: 44rpx;
+                color: #666666;
+                font-size: 30rpx;
+                padding-right: 77rpx;
+                text-align:right;
+                .rightSelect{
+                    padding-right: 20rpx;
+                    position: relative;
+                }
+                .rightSelect::after{
+                    content: " ";
+                    display: inline-block;
+                    height: 15rpx;
+                    width: 15rpx;
+                    border-width: 2rpx 2rpx 0 0;
+                    border-color:rgba(102,102,102,1);
+                    border-style: solid;
+                    -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+                    transform: matrix(.71,.71,-.71,.71,0,0);
+                    position: absolute;
+                    top: calc(50% - 15rpx);
+                    right: 0;
+                }
+            }
+            &-img{
+                 width: 100%;
+             }
+             .btnWrap{
+                 text-align:center;
+                 .gotoBtn{
+                     color: #fff;
+                     font-size:28rpx;
+                     display: inline-block;
+                     height:70rpx;
+                     padding: 0 82rpx;
+                     line-height: 70rpx;
+                     background:linear-gradient(91deg,rgba(57,57,232,1),rgba(57,121,255,1));
+                     border-radius:35rpx;
+                     box-shadow: 0 10rpx 32rpx rgba(173,194,253,1);
+                 }
+             }
         }
     }
 </style>
@@ -36,11 +58,17 @@
     <view class="guideBox">
         <swiper duration="500" class="swiper-item">
             <swiper-item>
-                <text class="rightSelect">跳过</text>
-                <image class="menu_item_icon" src="{{domin}}/mine/order_icon.png"></image>
+                <view class="jumpWrap"><text class="rightSelect" bindtap="gotoIndex">跳过</text></view>
+                <image class="swiper-item-img" src="{{domin}}/mine/order_icon.png"></image>
             </swiper-item>
             <swiper-item>
-                <view>4445566</view>
+                <image class="swiper-item-img" src="{{domin}}/mine/order_icon.png"></image>
+            </swiper-item>
+            <swiper-item>
+                <image class="swiper-item-img" src="{{domin}}/mine/order_icon.png"></image>
+                <view class="btnWrap">
+                    <text class="gotoBtn" bindtap="gotoIndex">进入首页</text>
+                </view>
             </swiper-item>
         </swiper>
     </view>
@@ -49,37 +77,35 @@
 </template>
 
 <script>
-  import wepy from 'wepy'
-  import {globalData} from '../../utils/globalData'
+  import wepy from 'wepy';
+  import { globalData } from '../../utils/globalData';
 
   export default class Index extends wepy.page {
     config = {
-      navigationBarTitleText: '我的'
-    }
-    components = {
+      navigationBarTitleText: '欢迎来到洗货'
+    };
+    components = {};
 
-    }
-
-    mixins = []
+    mixins = [];
 
     data = {
-      domin:globalData.domin
-    }
+      domin: globalData.domin
+    };
 
-    computed = {
-
-    }
+    computed = {};
 
     methods = {
+      gotoIndex() {
+        wx.switchTab({
+          url: '../index/index'
+        });
+      }
+    };
 
-    }
-
-    events = {
-
-    }
+    events = {};
 
     onLoad() {
-      let that = this
+      let that = this;
     }
   }
 </script>
