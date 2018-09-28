@@ -4,7 +4,7 @@
             font-size: 20rpx;
             color:rgba(102,102,102,1);
             width: 100vw;
-            height: 100vh;
+            min-height: 100vh;
             background-color: #fff;
             .jumpWrap{
                 padding-top: 44rpx;
@@ -34,6 +34,19 @@
             &-img{
                  width: 100%;
              }
+            &-img01{
+               margin-top: 54rpx;
+              height: 1210rpx;
+            }
+            &-img02{
+               margin-top: 204rpx;
+               height: 1128rpx;
+             }
+            &-img03{
+               margin-top: 214rpx;
+               margin-bottom: 58rpx;
+               height: 920rpx;
+             }
              .btnWrap{
                  text-align:center;
                  .gotoBtn{
@@ -59,13 +72,13 @@
         <swiper duration="500" class="swiper-item">
             <swiper-item>
                 <view class="jumpWrap"><text class="rightSelect" bindtap="gotoIndex">跳过</text></view>
-                <image class="swiper-item-img" src="{{domin}}/mine/order_icon.png"></image>
+                <image class="swiper-item-img swiper-item-img01" src="{{domin}}/guide/guide01.png"></image>
             </swiper-item>
             <swiper-item>
-                <image class="swiper-item-img" src="{{domin}}/mine/order_icon.png"></image>
+                <image class="swiper-item-img swiper-item-img02" src="{{domin}}/guide/guide02.png"></image>
             </swiper-item>
             <swiper-item>
-                <image class="swiper-item-img" src="{{domin}}/mine/order_icon.png"></image>
+                <image class="swiper-item-img swiper-item-img03" src="{{domin}}/guide/guide03.png"></image>
                 <view class="btnWrap">
                     <text class="gotoBtn" bindtap="gotoIndex">进入首页</text>
                 </view>
