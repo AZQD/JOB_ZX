@@ -31,6 +31,7 @@
         'pages/index/index',
         'pages/order/order',
         'pages/mine/mine',
+        'pages/recharge/recharge',//充值
         'pages/test/test'
       ],
       window: {
