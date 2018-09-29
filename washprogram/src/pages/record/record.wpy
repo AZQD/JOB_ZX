@@ -1,0 +1,203 @@
+<style lang="less">
+
+  .wrapper{
+    padding-top: 15rpx;
+  }
+  .menuBox{
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0 128rpx;
+    margin-bottom: 15rpx;
+    display:flex;
+    .menu_item{
+      font-size:30rpx;
+      color:#999;
+      line-height: 29rpx;
+      padding: 35rpx 0;
+      border-bottom: 5rpx solid transparent;
+    }
+    .active{
+      color: #078FEE;
+      border-bottom: 5rpx solid #078FEE;
+    }
+  }
+
+  .rechargeBox{
+    padding-left: 30rpx;
+    background-color: #fff;
+    .chargeItem{
+      padding: 24rpx 0;
+      padding-right: 30rpx;
+      border-bottom: 2rpx solid #E3E3E3;
+      .line{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .line1{
+        padding-bottom: 18rpx;
+        font-size: 26rpx;
+        .desc1{
+          color:#000;
+          font-size:26rpx;
+        }
+        .desc2{
+          color:#333;
+          .realy{
+            color:#078FEE;
+            padding-left: 24rpx;
+          }
+        }
+      }
+      .line2{
+        font-size: 24rpx;
+        color: #999;
+        .desc3{
+
+        }
+        .desc4{
+
+        }
+      }
+    }
+    .chargeItem:last-child{
+      border-bottom: none;
+    }
+  }
+
+  .consumeBox{
+    padding-left: 30rpx;
+    background-color: #fff;
+    .consumeItem{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24rpx 0;
+      font-size: 26rpx;
+      padding-right: 30rpx;
+      border-bottom: 2rpx solid #E3E3E3;
+      .left{
+        .desc1{
+          color: #000;
+          padding-bottom: 18rpx;
+        }
+        .desc2{
+          color: #999;
+          font-size: 24rpx;
+        }
+      }
+      .right{
+        color:#078FEE;
+      }
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="menuBox">
+      <view catchtap="stateToggle(0)" class="{{activeMenu==0?'menu_item active':'menu_item'}}">充值明细</view>
+      <view catchtap="stateToggle(1)" class="{{activeMenu==1?'menu_item active':'menu_item'}}">消费明细</view>
+    </view>
+
+    <view class="rechargeBox" wx:if="{{activeMenu==0}}">
+      <view class="chargeItem">
+        <view class="line line1">
+          <view class="desc1">为本账号充值</view>
+          <view class="desc2">到账:40.00<text class="realy">实付:40.00</text></view>
+        </view>
+        <view class="line line2">
+          <view class="desc3">2018-07-09</view>
+          <view class="desc4">优惠:10折优惠</view>
+        </view>
+      </view>
+      <view class="chargeItem">
+        <view class="line line1">
+          <view class="desc1">为本账号充值</view>
+          <view class="desc2">到账:40.00<text class="realy">实付:40.00</text></view>
+        </view>
+        <view class="line line2">
+          <view class="desc3">2018-07-09</view>
+          <view class="desc4">优惠:10折优惠</view>
+        </view>
+      </view>
+      <view class="chargeItem">
+        <view class="line line1">
+          <view class="desc1">为本账号充值</view>
+          <view class="desc2">到账:40.00<text class="realy">实付:40.00</text></view>
+        </view>
+        <view class="line line2">
+          <view class="desc3">2018-07-09</view>
+          <view class="desc4">优惠:10折优惠</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="consumeBox" wx:if="{{activeMenu==1}}">
+      <view class="consumeItem">
+        <view class="left">
+          <view class="desc1">预付款</view>
+          <view class="desc2">2018-07-09</view>
+        </view>
+        <view class="right">支付金额:40.00</view>
+      </view>
+      <view class="consumeItem">
+        <view class="left">
+          <view class="desc1">预付款</view>
+          <view class="desc2">2018-07-09</view>
+        </view>
+        <view class="right">支付金额:40.00</view>
+      </view>
+      <view class="consumeItem">
+        <view class="left">
+          <view class="desc1">预付款</view>
+          <view class="desc2">2018-07-09</view>
+        </view>
+        <view class="right">支付金额:40.00</view>
+      </view>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '../../utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '充值消费记录'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin,
+      activeMenu:0
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      stateToggle(type){
+        this.activeMenu = type;
+      }
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let self = this
+    }
+  }
+</script>
