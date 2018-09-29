@@ -7,6 +7,9 @@
     justify-content: space-between;
     box-sizing: border-box;
   }
+  page{
+    background-color: #F4F4F4;
+  }
   .wrapper{
     font-size: 0;
     min-height: 100vh;
