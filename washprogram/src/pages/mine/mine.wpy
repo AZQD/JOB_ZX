@@ -143,20 +143,20 @@
       <text class="account">账户余额</text>
       <view class="recharge">
         <view class="left">666666</view>
-        <view class="right">
+        <view class="right" catchtap="gotoRecharge(1)">
           <image class="money_icon" src="{{domin}}/mine/money_icon.png"></image>
           <text class="text">在线充值</text>
           <image class="more_white" src="{{domin}}/mine/more_white.png"></image>
         </view>
       </view>
       <view class="tabs">
-        <view class="left">代他人充值</view>
+        <view class="left" catchtap="gotoRecharge(2)">代他人充值</view>
         <view class="right">申请发票</view>
       </view>
     </view>
 
     <view class="menuBox">
-      <view class="menu_item">
+      <view class="menu_item" catchtap="gotoOrder">
         <image class="menu_item_icon" src="{{domin}}/mine/order_icon.png"></image>
         <text class="menu_item_name">我的订单</text>
       </view>
@@ -221,7 +221,16 @@
     }
 
     methods = {
-
+      gotoRecharge(type){ //type 1：给自己充值；2：给他人充值；
+        wx.navigateTo({
+          url:`../recharge/recharge?type=${type}`
+        });
+      },
+      gotoOrder(){
+        wx.switchTab({
+          url:`../order/order`
+        });
+      }
     }
 
     events = {

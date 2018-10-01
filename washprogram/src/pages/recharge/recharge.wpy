@@ -148,14 +148,14 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{domin}}" data-type="{{type}}">
 
-    <view class="headerBox">
+    <view class="headerBox" wx:if="{{type==1}}">
       <view class="account">余额</view>
       <view class="account_num">¥ 666666</view>
     </view>
 
-    <view class="inputBox">
+    <view class="inputBox" wx:if="{{type==2}}">
       <input class="phoneIpt" type="text" placeholder-class="placeholderStyle" placeholder="请输入好友手机号码"/>
       <image class="check" src="{{domin}}/recharge/check.png"></image>
       <view class="warning">该用户不存在请确认后重试！</view>
@@ -207,7 +207,7 @@
       </view>
     </view>
 
-    <view class="ctrlBtnBox">立即充值</view>
+    <view class="ctrlBtnBox" catchtap="gotoRecord">立即充值</view>
 
   </view>
 </template>
@@ -227,7 +227,8 @@
     mixins = []
 
     data = {
-      domin:globalData.domin
+      domin: globalData.domin,
+      type: 0, //1：给自己充值；2：给他人充值；
     }
 
     computed = {
@@ -235,15 +236,21 @@
     }
 
     methods = {
-
+      gotoRecord(){
+        wx.navigateTo({
+          url:`../record/record`
+        });
+      },
     }
 
     events = {
 
     }
 
-    onLoad() {
-      let that = this
+    onLoad(options) {
+      let that = this;
+      this.type = options.type;
+      this.$apply();
     }
   }
 </script>

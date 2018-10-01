@@ -116,7 +116,7 @@
         <image class="menu_item_icon" src="{{domin}}/index/menu_icon01.png"></image>
         <text class="menu_item_name">价格表</text>
       </view>
-      <view class="menu_item">
+      <view class="menu_item" catchtap="gotoMine">
         <image class="menu_item_icon" src="{{domin}}/index/menu_icon02.png"></image>
         <text class="menu_item_name">我的账户</text>
       </view>
@@ -201,7 +201,11 @@
     }
 
     methods = {
-
+      gotoMine(){
+        wx.switchTab({
+          url:`../mine/mine`
+        });
+      }
     }
 
     events = {
