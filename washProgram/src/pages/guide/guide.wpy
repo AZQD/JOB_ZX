@@ -71,7 +71,7 @@
     <view class="guideBox">
         <swiper duration="500" class="swiper-item">
             <swiper-item>
-                <view class="jumpWrap"><text class="rightSelect" bindtap="gotoIndex">跳过</text></view>
+                <view class="jumpWrap"><text class="rightSelect" catchtap="gotoIndex">跳过</text></view>
                 <image class="swiper-item-img swiper-item-img01" src="{{domin}}/guide/guide01.png"></image>
             </swiper-item>
             <swiper-item>
@@ -80,7 +80,7 @@
             <swiper-item>
                 <image class="swiper-item-img swiper-item-img03" src="{{domin}}/guide/guide03.png"></image>
                 <view class="btnWrap">
-                    <text class="gotoBtn" bindtap="gotoIndex">进入首页</text>
+                    <text class="gotoBtn" catchtap="gotoIndex">进入首页</text>
                 </view>
             </swiper-item>
         </swiper>
