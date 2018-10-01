@@ -164,27 +164,27 @@
     <view class="rechargeBox">
       <view class="title">充值金额</view>
       <view class="charges">
-        <view class="chargeItem active">
+        <view catchtap="chargeToggle(0)" class="{{currentCharge==0?'chargeItem active':'chargeItem'}}">
           <view class="money">50</view>
           <view class="desc">充50送50新用户专享</view>
         </view>
-        <view class="chargeItem">
+        <view catchtap="chargeToggle(1)" class="{{currentCharge==1?'chargeItem active':'chargeItem'}}">
           <view class="money">100</view>
           <view class="desc">充100送100</view>
         </view>
-        <view class="chargeItem">
+        <view catchtap="chargeToggle(2)" class="{{currentCharge==2?'chargeItem active':'chargeItem'}}">
           <view class="money">300</view>
           <view class="desc">充300送300</view>
         </view>
-        <view class="chargeItem">
+        <view catchtap="chargeToggle(3)" class="{{currentCharge==3?'chargeItem active':'chargeItem'}}">
           <view class="money">500</view>
           <view class="desc">充500送500</view>
         </view>
-        <view class="chargeItem">
+        <view catchtap="chargeToggle(4)" class="{{currentCharge==4?'chargeItem active':'chargeItem'}}">
           <view class="money">1000</view>
           <view class="desc">充1000送1000</view>
         </view>
-        <view class="chargeItem">
+        <view catchtap="chargeToggle(5)" class="{{currentCharge==5?'chargeItem active':'chargeItem'}}">
           <view class="money">2000</view>
           <view class="desc">充2000送2000</view>
         </view>
@@ -194,15 +194,15 @@
     <view class="payBox">
       <view class="title">选择充值方式</view>
       <view class="ways">
-        <view class="wayItem active">
+        <view class="wayItem" catchtap="payToggle(0)">
           <image class="item_icon" src="{{domin}}/recharge/alipay.png"></image>
           <view class="item_name">支付宝</view>
-          <image class="item_check" src="{{domin}}/recharge/checked.png"></image>
+          <image class="item_check" src="{{domin}}{{currentPay==0?'/recharge/checked.png':'/recharge/check.png'}}"></image>
         </view>
-        <view class="wayItem active">
+        <view class="wayItem" catchtap="payToggle(1)">
           <image class="item_icon" src="{{domin}}/recharge/wechat.png"></image>
           <view class="item_name">微信支付</view>
-          <image class="item_check" src="{{domin}}/recharge/check.png"></image>
+          <image class="item_check" src="{{domin}}{{currentPay==1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
         </view>
       </view>
     </view>
@@ -229,6 +229,8 @@
     data = {
       domin: globalData.domin,
       type: 0, //1：给自己充值；2：给他人充值；
+      currentCharge:0,//充值金额类型
+      currentPay:0,//0：支付宝； 1：微信
     }
 
     computed = {
@@ -241,6 +243,14 @@
           url:`../record/record`
         });
       },
+      chargeToggle(type){
+        this.currentCharge = type;
+        this.$apply();
+      },
+      payToggle(type){
+        this.currentPay = type;
+        this.$apply();
+      }
     }
 
     events = {

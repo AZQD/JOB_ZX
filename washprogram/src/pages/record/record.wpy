@@ -189,6 +189,7 @@
     methods = {
       stateToggle(type){
         this.activeMenu = type;
+        this.$apply();
       }
     }
 
