@@ -200,7 +200,7 @@
 
 <script>
   import wepy from 'wepy'
-  import {globalData} from '../../utils/globalData'
+  import {globalData} from '@utils/globalData'
 
   export default class Index extends wepy.page {
     config = {
