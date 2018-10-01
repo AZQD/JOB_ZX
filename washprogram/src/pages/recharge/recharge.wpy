@@ -259,7 +259,7 @@
         }else {
           this.truePhone = false;
         }
-
+        this.$apply();
       },
       blurPhone(event){
         if(globalData.regPhone.test(event.detail.value)){
@@ -267,6 +267,7 @@
         }else {
           this.phoneTip = true;
         }
+        this.$apply();
       }
     }
 
