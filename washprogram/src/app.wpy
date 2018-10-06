@@ -36,6 +36,7 @@
         'pages/mine/mine',
         'pages/recharge/recharge',//充值
         'pages/record/record',//充值消费记录
+        'pages/yuYue/yuYue',//预约下单
         'pages/test/test'
       ],
       window: {

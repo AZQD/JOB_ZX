@@ -1,0 +1,269 @@
+<style lang="less">
+
+  .addressBox{
+    padding: 32rpx 0;
+    color: #333;
+    margin: 14rpx 0;
+    display: flex;
+    align-items: center;
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/yuYue/address_line.png) no-repeat left bottom;
+    background-size: 100% 5rpx;
+    .left{
+      padding-left: 30rpx;
+      padding-right: 24rpx;
+      .address_icon{
+        width: 30rpx;
+        height: 40rpx;
+      }
+    }
+    .right{
+      flex-grow: 1;
+      background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/mine/more_black.png) no-repeat right 30rpx center;
+      background-size: 14rpx 26rpx;
+      .desc1{
+        color: #333;
+        .name{
+          font-size: 28rpx;
+          margin-right: 12rpx;
+        }
+        .phone{
+          font-size: 26rpx;
+        }
+      }
+      .desc2{
+        margin-top: 12rpx;
+        color: #625D65;
+        font-size: 24rpx;
+      }
+    }
+  }
+
+  .timeBox{
+    padding: 24rpx 0;
+    display: flex;
+    background-color: #fff;
+    .left{
+      font-size:28rpx;
+      color: #333;
+      padding-left: 32rpx;
+      flex-grow: 1;
+      line-height:40rpx;
+    }
+    .right{
+      padding-right: 54rpx;
+      line-height:40rpx;
+      font-size: 24rpx;
+      color: #999;
+      background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/mine/more_black.png) no-repeat right 30rpx center;
+      background-size: 14rpx 26rpx;
+    }
+  }
+
+  .serviceBox{
+    margin-top: 14rpx;
+    .top{
+      padding: 24rpx 0;
+      display: flex;
+      background-color: #fff;
+      .left{
+        font-size:28rpx;
+        color: #333;
+        padding-left: 32rpx;
+        flex-grow: 1;
+        line-height:40rpx;
+      }
+      .right{
+        padding-right: 54rpx;
+        line-height:40rpx;
+        font-size: 24rpx;
+        color: #999;
+      }
+    }
+    .bottom{
+      padding-left: 30rpx;
+      .item{
+        border-bottom: 1rpx solid #E2E2E2;
+        padding: 12rpx 0;
+        padding-right: 30rpx;
+        display: flex;
+        .good_img{
+          width: 92rpx;
+          height: 92rpx;
+        }
+        .good_desc{
+          padding-left: 16rpx;
+          flex-grow: 1;
+          .desc1{
+            font-size: 26rpx;
+            color: #333333;
+          }
+          .desc2{
+            margin-top: 12rpx;
+            font-size: 20rpx;
+            color: #666;
+          }
+        }
+        .good_price{
+          display: flex;
+          align-items: flex-end;
+          color: #FF0505;
+          font-size: 26rpx;
+          line-height: 40rpx;
+        }
+      }
+      .item:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+  .descBox{
+    padding-left: 30rpx;
+    background-color: #fff;
+    .itemBox{
+      padding: 24rpx 0;
+      padding-right: 30rpx;
+      display: flex;
+      border-bottom: 1rpx solid #E2E2E2;
+      font-size: 26rpx;
+      .left{
+        color: #666;
+        flex-grow: 1;
+        line-height:40rpx;
+        .pay{
+          color: #078FEE;
+        }
+      }
+      .right{
+        line-height:40rpx;
+      }
+      .right1{
+        color: #666;
+      }
+      .right2{
+        color: #666;
+      }
+      .right3{
+        color: #FF0505;
+      }
+      .right4{
+        color: #BCBCBC;
+      }
+    }
+    .itemBox:last-child{
+      border-bottom: none;
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="addressBox">
+      <view class="left">
+        <image class="address_icon" src="{{domin}}/yuYue/address_icon.png"></image>
+      </view>
+      <view class="right">
+        <view class="desc1"><text class="name">马云</text><text class="phone">18888888888</text></view>
+        <view class="desc2">广东省 广州市 白云区 帝国大厦 六栋 606</view>
+      </view>
+    </view>
+
+    <view class="timeBox">
+      <view class="left">上门时间</view>
+      <view class="right">请选择上门时间</view>
+    </view>
+
+    <view class="serviceBox">
+      <view class="top">
+        <view class="left">服务项目</view>
+        <view class="right">共2件</view>
+      </view>
+      <view class="bottom">
+        <view class="item">
+          <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          <view class="good_desc">
+            <view class="desc1">背心/上衣</view>
+            <view class="desc2"> x1</view>
+          </view>
+          <view class="good_price">￥9.00</view>
+        </view>
+        <view class="item">
+          <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          <view class="good_desc">
+            <view class="desc1">背心/上衣</view>
+            <view class="desc2"> x1</view>
+          </view>
+          <view class="good_price">￥9.00</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="descBox">
+      <view class="itemBox">
+        <view class="left">下单时间</view>
+        <view class="right right1">2018-08-17 20:58:01</view>
+      </view>
+      <view class="itemBox">
+        <view class="left">订单编号</view>
+        <view class="right right2">1534510681</view>
+      </view>
+      <view class="itemBox">
+        <view class="left">预约金额</view>
+        <view class="right right3">￥5.00</view>
+      </view>
+      <view class="itemBox">
+        <view class="left">项目预估价格<text class="pay">（上门支付）</text></view>
+        <view class="right right4">￥18.00</view>
+      </view>
+    </view>
+
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '预约下单'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      gotoRecharge(type){ //type 1：给自己充值；2：给他人充值；
+        wx.navigateTo({
+          url:`../recharge/recharge?type=${type}`
+        });
+      },
+      gotoOrder(){
+        wx.switchTab({
+          url:`../order/order`
+        });
+      }
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>

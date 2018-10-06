@@ -219,7 +219,7 @@
     data = {
       domin:globalData.domin,
       activeMenu:0,//当前item
-      listData:[],
+      listData:[666],
     }
 
     computed = {
