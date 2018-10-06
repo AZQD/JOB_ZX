@@ -111,6 +111,23 @@
     }
   }
 
+  .emptyBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 160rpx;
+    .empty_img{
+      width: 289rpx;
+      height: 267rpx;
+    }
+    .empty_text{
+      margin-top: 40rpx;
+      color: #333;
+      font-size:32rpx;
+      line-height:55rpx;
+    }
+  }
+
 </style>
 
 <template>
@@ -123,7 +140,7 @@
       <view catchtap="stateToggle(3)" class="{{activeMenu==3?'menu_item active':'menu_item'}}">已完成</view>
       <view catchtap="stateToggle(4)" class="{{activeMenu==4?'menu_item active':'menu_item'}}">取衣</view>
     </view>
-    <view class="listBox">
+    <view class="listBox" wx:if="{{listData.length>0}}">
       <view class="good-item">
         <view class="top">
           <view class="infoId">订单编号 : 201807230003</view>
@@ -176,6 +193,10 @@
           </view>
         </view>
       </view>
+    </view>
+    <view class="emptyBox" wx:else>
+      <image class="empty_img" src="{{domin}}/order/noresult.png"></image>
+      <view class="empty_text">您还没有相关的订单</view>
     </view>
 
   </view>
@@ -197,7 +218,8 @@
 
     data = {
       domin:globalData.domin,
-      activeMenu:0
+      activeMenu:0,//当前item
+      listData:[],
     }
 
     computed = {
