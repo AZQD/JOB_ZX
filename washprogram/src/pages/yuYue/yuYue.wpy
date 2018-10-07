@@ -305,7 +305,7 @@
 <template>
   <view class="wrapper" wx:if="{{domin}}">
 
-    <view class="addressBox">
+    <view class="addressBox" catchtap="gotoAddressList">
       <view class="left">
         <image class="address_icon" src="{{domin}}/yuYue/address_icon.png"></image>
       </view>
@@ -458,6 +458,11 @@
       showShadeFun(flag){
         this.showShadeBtn = flag;
         this.$apply();
+      },
+      gotoAddressList(){
+        wx.navigateTo({
+          url:`../addressList/addressList`
+        });
       },
     }
 

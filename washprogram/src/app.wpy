@@ -38,6 +38,7 @@
         'pages/rechargeConfirm/rechargeConfirm',//充值
         'pages/record/record',//充值消费记录（后面注意一下入口来源）
         'pages/yuYue/yuYue',//预约下单
+        'pages/addressList/addressList',//我的地址
         'pages/test/test'
       ],
       window: {
