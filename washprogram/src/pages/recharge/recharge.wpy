@@ -207,7 +207,7 @@
       </view>
     </view>
 
-    <view class="ctrlBtnBox" catchtap="gotoRecord">立即充值</view>
+    <view class="ctrlBtnBox" catchtap="gotoRechargeConfirm">立即充值</view>
 
   </view>
 </template>
@@ -240,9 +240,9 @@
     }
 
     methods = {
-      gotoRecord(){
+      gotoRechargeConfirm(){
         wx.navigateTo({
-          url:`../record/record`
+          url:`../rechargeConfirm/rechargeConfirm`
         });
       },
       chargeToggle(type){
