@@ -1,0 +1,198 @@
+<style lang="less">
+
+  .descBox{
+    margin-top: 12rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+    .itemBox{
+      padding: 28rpx 0;
+      padding-right: 30rpx;
+      padding-bottom: 26rpx;
+      display: flex;
+      border-bottom: 2rpx solid #ECECEC;
+      .left{
+        color: #333;
+        line-height:40rpx;
+        font-size: 28rpx;
+        padding-right: 93rpx;
+      }
+      .right{
+        flex-grow: 1;
+        color: #000;
+        font-size: 24rpx;
+      }
+    }
+    .itemBox:last-child{
+      border-bottom: none;
+    }
+  }
+
+  .ctrlBtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-size:32rpx;
+    margin: 24rpx 30rpx;
+    height: 100rpx;
+    background:linear-gradient(180deg,rgba(0,153,255,1),rgba(114,208,255,1));
+    border-radius:50rpx;
+    box-shadow:0rpx 9rpx 14rpx 2rpx rgba(0,153,255,0.15);
+  }
+
+  .shadeBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    .shadeContent{
+      width: 428rpx;
+      position: relative;
+      border-radius:9rpx;
+      background-color: #fff;
+      .close_icon{
+        width: 32rpx;
+        height: 32rpx;
+        position: absolute;
+        right: 27rpx;
+        top: 27rpx;
+      }
+      .failBox{
+        text-align: center;
+        .title{
+          line-height: 40rpx;
+          font-size: 32rpx;
+          color: #333;
+          font-weight: bold;
+          padding-top: 65rpx;
+        }
+        .fail_icon{
+          width: 238rpx;
+          height: 196rpx;
+          margin-top: 43rpx;
+          margin-bottom: 25rpx;
+        }
+        .gotoRecharge{
+          line-height: 40rpx;
+          font-size: 30rpx;
+          color: #0099FF;
+          padding: 20rpx 0;
+          border-top: 2rpx solid #E1E1E1;
+        }
+      }
+      .successBox{
+        text-align: center;
+        .title{
+          line-height: 40rpx;
+          font-size: 32rpx;
+          color: #333;
+          font-weight: bold;
+          padding-top: 72rpx;
+          .num{
+            color: #ff0000;
+          }
+        }
+        .success_icon{
+          width: 238rpx;
+          height: 196rpx;
+          margin-top: 43rpx;
+          margin-bottom: 25rpx;
+        }
+      }
+    }
+  }
+
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="descBox">
+      <view class="itemBox">
+        <view class="left">订单号：</view>
+        <view class="right">1808132789D</view>
+      </view>
+      <view class="itemBox">
+        <view class="left">需支付：</view>
+        <view class="right">50:00</view>
+      </view>
+    </view>
+
+    <view class="ctrlBtnBox" catchtap="confirmPay">确认支付</view>
+
+    <view class="shadeBox" wx:if="{{showShadeBtn}}">
+      <view class="shadeContent">
+        <image class="close_icon" catchtap="showShadeFun({{false}})" src="{{domin}}/rechargeConfirm/close_icon.png"></image>
+        <view class="successBox" wx:if="{{rechargeState}}">
+          <view class="title">已成功充值<text class="num">50元</text></view>
+          <image class="success_icon" src="{{domin}}/rechargeConfirm/close_icon.png"></image>
+        </view>
+        <view class="failBox" wx:else>
+          <view class="title">充值失败</view>
+          <image class="fail_icon" src="{{domin}}/rechargeConfirm/close_icon.png"></image>
+          <view class="gotoRecharge" catchtap="gotoRecharge(1)">重新充值</view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '充值'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin,
+      showShadeBtn: false,//是否显示遮罩
+      rechargeState: true//充值成功/充值失败
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      confirmPay(){
+        this.showShadeBtn = true;
+        this.$apply();
+      },
+      gotoRecharge(type){ //type 1：给自己充值；2：给他人充值；
+        this.showShadeBtn = false;
+        wx.navigateTo({
+          url:`../recharge/recharge?type=${type}`
+        });
+      },
+      showShadeFun(flag){
+        this.showShadeBtn = flag;
+        this.$apply();
+      },
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>

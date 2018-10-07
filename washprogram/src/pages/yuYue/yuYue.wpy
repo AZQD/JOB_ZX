@@ -315,7 +315,7 @@
       </view>
     </view>
 
-    <view class="timeBox" catchtap="chooseTime({{true}})">
+    <view class="timeBox" catchtap="showShadeFun({{true}})">
       <view class="left">上门时间</view>
       <view class="right">请选择上门时间</view>
     </view>
@@ -397,7 +397,7 @@
       </view>
     </view>
 
-    <view class="shadeBox" wx:if="{{showTimeBox}}">
+    <view class="shadeBox" wx:if="{{showShadeBtn}}">
       <view class="shadeContent">
         <view class="selectBox">
           <view class="left">
@@ -418,7 +418,7 @@
             <view class="item">5元预约配送费</view>
           </view>
         </view>
-        <view class="cancelBtn" catchtap="chooseTime({{false}})">取消</view>
+        <view class="cancelBtn" catchtap="showShadeFun({{false}})">取消</view>
       </view>
     </view>
 
@@ -443,7 +443,7 @@
     data = {
       domin:globalData.domin,
       currentPay:0,//0：微信； 1：支付宝； 2：账户余额； 3：在线支付
-      showTimeBox: false,//是否显示上门时间选择器
+      showShadeBtn: false,//是否显示上门时间选择器
     }
 
     computed = {
@@ -455,9 +455,8 @@
         this.currentPay = type;
         this.$apply();
       },
-      chooseTime(flag){
-        console.log(11,flag);
-        this.showTimeBox = flag;
+      showShadeFun(flag){
+        this.showShadeBtn = flag;
         this.$apply();
       },
     }
