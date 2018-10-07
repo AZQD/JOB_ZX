@@ -173,7 +173,7 @@
       </view>
     </view>
 
-    <view class="ctrlBtnBox">一键下单</view>
+    <view class="ctrlBtnBox" catchtap="gotoYuYue">一键下单</view>
 
   </view>
 </template>
@@ -205,7 +205,12 @@
         wx.switchTab({
           url:`../mine/mine`
         });
-      }
+      },
+      gotoYuYue(){
+        wx.navigateTo({
+          url:`../yuYue/yuYue`
+        });
+      },
     }
 
     events = {
