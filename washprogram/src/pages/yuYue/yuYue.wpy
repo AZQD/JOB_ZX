@@ -228,6 +228,78 @@
     }
   }
 
+  .shadeBox{
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    .shadeContent{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      .selectBox{
+        display: flex;
+        box-shadow:2rpx 8rpx 16rpx 0rpx rgba(0,0,0,0.02);
+        .left{
+          flex-grow: 1;
+          background-color: #F7F5F8;
+          .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 96rpx;
+            font-size: 28rpx;
+            color: #333;
+            background-color: #fff;
+          }
+        }
+        .middle{
+          background-color: #fff;
+          .item{
+            display: flex;
+            align-items: center;
+            height: 96rpx;
+            padding-left: 30rpx;
+            padding-right: 70rpx;
+            font-size: 26rpx;
+            color: #666;
+          }
+          .active{
+            color: #0099FF;
+          }
+        }
+        .right{
+          background-color: #fff;
+          .item{
+            display: flex;
+            align-items: center;
+            height: 96rpx;
+            font-size: 26rpx;
+            color: #666;
+            padding-right: 76rpx;
+          }
+          .active{
+            color: #0099FF;
+            background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/yuYue/select_icon.png) no-repeat right 30rpx center;
+            background-size: 25rpx 17rpx;
+          }
+        }
+      }
+      .cancelBtn{
+        padding: 26rpx 0;
+        text-align: center;
+        color: #666;
+        font-size: 32rpx;
+        border-top: 1rpx solid #f8f8f8;
+      }
+    }
+  }
+
 </style>
 
 <template>
@@ -243,7 +315,7 @@
       </view>
     </view>
 
-    <view class="timeBox">
+    <view class="timeBox" catchtap="chooseTime({{true}})">
       <view class="left">上门时间</view>
       <view class="right">请选择上门时间</view>
     </view>
@@ -325,6 +397,31 @@
       </view>
     </view>
 
+    <view class="shadeBox" wx:if="{{showTimeBox}}">
+      <view class="shadeContent">
+        <view class="selectBox">
+          <view class="left">
+            <view class="item">今天(周三)</view>
+          </view>
+          <view class="middle">
+            <view class="item active">立即送出</view>
+            <view class="item">7:00</view>
+            <view class="item">8:00</view>
+            <view class="item">9:00</view>
+            <view class="item">10:00</view>
+          </view>
+          <view class="right">
+            <view class="item active">5元预约配送费</view>
+            <view class="item">5元预约配送费</view>
+            <view class="item">5元预约配送费</view>
+            <view class="item">5元预约配送费</view>
+            <view class="item">5元预约配送费</view>
+          </view>
+        </view>
+        <view class="cancelBtn" catchtap="chooseTime({{false}})">取消</view>
+      </view>
+    </view>
+
 
   </view>
 </template>
@@ -346,6 +443,7 @@
     data = {
       domin:globalData.domin,
       currentPay:0,//0：微信； 1：支付宝； 2：账户余额； 3：在线支付
+      showTimeBox: false,//是否显示上门时间选择器
     }
 
     computed = {
@@ -355,6 +453,11 @@
     methods = {
       payToggle(type){
         this.currentPay = type;
+        this.$apply();
+      },
+      chooseTime(flag){
+        console.log(11,flag);
+        this.showTimeBox = flag;
         this.$apply();
       },
     }
