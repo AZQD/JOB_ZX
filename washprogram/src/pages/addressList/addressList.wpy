@@ -148,7 +148,7 @@
 
     data = {
       domin:globalData.domin,
-      addressData:[1]
+      addressData:[2]
     }
 
     computed = {
