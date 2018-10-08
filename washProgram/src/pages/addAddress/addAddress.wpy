@@ -1,5 +1,124 @@
 <style lang="less">
 
+  .descBox{
+    margin-top: 12rpx;
+    background-color: #fff;
+    padding-left: 30rpx;
+    .itemBox{
+      display: flex;
+      align-items: center;
+      padding: 20rpx 0;
+      color: #333;
+      border-bottom: 2rpx solid #ECECEC;
+      .left{
+        width: 180rpx;
+        font-size: 28rpx;
+      }
+      .right{
+        flex-grow: 1;
+        color: #999;
+        font-size: 24rpx;
+        .placeholderStyle{
+          color: #999;
+        }
+        .label{
+          display: inline-block;
+          padding: 0 12rpx;
+          color: #999;
+          border: 2rpx solid #999;
+          margin-right: 24rpx;
+          border-radius: 6rpx;
+        }
+        .active{
+          color: #078FEE;
+          border: 2rpx solid #078FEE;
+        }
+      }
+      .address{
+        padding-left: 28rpx;
+        background: url(https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/address/position_icon.png) no-repeat left center;
+        background-size: 22rpx 30rpx;
+      }
+    }
+    .itemBox:last-child{
+      border-bottom: none;
+    }
+  }
+
+  .moRenBox{
+    margin-top: 26rpx;
+    height: 84rpx;
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size:28rpx;
+    padding-left: 83rpx;
+  }
+  .check{
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/recharge/check.png) no-repeat left 30rpx center;
+    background-size: 34rpx 34rpx;
+  }
+  .checked{
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/recharge/checked.png) no-repeat left 30rpx center;
+    background-size: 34rpx 34rpx;
+  }
+
+  .deleteBox{
+    margin-top: 26rpx;
+    height: 84rpx;
+    display: flex;
+    align-items: center;
+    color: #f00;
+    font-size:28rpx;
+    padding-left: 83rpx;
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/address/delete_icon.png) no-repeat left 30rpx center;
+    background-size: 34rpx 34rpx;
+  }
+
+  .shadeBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    .shadeContent{
+      width: 521rpx;
+      position: relative;
+      text-align: center;
+      border-radius:20rpx;
+      background-color: #fff;
+      .title{
+        color: #333;
+        font-size: 30rpx;
+        padding-top: 90rpx;
+        padding-bottom: 70rpx;
+        border-bottom: 2rpx solid #E1E1E1;
+      }
+      .btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32rpx;
+        .btn{
+          padding: 22rpx 0;
+          flex-grow: 1;
+          color: #333;
+          border-right: 2rpx solid #E1E1E1;
+        }
+        .btn:last-child{
+          border-right: none;
+        }
+        .red{
+          color: #f00;
+        }
+      }
+    }
+  }
 
 </style>
 
@@ -8,16 +127,45 @@
 
     <view class="descBox">
       <view class="itemBox">
-        <view class="left">订单号：</view>
-        <view class="right">1808132789D</view>
+        <view class="left">姓名：</view>
+        <input type="text" class="right" placeholder="请填写收货人的姓名" placeholder-class="placeholderStyle">
       </view>
       <view class="itemBox">
-        <view class="left">需支付：</view>
-        <view class="right">50:00</view>
+        <view class="left">联系方式：</view>
+        <input type="text" class="right" placeholder="请填写收货人的联系方式" placeholder-class="placeholderStyle">
+      </view>
+      <view class="itemBox">
+        <view class="left">联系地址：</view>
+        <view class="right address" catchtap="getLocation">点击定位我的位置</view>
+      </view>
+      <view class="itemBox">
+        <view class="left">门牌号：</view>
+        <input type="text" class="right" placeholder="例如：1号楼101室" placeholder-class="placeholderStyle">
+      </view>
+      <view class="itemBox">
+        <view class="left">地址标签：</view>
+        <view class="right">
+          <text catchtap="labelToggle(0)" class="{{currentLabel==0?'label active':'label'}}">家</text>
+          <text catchtap="labelToggle(1)"  class="{{currentLabel==1?'label active':'label'}}">公司</text>
+        </view>
       </view>
     </view>
 
-    <view class="ctrlBtnBox" catchtap="confirmPay">保存地址</view>
+    <view class="{{moRenBtn?'moRenBox checked':'moRenBox check'}}" catchtap="moRenToggle">设为默认地址</view>
+
+    <view class="deleteBox" catchtap="showShadeFun({{true}})">删除收货地址</view>
+
+    <view class="ctrlBtnBox" catchtap="saveAddress">保存地址</view>
+
+    <view class="shadeBox" wx:if="{{showShadeBtn}}">
+      <view class="shadeContent">
+        <view class="title">确定要删除该地址吗？</view>
+        <view class="btns">
+          <view class="btn" catchtap="showShadeFun({{false}})">取消</view>
+          <view class="btn red">删除</view>
+        </view>
+      </view>
+    </view>
 
 
   </view>
@@ -40,6 +188,8 @@
     data = {
       domin:globalData.domin,
       showShadeBtn: false,//是否显示遮罩
+      currentLabel: 0,//0：家； 1：公司
+      moRenBtn: true,//默认地址
     }
 
     computed = {
@@ -47,7 +197,35 @@
     }
 
     methods = {
+      showShadeFun(flag){
+        this.showShadeBtn = flag;
+        this.$apply();
+      },
 
+      labelToggle(type){
+        this.currentLabel = type;
+        this.$apply();
+      },
+
+      moRenToggle(type){
+        this.moRenBtn = !this.moRenBtn;
+        this.$apply();
+      },
+
+      getLocation(){
+        wx.getLocation({
+          type: 'gcj02',
+          success (res) {
+            const latitude = res.latitude
+            const longitude = res.longitude
+            wx.openLocation({
+              latitude,
+              longitude,
+              scale: 28
+            })
+          }
+        })
+      }
     }
 
     events = {
