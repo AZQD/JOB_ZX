@@ -63,6 +63,27 @@
     }
   }
 
+  .emptyBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 309rpx;
+    .empty_img{
+      width: 289rpx;
+      height: 244rpx;
+    }
+    .empty_text{
+      margin-top: 30rpx;
+      margin-bottom: 20rpx;
+      color: #333;
+      font-size:32rpx;
+    }
+    .empty_tip{
+      color: #999;
+      font-size:26rpx;
+    }
+  }
+
   .add_wrap{
     position: fixed;
     left: 0;
@@ -80,7 +101,7 @@
 <template>
   <view class="wrapper" wx:if="{{domin}}">
 
-    <view class="addressBox">
+    <view class="addressBox" wx:if="{{addressData.length>0}}">
       <view class="addressItem">
         <view class="left"><text class="xing">习</text></view>
         <view class="middle">
@@ -97,6 +118,11 @@
         </view>
         <view class="right">编辑</view>
       </view>
+    </view>
+    <view class="emptyBox" wx:else>
+      <image class="empty_img" src="{{domin}}/address/no_address.png"></image>
+      <view class="empty_text">您还没有添加收货地址</view>
+      <view class="empty_tip">可以右下角按钮添加即可</view>
     </view>
 
     <view class="add_wrap">
@@ -122,6 +148,7 @@
 
     data = {
       domin:globalData.domin,
+      addressData:[]
     }
 
     computed = {
