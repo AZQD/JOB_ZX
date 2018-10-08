@@ -1,0 +1,62 @@
+<style lang="less">
+
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="descBox">
+      <view class="itemBox">
+        <view class="left">订单号：</view>
+        <view class="right">1808132789D</view>
+      </view>
+      <view class="itemBox">
+        <view class="left">需支付：</view>
+        <view class="right">50:00</view>
+      </view>
+    </view>
+
+    <view class="ctrlBtnBox" catchtap="confirmPay">保存地址</view>
+
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '新增地址'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin,
+      showShadeBtn: false,//是否显示遮罩
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad(options) {
+      let that = this;
+      console.log('options',options);
+    }
+  }
+</script>

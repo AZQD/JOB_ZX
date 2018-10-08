@@ -108,7 +108,7 @@
           <view class="desc1">张三丰<text class="phone">15089788366</text></view>
           <view class="desc2"><text class="moRen">默认</text>广东省 广州市 白云区 京溪街道 梅花园黄埔大 道上街123号</view>
         </view>
-        <view class="right">编辑</view>
+        <view class="right" catchtap="gotoAdd(1)">编辑</view>
       </view>
       <view class="addressItem">
         <view class="left"><text class="xing">习</text></view>
@@ -116,7 +116,7 @@
           <view class="desc1">张三丰<text class="phone">15089788366</text></view>
           <view class="desc2"><text class="moRen">默认</text>广东省 广州市 白云区 京溪街道 梅花园黄埔大 道上街123号</view>
         </view>
-        <view class="right">编辑</view>
+        <view class="right" catchtap="gotoAdd(2)">编辑</view>
       </view>
     </view>
     <view class="emptyBox" wx:else>
@@ -126,7 +126,7 @@
     </view>
 
     <view class="add_wrap">
-      <image class="add_icon" src="{{domin}}/address/add_address.png"></image>
+      <image class="add_icon" catchtap="gotoAdd()" src="{{domin}}/address/add_address.png"></image>
     </view>
 
   </view>
@@ -148,7 +148,7 @@
 
     data = {
       domin:globalData.domin,
-      addressData:[]
+      addressData:[1]
     }
 
     computed = {
@@ -156,7 +156,12 @@
     }
 
     methods = {
-
+      gotoAdd(id) {
+        let url = id ? `../addAddress/addAddress?id=${id}` : `../addAddress/addAddress`;
+        wx.navigateTo({
+          url: url
+        });
+      }
     }
 
     events = {

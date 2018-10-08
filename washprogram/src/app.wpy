@@ -15,6 +15,19 @@
     min-height: 100vh;
     background-color: #F4F4F4;
   }
+
+  .ctrlBtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-size:32rpx;
+    margin: 24rpx 30rpx;
+    height: 100rpx;
+    background:linear-gradient(180deg,rgba(0,153,255,1),rgba(114,208,255,1));
+    border-radius:50rpx;
+    box-shadow:0rpx 9rpx 14rpx 2rpx rgba(0,153,255,0.15);
+  }
 </style>
 
 <script>
@@ -39,6 +52,7 @@
         'pages/record/record',//充值消费记录（后面注意一下入口来源）
         'pages/yuYue/yuYue',//预约下单
         'pages/addressList/addressList',//我的地址
+        'pages/addAddress/addAddress',//新增/编译地址
         'pages/test/test'
       ],
       window: {
