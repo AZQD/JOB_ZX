@@ -10,23 +10,55 @@
     .addressItem{
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 24rpx 0;
+      padding: 12rpx 0;
       font-size: 26rpx;
-      padding-right: 30rpx;
-      border-bottom: 2rpx solid #E3E3E3;
       .left{
+        padding-right: 22rpx;
+        .xing{
+          display: inline-block;
+          width: 50rpx;
+          height: 50rpx;
+          line-height: 50rpx;
+          text-align: center;
+          background:linear-gradient(90deg,rgba(225,225,225,1), rgba(205,205,205,1));
+          border-radius:50%;
+          font-size:24rpx;
+          color: #fff;
+        }
+      }
+      .middle{
         .desc1{
           color: #000;
-          padding-bottom: 18rpx;
+          font-size:26rpx;
+          .phone{
+            font-size:24rpx;
+            color: #999;
+            padding-left: 19rpx;
+          }
         }
         .desc2{
-          color: #999;
-          font-size: 24rpx;
+          color: #333;
+          line-height: 40rpx;
+          font-size:26rpx;
+          .moRen{
+            line-height: 24rpx;
+            display: inline-block;
+            color: #007EFF;
+            background-color: #A2DAFF;
+            font-size: 22rpx;
+            padding: 0 10rpx;
+            margin-right: 29rpx;
+          }
         }
       }
       .right{
-        color:#078FEE;
+        font-size: 24rpx;
+        color:#999;
+        padding-left: 18rpx;
+        padding-right: 30rpx;
+        margin-left: 20rpx;
+        white-space: nowrap;
+        border-left: 2rpx solid #DDDDDD;
       }
     }
   }
@@ -38,18 +70,20 @@
 
     <view class="addressBox">
       <view class="addressItem">
-        <view class="left">
-          <view class="desc1">预付款</view>
-          <view class="desc2">2018-07-09</view>
+        <view class="left"><text class="xing">习</text></view>
+        <view class="middle">
+          <view class="desc1">张三丰<text class="phone">15089788366</text></view>
+          <view class="desc2"><text class="moRen">默认</text>广东省 广州市 白云区 京溪街道 梅花园黄埔大 道上街123号</view>
         </view>
-        <view class="right">支付金额:40.00</view>
+        <view class="right">编辑</view>
       </view>
       <view class="addressItem">
-        <view class="left">
-          <view class="desc1">预付款</view>
-          <view class="desc2">2018-07-09</view>
+        <view class="left"><text class="xing">习</text></view>
+        <view class="middle">
+          <view class="desc1">张三丰<text class="phone">15089788366</text></view>
+          <view class="desc2"><text class="moRen">默认</text>广东省 广州市 白云区 京溪街道 梅花园黄埔大 道上街123号</view>
         </view>
-        <view class="right">支付金额:40.00</view>
+        <view class="right">编辑</view>
       </view>
     </view>
 
