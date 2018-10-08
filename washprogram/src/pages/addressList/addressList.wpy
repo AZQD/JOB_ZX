@@ -63,6 +63,18 @@
     }
   }
 
+  .add_wrap{
+    position: fixed;
+    left: 0;
+    bottom: 76rpx;
+    width: 100%;
+    text-align: center;
+    .add_icon{
+      width: 114rpx;
+      height: 114rpx;
+    }
+  }
+
 </style>
 
 <template>
@@ -85,6 +97,10 @@
         </view>
         <view class="right">编辑</view>
       </view>
+    </view>
+
+    <view class="add_wrap">
+      <image class="add_icon" src="{{domin}}/address/add_address.png"></image>
     </view>
 
   </view>
