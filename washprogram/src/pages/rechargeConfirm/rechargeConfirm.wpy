@@ -74,7 +74,7 @@
         }
         .fail_icon{
           width: 238rpx;
-          height: 196rpx;
+          height: 238rpx;
           margin-top: 43rpx;
           margin-bottom: 25rpx;
         }
@@ -100,7 +100,7 @@
         }
         .success_icon{
           width: 238rpx;
-          height: 196rpx;
+          height: 238rpx;
           margin-top: 43rpx;
           margin-bottom: 25rpx;
         }
@@ -132,11 +132,11 @@
         <image class="close_icon" catchtap="showShadeFun({{false}})" src="{{domin}}/rechargeConfirm/close_icon.png"></image>
         <view class="successBox" wx:if="{{rechargeState}}">
           <view class="title">已成功充值<text class="num">50元</text></view>
-          <image class="success_icon" src="{{domin}}/rechargeConfirm/close_icon.png"></image>
+          <image class="success_icon" src="{{domin}}/rechargeConfirm/success_icon.png"></image>
         </view>
         <view class="failBox" wx:else>
           <view class="title">充值失败</view>
-          <image class="fail_icon" src="{{domin}}/rechargeConfirm/close_icon.png"></image>
+          <image class="fail_icon" src="{{domin}}/rechargeConfirm/fail_icon.png"></image>
           <view class="gotoRecharge" catchtap="gotoRecharge(1)">重新充值</view>
         </view>
       </view>
@@ -163,7 +163,7 @@
     data = {
       domin:globalData.domin,
       showShadeBtn: false,//是否显示遮罩
-      rechargeState: true//充值成功/充值失败
+      rechargeState: false//充值成功/充值失败
     }
 
     computed = {
