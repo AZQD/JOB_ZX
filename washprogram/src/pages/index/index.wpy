@@ -105,9 +105,15 @@
   <view class="wrapper" wx:if="{{domin}}">
 
     <view class="headerBox">
-      <swiper duration="500" circular>
+      <swiper duration="500" circular autoplay interval="3000">
         <swiper-item>
-          <image class="slide-image" src="{{domin}}/index/banner.png" />
+          <image class="slide-image" src="{{domin}}/index/banner1.png" />
+        </swiper-item>
+        <swiper-item>
+          <image class="slide-image" src="{{domin}}/index/banner2.png" />
+        </swiper-item>
+        <swiper-item>
+          <image class="slide-image" src="{{domin}}/index/banner3.png" />
         </swiper-item>
       </swiper>
     </view>
