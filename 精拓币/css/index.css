@@ -1,0 +1,73 @@
+.container {
+  padding-top: 60px;
+}
+.container .partBox {
+  display: flex;
+  margin-bottom: 20px;
+}
+.container .partBox .left {
+  padding: 6px 10px;
+  width: 150px;
+  text-align: center;
+}
+.container .partBox .right {
+  width: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+}
+.container .partBox .right .partAItem {
+  cursor: pointer;
+  padding: 6px 10px;
+  border: 1px solid #000000;
+}
+.container .partBox .right .activeA {
+  color: blue;
+  background-color: #949984;
+  border: 1px solid blue;
+}
+.container .partBox .right .partBItem {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 6px 10px;
+  padding-right: 24px;
+  font-size: 12px;
+  border: 1px solid #000000;
+}
+.container .partBox .right .partBItem .desc1 {
+  color: #fd8324;
+}
+.container .partBox .right .partBItem .desc1 .nums {
+  color: #333;
+  font-weight: bold;
+}
+.container .partBox .right .activeB {
+  border: 1px solid blue;
+}
+.container .partBox .right .partCItem {
+  display: flex;
+  align-items: center;
+}
+.container .partBox .right .partCItem #countC {
+  text-indent: 6px;
+  margin-right: 6px;
+}
+.container .partBox .right .totalBox {
+  font-size: 12px;
+}
+.container .partBox .right .totalBox #totalMoney {
+  font-size: 20px;
+  color: #fd8324;
+}
+.container .partBox .right #buyBtn {
+  display: inline-block;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #fd8324;
+}
+.container .partBoxC {
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */

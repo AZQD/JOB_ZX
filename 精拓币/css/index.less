@@ -1,0 +1,84 @@
+@rem : 16rem;
+
+@activeColor: blue;
+@orangeColor: #fd8324;
+
+body{
+
+}
+
+.container{
+  padding-top: 60px;
+  .partBox{
+    display: flex;
+    margin-bottom: 20px;
+    .left{
+      padding: 6px 10px;
+      width: 150px;
+      text-align: center;
+    }
+    .right{
+      width: 0;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      flex-flow: wrap;
+      .partAItem{
+        cursor: pointer;
+        padding: 6px 10px;
+        border: 1px solid #000000;
+      }
+      .activeA{
+        color: @activeColor;
+        background-color: #949984;
+        border: 1px solid @activeColor;
+      }
+      .partBItem{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        padding: 6px 10px;
+        padding-right: 24px;
+        font-size: 12px;
+        border: 1px solid #000000;
+        .desc1{
+          color: @orangeColor;
+          .nums{
+            color: #333;
+            font-weight: bold;
+          }
+        }
+        .desc2{
+
+        }
+      }
+      .activeB{
+        border: 1px solid @activeColor;
+      }
+      .partCItem{
+        display: flex;
+        align-items: center;
+        #countC{
+          text-indent: 6px;
+          margin-right: 6px;
+        }
+      }
+      .totalBox{
+        font-size: 12px;
+        #totalMoney{
+          font-size: 20px;
+          color: @orangeColor;
+        }
+      }
+      #buyBtn{
+        display: inline-block;
+        color: #fff;
+        padding: 8px 16px;
+        background-color: @orangeColor;
+      }
+    }
+  }
+  .partBoxC{
+    display: none;
+  }
+}
