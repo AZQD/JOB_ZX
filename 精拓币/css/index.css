@@ -23,9 +23,9 @@
   border: 1px solid #000000;
 }
 .container .partBox .right .activeA {
-  color: blue;
-  background-color: #949984;
-  border: 1px solid blue;
+  color: #34b6ff;
+  background-color: #d7e6f8;
+  border: 1px solid #34b6ff;
 }
 .container .partBox .right .partBItem {
   margin-right: 10px;
@@ -44,7 +44,7 @@
   font-weight: bold;
 }
 .container .partBox .right .activeB {
-  border: 1px solid blue;
+  border: 1px solid #34b6ff;
 }
 .container .partBox .right .partCItem {
   display: flex;
