@@ -53,6 +53,7 @@
         'pages/yuYue/yuYue',//预约下单
         'pages/addressList/addressList',//我的地址
         'pages/addAddress/addAddress',//新增/编译地址
+        'pages/rechargeCard/rechargeCard',//充值卡
         'pages/test/test'
       ],
       window: {
