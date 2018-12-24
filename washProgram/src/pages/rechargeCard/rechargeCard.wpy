@@ -1,0 +1,114 @@
+<style lang="less">
+  .headerBox{
+    height: 406rpx;
+    margin: 16rpx 30rpx 0rpx;
+    padding-left: 53rpx;
+    color: #fff;
+    background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/recharge/rechargeCard.png) no-repeat;
+    background-size: 100% 100%;
+    .account{
+      padding-top: 50rpx;
+      font-size:30rpx;
+      line-height:40rpx;
+    }
+    .account_num{
+      padding-top: 18rpx;
+      font-size:60rpx;
+      line-height:40rpx;
+    }
+  }
+
+  .ctrlBtnBox{
+    margin: 0 30rpx 42rpx;
+  }
+
+  .warningBox{
+    padding: 16rpx 0;
+    padding-left: 32rpx;
+    background-color: #fff;
+    font-size: 28rpx;
+    line-height: 58rpx;
+    .title{
+      color: #333;
+      /*padding: 24rpx 0;*/
+    }
+    .tips{
+      color: #666;
+      .tipItem{
+        padding-left: 26rpx;
+      }
+      .tipItem:before{
+        position: relative;
+        left: -26rpx;
+        display: inline-block;
+        content: "";
+        width: 18rpx;
+        height: 18rpx;
+        border-radius: 50%;
+        background-color: #069CFF;
+      }
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="headerBox">
+      <view class="account">充值金额</view>
+      <view class="account_num">¥ 666666</view>
+    </view>
+
+    <view class="ctrlBtnBox" catchtap="gotoRechargeConfirm">立即领取</view>
+
+    <view class="warningBox">
+      <view class="title">充值卡说明</view>
+      <view class="tips">
+        <view class="tipItem">购买商品可使用</view>
+        <view class="tipItem">点击立即领取到我的账户</view>
+      </view>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '充值卡'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin: globalData.domin,
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      gotoRechargeConfirm(){
+        /*wx.navigateTo({
+          url:`../rechargeConfirm/rechargeConfirm`
+        });*/
+      },
+    }
+
+    events = {
+
+    }
+
+    onLoad(options) {
+      let that = this;
+    }
+  }
+</script>
