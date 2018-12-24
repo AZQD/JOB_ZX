@@ -43,12 +43,12 @@
   export default class extends wepy.app {
     config = {
       pages: [
-        // 'pages/guide/guide',
-        'pages/index/index',
-        'pages/order/order',
-        'pages/mine/mine',
+        // 'pages/guide/guide', //引导页面（APP才用）
+        'pages/index/index', //首页
+        'pages/order/order', //我的订单
+        'pages/mine/mine', //个人中心
         'pages/recharge/recharge',//充值
-        'pages/rechargeConfirm/rechargeConfirm',//充值
+        'pages/rechargeConfirm/rechargeConfirm',//充值（确认页面）
         'pages/record/record',//充值消费记录（后面注意一下入口来源）
         'pages/yuYue/yuYue',//预约下单
         'pages/addressList/addressList',//我的地址
