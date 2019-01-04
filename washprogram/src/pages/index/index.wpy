@@ -104,6 +104,11 @@
 <template>
   <view class="wrapper" wx:if="{{domin}}">
 
+    <button
+      open-type="getUserInfo"
+      bindgetuserinfo="bindGetUserInfo"
+    >授权登录</button>
+
     <view class="headerBox">
       <swiper duration="500" circular autoplay interval="3000">
         <swiper-item>
@@ -225,6 +230,34 @@
 
     onLoad() {
       let that = this
+    }
+
+    bindGetUserInfo(res){
+      console.log(666, res);
+
+      let encryptedData = res.detail.encryptedData;
+      let iv = res.detail.iv;
+      wepy.login({
+        success:function(res){
+          console.log(123, res);
+          let code = res.code;
+          wepy.request({
+            url: 'https://www.xihuo.ink/Weapp/Auth/login',
+            header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
+            data: {
+              encryptedData,
+              iv,
+              code
+            },
+            method: "POST",
+            success: function (t) {
+              console.log(8888,t);
+            }
+          });
+        }
+      });
     }
   }
 </script>
