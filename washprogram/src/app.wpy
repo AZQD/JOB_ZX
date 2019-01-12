@@ -54,6 +54,7 @@
         'pages/addressList/addressList',//我的地址
         'pages/addAddress/addAddress',//新增/编译地址
         'pages/rechargeCard/rechargeCard',//充值卡
+        'pages/envBag/envBag',//我的环保袋
         'pages/test/test'
       ],
       window: {
