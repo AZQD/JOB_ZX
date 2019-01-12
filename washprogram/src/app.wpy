@@ -60,6 +60,7 @@
         'pages/coupon/coupon',//代金券
         'pages/buyBag/buyBag',//环保袋购买
         'pages/bagRecord/bagRecord',//环保袋购买记录
+        'pages/price/price',//价格表
         'pages/test/test'
       ],
       window: {
