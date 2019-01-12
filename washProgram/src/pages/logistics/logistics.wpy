@@ -1,0 +1,138 @@
+<style lang="less">
+  .headerBox{
+    background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/logistics/header_bg.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 34rpx 26rpx;
+    align-items: center;
+    display: flex;
+    .left{
+      margin-right: 18rpx;
+      background-color: #fff;
+      overflow: hidden;
+      border-radius:6rpx;
+      .good_img{
+        width:117rpx;
+        height:119rpx;
+      }
+    }
+    .right{
+      color: #fff;
+      flex-grow: 1;
+      .desc1{
+        font-size: 28rpx;
+        .status{
+          padding-left: 16rpx;
+          font-size: 26rpx;
+        }
+      }
+      .desc2{
+        font-size:24rpx;
+        padding-top: 10rpx;
+      }
+    }
+  }
+
+  .statusBox{
+    padding: 8rpx 0;
+    padding-left: 130rpx;
+    margin: 0 30rpx;
+    margin-top: 16rpx;
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/logistics/state_bg2.png) no-repeat left 45rpx center;
+    background-size: 30rpx auto;
+    .statusItem{
+      padding-top: 32rpx;
+      padding-bottom: 80rpx;
+      border-bottom: 1rpx solid #E2E2E2;
+      color: #999;
+      .desc1{
+        padding-bottom: 4rpx;
+        font-size: 26rpx;
+      }
+      .desc2{
+        font-size: 22rpx;
+      }
+    }
+    .active{
+      color: #078FEE;
+    }
+    .statusItem:last-child{
+      border-bottom: none;
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="headerBox">
+      <view class="left">
+        <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+      </view>
+      <view class="right">
+        <view class="desc1">状态<text class="status">已签收</text></view>
+        <view class="desc2">订单编号：88991244880215</view>
+      </view>
+    </view>
+
+    <view class="statusBox">
+      <view class="statusItem active">
+        <view class="desc1">收件中</view>
+        <view class="desc2">2018-6-1 15:52::59</view>
+      </view>
+      <view class="statusItem active">
+        <view class="desc1">收件中</view>
+        <view class="desc2">2018-6-1 15:52::59</view>
+      </view>
+      <view class="statusItem">
+        <view class="desc1">收件中</view>
+        <view class="desc2">2018-6-1 15:52::59</view>
+      </view>
+      <view class="statusItem">
+        <view class="desc1">收件中</view>
+        <view class="desc2">2018-6-1 15:52::59</view>
+      </view>
+      <view class="statusItem">
+        <view class="desc1">收件中</view>
+        <view class="desc2">2018-6-1 15:52::59</view>
+      </view>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '物流信息'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>
