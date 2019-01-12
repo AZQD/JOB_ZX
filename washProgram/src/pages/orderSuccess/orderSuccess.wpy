@@ -1,0 +1,156 @@
+<style lang="less">
+
+  .infoBox{
+    background-color: #fff;
+    margin-top: 14rpx;
+    padding-bottom: 44rpx;
+    .statusBox{
+     padding-top: 38rpx;
+      padding-bottom: 20rpx;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     .success_icon{
+       width:92rpx;
+       height:92rpx;
+     }
+     .success_text{
+       padding-top: 18rpx;
+       color: #1095FA;
+       font-size: 32rpx;
+     }
+    }
+
+    .menuItem{
+      display: flex;
+      align-items: center;
+      margin-left: 30rpx;
+      padding: 22rpx 0;
+      padding-right: 30rpx;
+      border-bottom: 1rpx solid #E2E2E2;
+      font-size: 26rpx;
+      .left{
+        min-width: 100rpx;
+        flex-grow: 1;
+        color: #666;
+      }
+      .right{
+        color: #333;
+        /*text-align: right;*/
+      }
+      .blue{
+        color: #1095FA;
+      }
+    }
+    .contact{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 42rpx auto 0;
+      width:278rpx;
+      height:72rpx;
+      border: 2rpx solid #1095FA;
+      border-radius:36rpx;
+      &_icon{
+         margin-right: 12rpx;
+         width:34rpx;
+         height:37rpx;
+      }
+      &_name{
+        color: #1095FA;
+        font-size: 32rpx;
+      }
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="infoBox">
+      <view class="statusBox">
+        <image class="success_icon" src="{{domin}}/mine/head_img.png"></image>
+        <text class="success_text">下单成功</text>
+      </view>
+
+      <view class="menuItem">
+        <view class="left">下单时间</view>
+        <view class="right">2018-08-17 20:58:01</view>
+      </view>
+
+      <view class="menuItem">
+        <view class="left">订单编号</view>
+        <view class="right">1534510681</view>
+      </view>
+
+      <view class="menuItem">
+        <view class="left">上门时间</view>
+        <view class="right">2018-08-17 20:58:01</view>
+      </view>
+
+      <view class="menuItem">
+        <view class="left">地址</view>
+        <view class="right">广东省 广州市 白云区 帝国大厦 六栋 606 梅花园B 出口濂泉路口</view>
+      </view>
+
+      <view class="menuItem">
+        <view class="left">手机号码</view>
+        <view class="right">15089788366</view>
+      </view>
+
+      <view class="menuItem">
+        <view class="left">金额</view>
+        <view class="right blue">￥26.00</view>
+      </view>
+
+      <view class="contact" catchtap='contact' data-phone="15089788366">
+        <image class="contact_icon" src="{{domin}}/orderSuccess/contact_icon.png"></image>
+        <text class="contact_name">洗货小哥</text>
+      </view>
+
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '下单成功'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      contact: function(e) {
+        var phone = e.currentTarget.dataset.phone;
+        wx.makePhoneCall({
+          phoneNumber: phone,
+        })
+      },
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>
