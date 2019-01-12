@@ -1,0 +1,106 @@
+<style lang="less">
+
+  .wrapper{
+    padding-top: 15rpx;
+  }
+
+  .consumeBox{
+    padding-left: 30rpx;
+    background-color: #fff;
+    .consumeItem{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16rpx 0;
+      font-size: 26rpx;
+      padding-right: 30rpx;
+      border-bottom: 2rpx solid #E3E3E3;
+      .left{
+        .desc1{
+          color: #000;
+          padding-bottom: 10rpx;
+        }
+        .desc2{
+          color: #999;
+          font-size: 24rpx;
+        }
+      }
+      .right{
+        color:#078FEE;
+      }
+    }
+    .failItem{
+      .left{
+        .desc1{
+          color: #FF0000;
+        }
+      }
+      .right{
+        color:#FF0000;
+      }
+    }
+    .consumeItem:last-child{
+      border-bottom: none;
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="consumeBox">
+      <view class="consumeItem">
+        <view class="left">
+          <view class="desc1">购买成功</view>
+          <view class="desc2">2018-07-09</view>
+        </view>
+        <view class="right">实付:40.00</view>
+      </view>
+      <view class="consumeItem failItem">
+        <view class="left">
+          <view class="desc1">购买失败</view>
+          <view class="desc2">2018-07-09</view>
+        </view>
+        <view class="right">未付:40.00</view>
+      </view>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '环保袋购买记录'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin,
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let self = this
+    }
+  }
+</script>
