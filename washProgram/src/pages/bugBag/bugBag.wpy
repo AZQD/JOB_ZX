@@ -1,0 +1,213 @@
+<style lang="less">
+  .headerBox{
+    background-color: #fff;
+    swiper{
+      height: 583rpx;
+      .slide-image{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .infoBox{
+    background-color: #fff;
+    padding: 22rpx 0;
+    padding-left: 30rpx;
+    margin: 20rpx 0;
+    .desc1{
+      color: #1095FA;
+      font-size: 24rpx;
+      .num{
+        font-size: 40rpx;
+      }
+    }
+    .desc2{
+      padding: 30rpx 0;
+      color: #333;
+      font-size: 28rpx;
+    }
+    .desc3{
+      display: flex;
+      align-items: center;
+      color: #333;
+      font-size: 26rpx;
+      .modify_icon{
+        width: 42rpx;
+        height: 42rpx;
+      }
+      .num{
+        padding: 0 12rpx;
+        font-size: 22rpx;
+      }
+    }
+  }
+
+  .payBox{
+    padding-left: 30rpx;
+    background-color: #fff;
+    line-height: 40rpx;
+    font-size:28rpx;
+    .title{
+      font-weight: bold;
+      padding: 22rpx 0;
+      color: #333;
+      border-bottom: 2rpx solid #ECECEC;
+    }
+    .ways{
+      .wayItem{
+        padding: 22rpx 0;
+        display: flex;
+        align-items: center;
+        border-bottom: 2rpx solid #ECECEC;
+        .item_icon{
+          width: 32rpx;
+          height: 32rpx;
+          margin-right: 16rpx;
+        }
+        .item_name{
+          flex-grow: 1;
+        }
+        .item_check{
+          width: 40rpx;
+          height: 40rpx;
+          padding-right: 26rpx;
+        }
+      }
+      .wayItem:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+  .heJiBox{
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*z-index: 1;*/
+    margin-bottom: 30rpx;
+    /*background: linear-gradient(270deg,rgba(3,181,243,1),rgba(16,149,250,1),rgba(16,149,250,1));*/
+    .content{
+      height: 90rpx;
+      display: flex;
+      align-items: center;
+      margin: 0 30rpx;
+      border-radius:45rpx;
+      background: #E3E3E3;
+      .left{
+        flex-grow: 1;
+        padding-left: 72rpx;
+        color: #666;
+        font-size: 26rpx;
+        .num{
+          color: #078FEE;
+        }
+      }
+      .right{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-radius:45rpx;
+        padding: 0 120rpx;
+        color: #fff;
+        font-size: 32rpx;
+        background-color: #078FEE;
+      }
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="headerBox">
+      <swiper duration="500" circular autoplay interval="3000">
+        <swiper-item>
+          <image class="slide-image" src="{{domin}}/index/banner1.png" />
+        </swiper-item>
+        <swiper-item>
+          <image class="slide-image" src="{{domin}}/index/banner2.png" />
+        </swiper-item>
+        <swiper-item>
+          <image class="slide-image" src="{{domin}}/index/banner3.png" />
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <view class="infoBox">
+      <view class="desc1">单价：￥<text class="num">20</text></view>
+      <view class="desc2">洗衣袋 环保袋</view>
+      <view class="desc3">数量：
+        <image class="modify_icon" src="{{domin}}/yuYue/alipay_pay.png"></image>
+        <text class="num">0</text>
+        <image class="modify_icon" src="{{domin}}/yuYue/alipay_pay.png"></image>
+      </view>
+    </view>
+
+    <view class="payBox">
+      <view class="title">选择支付方式</view>
+      <view class="ways">
+        <view class="wayItem" catchtap="payToggle(0)">
+          <image class="item_icon" src="{{domin}}/yuYue/alipay_pay.png"></image>
+          <view class="item_name">支付宝</view>
+          <image class="item_check" src="{{domin}}{{currentPay==0?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+        </view>
+        <view class="wayItem" catchtap="payToggle(1)">
+          <image class="item_icon" src="{{domin}}/yuYue/wechat_pay.png"></image>
+          <view class="item_name">微信支付</view>
+          <image class="item_check" src="{{domin}}{{currentPay==1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="heJiBox">
+      <view class="content">
+        <view class="left">合计：<text class="num">￥26.00</text></view>
+        <view class="right">确定</view>
+      </view>
+    </view>
+
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '环保袋购买'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin,
+      currentPay:0,//0：微信； 1：支付宝； 2：账户余额； 3：在线支付
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      payToggle(type){
+        this.currentPay = type;
+        this.$apply();
+      },
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>

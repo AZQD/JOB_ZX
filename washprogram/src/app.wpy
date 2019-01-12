@@ -57,6 +57,8 @@
         'pages/envBag/envBag',//我的环保袋
         'pages/logistics/logistics',//物流信息
         'pages/orderSuccess/orderSuccess',//下单成功
+        'pages/coupon/coupon',//代金券
+        'pages/bugBag/bugBag',//环保袋购买
         'pages/test/test'
       ],
       window: {
