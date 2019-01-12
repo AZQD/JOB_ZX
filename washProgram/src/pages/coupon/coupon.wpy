@@ -1,0 +1,123 @@
+<style lang="less">
+
+  .couponBox{
+    margin: 0 30rpx;
+    .couponItem{
+      margin-top: 14rpx;
+      height: 166rpx;
+      background-color: #fff;
+      border: 1rpx dotted #666;
+      display: flex;
+      align-items: center;
+      .left{
+        width: 184rpx;
+        text-align: center;
+        font-size: 40rpx;
+        color: #fff;
+        .icon{
+          font-size: 26rpx;
+        }
+      }
+      .middle{
+        padding-left: 36rpx;
+        flex-grow: 1;
+        .desc1{
+          font-size: 28rpx;
+          color: #333;
+        }
+        .desc2{
+          font-size: 22rpx;
+          color: #666;
+        }
+      }
+      .right{
+        text-align: center;
+        width: 88rpx;
+        font-size: 24rpx;
+        color: #fff;
+      }
+    }
+    .bg1{
+      background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/coupon/bg01.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    .bg2{
+      background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/coupon/bg02.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    .bg3{
+      background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/coupon/bg03.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    .bg4{
+      background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/coupon/bg04.png) no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{domin}}">
+
+    <view class="couponBox">
+      <view class="couponItem bg1">
+        <view class="left" wx:if="{{true}}">体验卡</view>
+        <view class="left" wx:else><text class="icon">￥</text>88</view>
+        <view class="middle">
+          <view class="desc1">6月端午优惠券</view>
+          <view class="desc2">使用期限：2018.6.1-2018.6.15</view>
+        </view>
+        <view class="right"><text>立即\n领取</text></view>
+        <!--<view class="right"><text>已\n失\n效</text></view>--><!--立即领取，已过期，已失效，已兑换-->
+      </view>
+      <view class="couponItem bg3">
+        <view class="left" wx:if="{{true}}">体验卡</view>
+        <view class="left" wx:else><text class="icon">￥</text>88</view>
+        <view class="middle">
+          <view class="desc1">6月端午优惠券</view>
+          <view class="desc2">使用期限：2018.6.1-2018.6.15</view>
+        </view>
+        <!--<view class="right"><text>立即\n领取</text></view>-->
+        <view class="right"><text>已\n失\n效</text></view>
+      </view>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '代金券'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      domin:globalData.domin
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>
