@@ -125,7 +125,7 @@
         </view>
         <view class="right">购买环保袋</view>
       </view>
-      <view class="item">
+      <view class="item" catchtap='contact' data-phone="1010977766666">
         <view class="left">
           <image class="item_icon" src="{{domin}}/envBag/refund.png"></image>
         </view>
@@ -163,7 +163,13 @@
         wx.navigateTo({
           url:'../recharge/recharge'
         });
-      }
+      },
+      contact: function(e) {
+        var phone = e.currentTarget.dataset.phone;
+        wx.makePhoneCall({
+          phoneNumber: phone,
+        })
+      },
     }
 
     events = {
