@@ -95,6 +95,52 @@
     }
   }
 
+  .shadeBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    .shadeContent{
+      width: 521rpx;
+      position: relative;
+      text-align: center;
+      border-radius:20rpx;
+      padding-top: 44rpx;
+      background-color: #fff;
+      .title{
+        color: #333;
+        font-size: 30rpx;
+        padding-bottom: 20rpx;
+      }
+      .btns{
+        margin-top: 8rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32rpx;
+        border-top: 2rpx solid #E1E1E1;
+        .btn{
+          padding: 20rpx 0;
+          flex-grow: 1;
+          color: #333;
+          border-right: 2rpx solid #E1E1E1;
+        }
+        .btn:last-child{
+          border-right: none;
+        }
+        .blue{
+          color: #1095FA;
+        }
+      }
+    }
+  }
+
 </style>
 
 <template>
@@ -125,11 +171,22 @@
         </view>
         <view class="right">购买环保袋</view>
       </view>
-      <view class="item" catchtap='contact' data-phone="1010977766666">
+      <view class="item" catchtap="showShadeFun({{true}})" data-phone="15089788366">
         <view class="left">
           <image class="item_icon" src="{{domin}}/envBag/refund.png"></image>
         </view>
         <view class="right">购物袋退款</view>
+      </view>
+    </view>
+
+    <view class="shadeBox" wx:if="{{showShadeBtn}}">
+      <view class="shadeContent">
+        <view class="title">退款请咨询客服</view>
+        <view class="title">1010977766666</view>
+        <view class="btns">
+          <view class="btn" catchtap="showShadeFun({{false}})">取消</view>
+          <view class="btn blue" catchtap="contact" data-phone="1010977766666">呼叫</view>
+        </view>
       </view>
     </view>
 
@@ -151,7 +208,8 @@
     mixins = []
 
     data = {
-      domin:globalData.domin
+      domin:globalData.domin,
+      showShadeBtn: false,//是否显示遮罩
     }
 
     computed = {
@@ -169,6 +227,10 @@
         wx.makePhoneCall({
           phoneNumber: phone,
         })
+      },
+      showShadeFun(flag){
+        this.showShadeBtn = flag;
+        this.$apply();
       },
     }
 
