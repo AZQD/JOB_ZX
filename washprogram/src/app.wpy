@@ -108,11 +108,11 @@
 
     onLaunch() {
       this.testAsync()
-      wepy.login({
+      /*wepy.login({
         success:function(res){
-          console.log(123, res);
+          console.log('wepy.login', res);
         }
-      });
+      });*/
     }
 
     sleep(s) {

@@ -19,6 +19,7 @@ module.exports = {
       '@components': path.join(__dirname, 'src/components'),
       '@mixins': path.join(__dirname, 'src/mixins'),
       '@utils': path.join(__dirname, 'src/utils'),
+      'appUtils': path.join(__dirname, 'src', 'utils'),
     },
     aliasFields: ['wepy', 'weapp'],
     modules: ['node_modules']

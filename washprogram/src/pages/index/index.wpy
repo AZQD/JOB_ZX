@@ -191,7 +191,7 @@
 
 <script>
   import wepy from 'wepy'
-  import {globalData} from '@utils/globalData'
+  import * as appUtils from "appUtils";
 
   export default class Index extends wepy.page {
     config = {
@@ -204,8 +204,8 @@
     mixins = []
 
     data = {
-      ossDomain:globalData.ossDomain
-    }
+      ossDomain: appUtils.globalData.ossDomain
+    };
 
     computed = {
 
@@ -232,29 +232,20 @@
       let that = this
     }
 
-    bindGetUserInfo(res){
-      console.log(666, res);
-
+    bindGetUserInfo(res) {
+      console.log('bindGetUserInfo', res);
       let encryptedData = res.detail.encryptedData;
       let iv = res.detail.iv;
       wepy.login({
-        success:function(res){
-          console.log(123, res);
+        success: function(res) {
+          console.log('wepy.login', res);
           let code = res.code;
-          wepy.request({
-            url: 'https://ttt.xihuo.ink/Weapp/Auth/login',
-            header: {
-              "Content-Type": "application/x-www-form-urlencoded"
-            },
-            data: {
-              encryptedData,
-              iv,
-              code
-            },
-            method: "POST",
-            success: function (t) {
-              console.log(8888,t);
-            }
+          appUtils.requestPost(appUtils.api.AUTH_LOGIN, {
+            encryptedData,
+            iv,
+            code
+          }).then(function(res) {
+            console.log('登录数据', res);
           });
         }
       });
