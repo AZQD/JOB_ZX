@@ -123,7 +123,7 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="descBox">
       <view class="itemBox">
@@ -186,7 +186,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin,
+      ossDomain:globalData.ossDomain,
       showShadeBtn: false,//是否显示遮罩
       currentLabel: 0,//0：家； 1：公司
       moRenBtn: true,//默认地址

@@ -148,7 +148,7 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}" data-type="{{type}}">
+  <view class="wrapper" wx:if="{{ossDomain}}" data-type="{{type}}">
 
     <view class="headerBox" wx:if="{{type==1}}">
       <view class="account">余额</view>
@@ -157,7 +157,7 @@
 
     <view class="inputBox" wx:if="{{type==2}}">
       <input bindinput='getPhone' bindblur="blurPhone" class="phoneIpt" type="text" placeholder-class="placeholderStyle" placeholder="请输入好友手机号码"/>
-      <image class="check" src="{{domin}}{{truePhone?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+      <image class="check" src="{{ossDomain}}{{truePhone?'/recharge/checked.png':'/recharge/check.png'}}"></image>
       <view class="warning" wx:if="{{phoneTip}}">该用户不存在请确认后重试！</view>
     </view>
 
@@ -195,14 +195,14 @@
       <view class="title">选择充值方式</view>
       <view class="ways">
         <view class="wayItem" catchtap="payToggle(0)">
-          <image class="item_icon" src="{{domin}}/recharge/alipay.png"></image>
+          <image class="item_icon" src="{{ossDomain}}/recharge/alipay.png"></image>
           <view class="item_name">支付宝</view>
-          <image class="item_check" src="{{domin}}{{currentPay==0?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_check" src="{{ossDomain}}{{currentPay==0?'/recharge/checked.png':'/recharge/check.png'}}"></image>
         </view>
         <view class="wayItem" catchtap="payToggle(1)">
-          <image class="item_icon" src="{{domin}}/recharge/wechat.png"></image>
+          <image class="item_icon" src="{{ossDomain}}/recharge/wechat.png"></image>
           <view class="item_name">微信支付</view>
-          <image class="item_check" src="{{domin}}{{currentPay==1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_check" src="{{ossDomain}}{{currentPay==1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
         </view>
       </view>
     </view>
@@ -227,7 +227,7 @@
     mixins = []
 
     data = {
-      domin: globalData.domin,
+      ossDomain: globalData.ossDomain,
       type: 0, //1：给自己充值；2：给他人充值；
       currentCharge:0,//充值金额类型
       currentPay:0,//0：支付宝； 1：微信

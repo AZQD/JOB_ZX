@@ -112,7 +112,7 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="descBox">
       <view class="itemBox">
@@ -129,14 +129,14 @@
 
     <view class="shadeBox" wx:if="{{showShadeBtn}}">
       <view class="shadeContent">
-        <image class="close_icon" catchtap="showShadeFun({{false}})" src="{{domin}}/rechargeConfirm/close_icon.png"></image>
+        <image class="close_icon" catchtap="showShadeFun({{false}})" src="{{ossDomain}}/rechargeConfirm/close_icon.png"></image>
         <view class="successBox" wx:if="{{rechargeState}}">
           <view class="title">已成功充值<text class="num">50元</text></view>
-          <image class="success_icon" src="{{domin}}/rechargeConfirm/success_icon.png"></image>
+          <image class="success_icon" src="{{ossDomain}}/rechargeConfirm/success_icon.png"></image>
         </view>
         <view class="failBox" wx:else>
           <view class="title">充值失败</view>
-          <image class="fail_icon" src="{{domin}}/rechargeConfirm/fail_icon.png"></image>
+          <image class="fail_icon" src="{{ossDomain}}/rechargeConfirm/fail_icon.png"></image>
           <view class="gotoRecharge" catchtap="gotoRecharge(1)">重新充值</view>
         </view>
       </view>
@@ -161,7 +161,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin,
+      ossDomain:globalData.ossDomain,
       showShadeBtn: false,//是否显示遮罩
       rechargeState: false//充值成功/充值失败
     }

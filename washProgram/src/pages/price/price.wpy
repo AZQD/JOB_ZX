@@ -173,7 +173,7 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="menuBox">
       <view catchtap="stateToggle(0)" class="{{activeMenu==0?'menu_item active':'menu_item'}}">洗衣</view>
@@ -195,91 +195,91 @@
 
       <view class="good-item">
         <view class="imgWrap">
-          <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
         </view>
         <view class="desc1"><text class="desc1Text">毛绒玩具(50厘米-1米)</text></view>
         <view class="desc2">充值后￥9.50</view>
         <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
         <view class="desc4">
-          <image class="modify_icon" src="{{domin}}/price/reduce_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/reduce_icon.png"></image>
           <text class="num">0</text>
-          <image class="modify_icon" src="{{domin}}/price/add_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/add_icon.png"></image>
         </view>
       </view>
 
       <view class="good-item">
         <view class="imgWrap">
-          <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
         </view>
         <view class="desc1"><text class="desc1Text">毛绒玩具(50厘米-1米)</text></view>
         <view class="desc2">充值后￥9.50</view>
         <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
         <view class="desc4">
-          <image class="modify_icon" src="{{domin}}/price/reduce_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/reduce_icon.png"></image>
           <text class="num">0</text>
-          <image class="modify_icon" src="{{domin}}/price/add_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/add_icon.png"></image>
         </view>
       </view>
 
       <view class="good-item">
         <view class="imgWrap">
-          <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
         </view>
         <view class="desc1"><text class="desc1Text">毛绒玩具(50厘米-1米)</text></view>
         <view class="desc2">充值后￥9.50</view>
         <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
         <view class="desc4">
-          <image class="modify_icon" src="{{domin}}/price/reduce_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/reduce_icon.png"></image>
           <text class="num">0</text>
-          <image class="modify_icon" src="{{domin}}/price/add_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/add_icon.png"></image>
         </view>
       </view>
 
       <view class="good-item">
         <view class="imgWrap">
-          <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
         </view>
         <view class="desc1"><text class="desc1Text">毛绒玩具(50厘米-1米)</text></view>
         <view class="desc2">充值后￥9.50</view>
         <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
         <view class="desc4">
-          <image class="modify_icon" src="{{domin}}/price/reduce_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/reduce_icon.png"></image>
           <text class="num">0</text>
-          <image class="modify_icon" src="{{domin}}/price/add_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/add_icon.png"></image>
         </view>
       </view>
 
       <view class="good-item">
         <view class="imgWrap">
-          <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
         </view>
         <view class="desc1"><text class="desc1Text">毛绒玩具(50厘米-1米)</text></view>
         <view class="desc2">充值后￥9.50</view>
         <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
         <view class="desc4">
-          <image class="modify_icon" src="{{domin}}/price/reduce_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/reduce_icon.png"></image>
           <text class="num">0</text>
-          <image class="modify_icon" src="{{domin}}/price/add_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/add_icon.png"></image>
         </view>
       </view>
 
       <view class="good-item">
         <view class="imgWrap">
-          <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+          <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
         </view>
         <view class="desc1"><text class="desc1Text">毛绒玩具(50厘米-1米)</text></view>
         <view class="desc2">充值后￥9.50</view>
         <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
         <view class="desc4">
-          <image class="modify_icon" src="{{domin}}/price/reduce_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/reduce_icon.png"></image>
           <text class="num">0</text>
-          <image class="modify_icon" src="{{domin}}/price/add_icon.png"></image>
+          <image class="modify_icon" src="{{ossDomain}}/price/add_icon.png"></image>
         </view>
       </view>
 
     </view>
     <view class="emptyBox" wx:else>
-      <image class="empty_img" src="{{domin}}/order/noresult.png"></image>
+      <image class="empty_img" src="{{ossDomain}}/order/noresult.png"></image>
       <view class="empty_text">还没有相关数据</view>
     </view>
 
@@ -308,7 +308,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin,
+      ossDomain:globalData.ossDomain,
       activeMenu:0,//当前item
       listData:[666],
     }

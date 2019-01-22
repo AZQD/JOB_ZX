@@ -99,7 +99,7 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="addressBox" wx:if="{{addressData.length>0}}">
       <view class="addressItem">
@@ -120,13 +120,13 @@
       </view>
     </view>
     <view class="emptyBox" wx:else>
-      <image class="empty_img" src="{{domin}}/address/no_address.png"></image>
+      <image class="empty_img" src="{{ossDomain}}/address/no_address.png"></image>
       <view class="empty_text">您还没有添加收货地址</view>
       <view class="empty_tip">可以右下角按钮添加即可</view>
     </view>
 
     <view class="add_wrap">
-      <image class="add_icon" catchtap="gotoAdd()" src="{{domin}}/address/add_address.png"></image>
+      <image class="add_icon" catchtap="gotoAdd()" src="{{ossDomain}}/address/add_address.png"></image>
     </view>
 
   </view>
@@ -147,7 +147,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin,
+      ossDomain:globalData.ossDomain,
       addressData:[2]
     }
 

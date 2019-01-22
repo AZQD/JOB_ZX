@@ -63,11 +63,11 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="headerBox">
       <view class="left">
-        <image class="good_img" src="{{domin}}/order/good_img.png"></image>
+        <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
       </view>
       <view class="right">
         <view class="desc1">状态<text class="status">已签收</text></view>
@@ -116,7 +116,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin
+      ossDomain:globalData.ossDomain
     }
 
     computed = {

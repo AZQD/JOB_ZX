@@ -66,11 +66,11 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="infoBox">
       <view class="statusBox">
-        <image class="success_icon" src="{{domin}}/mine/head_img.png"></image>
+        <image class="success_icon" src="{{ossDomain}}/mine/head_img.png"></image>
         <text class="success_text">下单成功</text>
       </view>
 
@@ -105,7 +105,7 @@
       </view>
 
       <view class="contact" catchtap='contact' data-phone="15089788366">
-        <image class="contact_icon" src="{{domin}}/orderSuccess/contact_icon.png"></image>
+        <image class="contact_icon" src="{{ossDomain}}/orderSuccess/contact_icon.png"></image>
         <text class="contact_name">洗货小哥</text>
       </view>
 
@@ -129,7 +129,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin
+      ossDomain:globalData.ossDomain
     }
 
     computed = {

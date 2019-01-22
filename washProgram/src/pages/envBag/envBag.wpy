@@ -144,18 +144,18 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="headerBox">
       <view class="topBox">
         <view class="left">
-          <image class="avatar_icon" src="{{domin}}/mine/head_img.png"></image>
+          <image class="avatar_icon" src="{{ossDomain}}/mine/head_img.png"></image>
           <text class="avatar_name">加菲猫</text>
         </view>
         <view class="right" catchtap="gotoRecharge">
-          <image class="money_icon" src="{{domin}}/envBag/record.png"></image>
+          <image class="money_icon" src="{{ossDomain}}/envBag/record.png"></image>
           <text class="text">环保袋购买记录</text>
-          <image class="more_white" src="{{domin}}/mine/more_white.png"></image>
+          <image class="more_white" src="{{ossDomain}}/mine/more_white.png"></image>
         </view>
       </view>
       <view class="tabs">
@@ -167,13 +167,13 @@
     <view class="footerBox">
       <view class="item">
         <view class="left">
-          <image class="item_icon" src="{{domin}}/envBag/shoppingCard.png"></image>
+          <image class="item_icon" src="{{ossDomain}}/envBag/shoppingCard.png"></image>
         </view>
         <view class="right">购买环保袋</view>
       </view>
       <view class="item" catchtap="showShadeFun({{true}})" data-phone="15089788366">
         <view class="left">
-          <image class="item_icon" src="{{domin}}/envBag/refund.png"></image>
+          <image class="item_icon" src="{{ossDomain}}/envBag/refund.png"></image>
         </view>
         <view class="right">购物袋退款</view>
       </view>
@@ -208,7 +208,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin,
+      ossDomain:globalData.ossDomain,
       showShadeBtn: false,//是否显示遮罩
     }
 

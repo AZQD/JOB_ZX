@@ -96,7 +96,7 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="menuBox">
       <view catchtap="stateToggle(0)" class="{{activeMenu==0?'menu_item active':'menu_item'}}">充值明细</view>
@@ -178,7 +178,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin,
+      ossDomain:globalData.ossDomain,
       activeMenu:0
     }
 

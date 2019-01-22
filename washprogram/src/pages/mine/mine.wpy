@@ -133,20 +133,20 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="headerBox">
       <view class="avatar">
-        <image class="avatar_icon" src="{{domin}}/mine/head_img.png"></image>
+        <image class="avatar_icon" src="{{ossDomain}}/mine/head_img.png"></image>
         <text class="avatar_name">加菲猫</text>
       </view>
       <text class="account">账户余额</text>
       <view class="recharge">
         <view class="left">666666</view>
         <view class="right" catchtap="gotoRecharge(1)">
-          <image class="money_icon" src="{{domin}}/mine/money_icon.png"></image>
+          <image class="money_icon" src="{{ossDomain}}/mine/money_icon.png"></image>
           <text class="text">在线充值</text>
-          <image class="more_white" src="{{domin}}/mine/more_white.png"></image>
+          <image class="more_white" src="{{ossDomain}}/mine/more_white.png"></image>
         </view>
       </view>
       <view class="tabs">
@@ -157,19 +157,19 @@
 
     <view class="menuBox">
       <view class="menu_item" catchtap="gotoOrder">
-        <image class="menu_item_icon" src="{{domin}}/mine/order_icon.png"></image>
+        <image class="menu_item_icon" src="{{ossDomain}}/mine/order_icon.png"></image>
         <text class="menu_item_name">我的订单</text>
       </view>
       <view class="menu_item">
-        <image class="menu_item_icon" src="{{domin}}/mine/address_icon.png"></image>
+        <image class="menu_item_icon" src="{{ossDomain}}/mine/address_icon.png"></image>
         <text class="menu_item_name">我的地址</text>
       </view>
       <view class="menu_item">
-        <image class="menu_item_icon" src="{{domin}}/mine/deliver_icon.png"></image>
+        <image class="menu_item_icon" src="{{ossDomain}}/mine/deliver_icon.png"></image>
         <text class="menu_item_name">派送招募</text>
       </view>
       <view class="menu_item">
-        <image class="menu_item_icon" src="{{domin}}/mine/service_icon.png"></image>
+        <image class="menu_item_icon" src="{{ossDomain}}/mine/service_icon.png"></image>
         <text class="menu_item_name">在线客服</text>
       </view>
     </view>
@@ -177,19 +177,19 @@
     <view class="footerBox">
       <view class="item">
         <view class="left">
-          <image class="item_icon" src="{{domin}}/mine/bag.png"></image>
+          <image class="item_icon" src="{{ossDomain}}/mine/bag.png"></image>
         </view>
         <view class="right">我的环保袋</view>
       </view>
       <view class="item">
         <view class="left">
-          <image class="item_icon" src="{{domin}}/mine/storage.png"></image>
+          <image class="item_icon" src="{{ossDomain}}/mine/storage.png"></image>
         </view>
         <view class="right">衣仓</view>
       </view>
       <view class="item">
         <view class="left">
-          <image class="item_icon" src="{{domin}}/mine/setting.png"></image>
+          <image class="item_icon" src="{{ossDomain}}/mine/setting.png"></image>
         </view>
         <view class="right">设置</view>
       </view>
@@ -213,7 +213,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin
+      ossDomain:globalData.ossDomain
     }
 
     computed = {

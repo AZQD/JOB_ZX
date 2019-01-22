@@ -58,7 +58,7 @@
 </style>
 
 <template>
-  <view class="wrapper" wx:if="{{domin}}">
+  <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="couponBox">
       <view class="couponItem bg1">
@@ -101,7 +101,7 @@
     mixins = []
 
     data = {
-      domin:globalData.domin
+      ossDomain:globalData.ossDomain
     }
 
     computed = {
