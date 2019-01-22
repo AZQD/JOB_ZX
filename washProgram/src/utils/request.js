@@ -3,6 +3,7 @@
  * @param {*} params : 请求需要传的参数
  * @param {*} method : 请求的方式，默认是GET，可以是POST
  */
+import Toast from 'wepy-com-toast'
 
 const methods = {
   requestPost(path, params) {

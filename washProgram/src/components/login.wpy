@@ -1,0 +1,53 @@
+<style lang="less">
+
+</style>
+<template>
+  <button
+    open-type="getUserInfo"
+    bindgetuserinfo="bindGetUserInfo"
+  >授权登录</button>
+</template>
+<script>
+  import wepy from 'wepy'
+  import * as appUtils from "appUtils";
+
+  export default class List extends wepy.component {
+    data = {
+
+    }
+
+    events = {
+
+    }
+
+    methods = {
+      bindGetUserInfo(res) {
+        let that = this;
+        console.log('bindGetUserInfo', res);
+        let encryptedData = res.detail.encryptedData;
+        let iv = res.detail.iv;
+        wepy.login({
+          success: function(res) {
+            console.log('wepy.login', res);
+            let code = res.code;
+            appUtils.requestPost(appUtils.api.AUTH_LOGIN, {
+              encryptedData,
+              iv,
+              code
+            }).then(function(res) {
+              console.log('登录数据', res);
+              if(res.data.code === 0){
+                wx.setStorageSync("users", res.data.data);
+                appUtils.globalData.userInfo = res.data.data;
+                that.$emit('usersActive', res.data.data)
+              }
+            });
+          }
+        });
+      }
+    }
+
+    onLoad () {
+    }
+  }
+</script>

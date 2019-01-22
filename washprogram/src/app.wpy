@@ -36,6 +36,7 @@
 
   import {setStore} from 'wepy-redux'
   import configStore from './store'
+  import * as appUtils from "appUtils";
 
   const store = configStore()
   setStore(store)
@@ -113,6 +114,12 @@
           console.log('wepy.login', res);
         }
       });*/
+      let users = wx.getStorageSync("users");
+      console.log('storage中的users', users);
+      if(users){
+        appUtils.globalData.users = users
+      }
+      
     }
 
     sleep(s) {

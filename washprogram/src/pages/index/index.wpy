@@ -104,10 +104,7 @@
 <template>
   <view class="wrapper" wx:if="{{ossDomain}}">
 
-    <button
-      open-type="getUserInfo"
-      bindgetuserinfo="bindGetUserInfo"
-    >授权登录</button>
+    <Login wx:if="{{!users}}"/>
 
     <view class="headerBox">
       <swiper duration="500" circular autoplay interval="3000">
@@ -192,19 +189,21 @@
 <script>
   import wepy from 'wepy'
   import * as appUtils from "appUtils";
+  import Login from '@components/login'
 
   export default class Index extends wepy.page {
     config = {
       navigationBarTitleText: '欢迎来到洗货'
     }
     components = {
-
+      Login: Login
     }
 
     mixins = []
 
     data = {
-      ossDomain: appUtils.globalData.ossDomain
+      ossDomain: appUtils.globalData.ossDomain,
+      users: appUtils.globalData.users,
     };
 
     computed = {
@@ -225,30 +224,16 @@
     }
 
     events = {
-
-    }
+      'usersActive': (users) => { //接收登录子组件的事件
+        console.log('接收登录子组件的事件', users);
+        this.users = users;
+        this.$apply();
+      }
+    };
 
     onLoad() {
       let that = this
-    }
-
-    bindGetUserInfo(res) {
-      console.log('bindGetUserInfo', res);
-      let encryptedData = res.detail.encryptedData;
-      let iv = res.detail.iv;
-      wepy.login({
-        success: function(res) {
-          console.log('wepy.login', res);
-          let code = res.code;
-          appUtils.requestPost(appUtils.api.AUTH_LOGIN, {
-            encryptedData,
-            iv,
-            code
-          }).then(function(res) {
-            console.log('登录数据', res);
-          });
-        }
-      });
+      console.log('appUtils', appUtils);
     }
   }
 </script>
