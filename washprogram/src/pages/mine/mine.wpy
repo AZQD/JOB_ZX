@@ -200,7 +200,7 @@
 
 <script>
   import wepy from 'wepy'
-  import {globalData} from '@utils/globalData'
+  import * as appUtils from "appUtils";
 
   export default class Index extends wepy.page {
     config = {
@@ -213,7 +213,7 @@
     mixins = []
 
     data = {
-      ossDomain:globalData.ossDomain
+      ossDomain:appUtils.globalData.ossDomain
     }
 
     computed = {
@@ -238,7 +238,19 @@
     }
 
     onLoad() {
-      let that = this
+      this.getUserDetail();
+    }
+
+    getUserDetail() {
+      appUtils.request(appUtils.api.USER_DETAIL, {
+        token: appUtils.globalData.token,
+      }).then(res => {
+        console.log('个人基本信息接口', res);
+        if (res.data.code === 0) {
+          // this.categoryData = res.data.data;
+          this.$apply();
+        }
+      });
     }
   }
 </script>
