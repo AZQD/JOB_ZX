@@ -20,7 +20,7 @@
     <button
       open-type="getUserInfo"
       bindgetuserinfo="bindGetUserInfo"
-    >授权登录</button>
+    >用户信息授权</button>
   </view>
 </template>
 <script>

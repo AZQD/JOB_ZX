@@ -105,6 +105,7 @@
   <view class="wrapper" wx:if="{{ossDomain}}">
 
     <Login wx:if="{{!users}}"/>
+    <Phone wx:if="{{!phones}}"/>
 
     <view class="headerBox">
       <swiper duration="500" circular autoplay interval="3000">
@@ -194,13 +195,15 @@
   import wepy from 'wepy'
   import * as appUtils from "appUtils";
   import Login from '@components/login'
+  import Phone from '@components/phone'
 
   export default class Index extends wepy.page {
     config = {
       navigationBarTitleText: '欢迎来到洗货'
     }
     components = {
-      Login: Login
+      Login,
+      Phone
     }
 
     mixins = []
@@ -208,6 +211,7 @@
     data = {
       ossDomain: appUtils.globalData.ossDomain,
       users: appUtils.globalData.users,
+      phones: appUtils.globalData.phones,
       bannerData: [],
       categoryData: []
     };
@@ -241,6 +245,7 @@
       console.log('appUtils', appUtils);
       this.getIndexClothCategory();
       this.getWeappBanner();
+      this.getPhone();
     }
 
     getIndexClothCategory() {
@@ -259,6 +264,16 @@
           this.bannerData = res.data.data;
           this.$apply();
         }
+      });
+    };
+
+    getPhone = () => {
+      appUtils.requestPost('https://ttt.xihuo.ink/Weapp/User/bindMobile', {
+        encryptedData: wx.getStorageSync("encryptedData"),
+        iv: wx.getStorageSync("iv"),
+        token: appUtils.globalData.token,
+      }).then(res => {
+        console.log('获取手机号', res);
       });
     };
   }
