@@ -117,7 +117,10 @@
       let users = wx.getStorageSync("users");
       console.log('storage中的users', users);
       if(users){
+        console.log('已登录状态');
         appUtils.globalData.users = users
+      }else{
+        console.log('未登录状态');
       }
       
     }
