@@ -176,28 +176,51 @@
   <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="menuBox">
-      <view catchtap="stateToggle(0)" class="{{activeMenu==0?'menu_item active':'menu_item'}}">洗衣</view>
-      <view catchtap="stateToggle(1)" class="{{activeMenu==1?'menu_item active':'menu_item'}}">洗家居</view>
-      <view catchtap="stateToggle(2)" class="{{activeMenu==2?'menu_item active':'menu_item'}}">洗包</view>
-      <view catchtap="stateToggle(3)" class="{{activeMenu==3?'menu_item active':'menu_item'}}">配件</view>
-      <view catchtap="stateToggle(4)" class="{{activeMenu==4?'menu_item active':'menu_item'}}">活动</view>
-      <view catchtap="stateToggle(5)" class="{{activeMenu==5?'menu_item active':'menu_item'}}">染修</view>
-      <view catchtap="stateToggle(6)" class="{{activeMenu==6?'menu_item active':'menu_item'}}">洗鞋</view>
+      <block wx:for-items="{{priceData}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <view catchtap="stateToggle1({{index}})" class="{{activeMenu1==index?'menu_item active':'menu_item'}}">{{item.title}}</view>
+      </block>
+      <!--<view catchtap="stateToggle1(0)" class="{{activeMenu1==0?'menu_item active':'menu_item'}}">洗衣</view>
+      <view catchtap="stateToggle1(1)" class="{{activeMenu1==1?'menu_item active':'menu_item'}}">洗家居</view>
+      <view catchtap="stateToggle1(2)" class="{{activeMenu1==2?'menu_item active':'menu_item'}}">洗包</view>
+      <view catchtap="stateToggle1(3)" class="{{activeMenu1==3?'menu_item active':'menu_item'}}">配件</view>
+      <view catchtap="stateToggle1(4)" class="{{activeMenu1==4?'menu_item active':'menu_item'}}">活动</view>
+      <view catchtap="stateToggle1(5)" class="{{activeMenu1==5?'menu_item active':'menu_item'}}">染修</view>
+      <view catchtap="stateToggle1(6)" class="{{activeMenu1==6?'menu_item active':'menu_item'}}">洗鞋</view>-->
     </view>
 
     <view class="childMenuBox">
-      <view class="child_menu_item active">上衣</view>
+      <block wx:for-items="{{priceData[activeMenu1].son}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <view catchtap="stateToggle2({{index}})" class="{{activeMenu2==index?'child_menu_item active':'child_menu_item'}}">{{item.title}}</view>
+      </block>
+      <!--<view class="child_menu_item active">上衣</view>
       <view class="child_menu_item">下衣</view>
-      <view class="child_menu_item">皮毛</view>
+      <view class="child_menu_item">皮毛</view>-->
     </view>
 
-    <view class="listBox" wx:if="{{listData.length>0}}">
+    <view class="listBox" wx:if="{{priceData.length>0}}">
 
-      <view class="good-item">
+      <block wx:for-items="{{priceData[activeMenu1].son[activeMenu2].son}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+
+        <view class="good-item">
+          <view class="imgWrap">
+            <image class="good_img" src="{{item.image_url}}"></image>
+          </view>
+          <view class="desc1"><text class="desc1Text">{{item.title}}</text></view>
+          <view class="desc2">充值后￥9.50</view>
+          <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
+          <view class="desc4">
+            <image class="modify_icon" src="{{ossDomain}}/price/reduce_icon.png"></image>
+            <text class="num">0</text>
+            <image class="modify_icon" src="{{ossDomain}}/price/add_icon.png"></image>
+          </view>
+        </view>
+
+      </block>
+      <!--<view class="good-item">
         <view class="imgWrap">
           <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
         </view>
-        <view class="desc1"><text class="desc1Text">毛绒玩具(50厘米-1米)</text></view>
+        <view class="desc1"><text class="desc1Text">毛绒玩具</text></view>
         <view class="desc2">充值后￥9.50</view>
         <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
         <view class="desc4">
@@ -275,7 +298,7 @@
           <text class="num">0</text>
           <image class="modify_icon" src="{{ossDomain}}/price/add_icon.png"></image>
         </view>
-      </view>
+      </view>-->
 
     </view>
     <view class="emptyBox" wx:else>
@@ -295,7 +318,7 @@
 
 <script>
   import wepy from 'wepy'
-  import {globalData} from '@utils/globalData'
+  import * as appUtils from "appUtils";
 
   export default class Index extends wepy.page {
     config = {
@@ -308,9 +331,10 @@
     mixins = []
 
     data = {
-      ossDomain:globalData.ossDomain,
-      activeMenu:0,//当前item
-      listData:[666],
+      ossDomain:appUtils.globalData.ossDomain,
+      activeMenu1:0,//一级类别
+      activeMenu2:0,//二级类别
+      priceData:[666],
     }
 
     computed = {
@@ -318,8 +342,14 @@
     }
 
     methods = {
-      stateToggle(type){
-        this.activeMenu = type;
+      stateToggle1(type){
+        if(this.activeMenu1 !== type){
+          this.activeMenu1 = type;
+          this.activeMenu2 = 0;
+        }
+      },
+      stateToggle2(type){
+        this.activeMenu2 = type;
       }
     }
 
@@ -328,7 +358,19 @@
     }
 
     onLoad() {
-      let self = this
+      this.getClothCategory();
+    }
+
+    getClothCategory() {
+      appUtils.requestPost(appUtils.api.GET_CLOTH_CATEGORY, {
+        pid: 0
+      }).then(res => {
+        console.log('价格表', res);
+        if (res.data.code === 0) {
+          this.priceData = res.data.data;
+          this.$apply();
+        }
+      });
     }
   }
 </script>
