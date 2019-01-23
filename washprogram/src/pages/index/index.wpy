@@ -30,6 +30,7 @@
   }
 
   .goodsBox{
+    min-height: 516rpx;
     font-size: 16rpx;
     margin: 0 30rpx;
     margin-top: 11rpx;
@@ -105,7 +106,7 @@
   <view class="wrapper" wx:if="{{ossDomain}}">
 
     <Login wx:if="{{!users}}"/>
-    <Phone wx:if="{{!phones}}"/>
+    <!--<Phone wx:if="{{!phones}}"/>-->
 
     <view class="headerBox">
       <swiper duration="500" circular autoplay interval="3000">
@@ -144,7 +145,7 @@
         <view class="good_item" style="background:url({{ item.image_url }}) no-repeat center; background-size: cover" id="{{item.id}}">
           <view class="desc_item">
             <view class="desc1">{{item.title}}</view>
-            <view class="desc2">WASH THE FURNITURE</view>
+            <view class="desc2">{{item.alias_title}}</view>
           </view>
         </view>
       </block>

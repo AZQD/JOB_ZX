@@ -206,8 +206,8 @@
             <image class="good_img" src="{{item.image_url}}"></image>
           </view>
           <view class="desc1"><text class="desc1Text">{{item.title}}</text></view>
-          <view class="desc2">充值后￥9.50</view>
-          <view class="desc3"><text class="desc3Text">原价￥99.00元</text></view>
+          <view class="desc2">充值后￥{{item.old_price}}</view>
+          <view class="desc3"><text class="desc3Text">原价￥{{item.price}}元</text></view>
           <view class="desc4">
             <image class="modify_icon" src="{{ossDomain}}/price/reduce_icon.png"></image>
             <text class="num">0</text>

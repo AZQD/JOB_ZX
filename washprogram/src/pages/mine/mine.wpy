@@ -137,12 +137,12 @@
 
     <view class="headerBox">
       <view class="avatar">
-        <image class="avatar_icon" src="{{ossDomain}}/mine/head_img.png"></image>
-        <text class="avatar_name">加菲猫</text>
+        <image class="avatar_icon" src="{{userData.user_headimg}}"></image>
+        <text class="avatar_name">{{userData.user_name}}</text>
       </view>
       <text class="account">账户余额</text>
       <view class="recharge">
-        <view class="left">666666</view>
+        <view class="left">{{userData.money}}</view>
         <view class="right" catchtap="gotoRecharge(1)">
           <image class="money_icon" src="{{ossDomain}}/mine/money_icon.png"></image>
           <text class="text">在线充值</text>
@@ -213,7 +213,8 @@
     mixins = []
 
     data = {
-      ossDomain:appUtils.globalData.ossDomain
+      ossDomain:appUtils.globalData.ossDomain,
+      userData: {}
     }
 
     computed = {
@@ -247,7 +248,7 @@
       }).then(res => {
         console.log('个人基本信息接口', res);
         if (res.data.code === 0) {
-          // this.categoryData = res.data.data;
+          this.userData = res.data.data;
           this.$apply();
         }
       });
