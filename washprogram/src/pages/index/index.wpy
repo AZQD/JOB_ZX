@@ -239,6 +239,11 @@
         console.log('接收登录子组件的事件', users);
         this.users = users;
         this.$apply();
+      },
+      'phonesActive': (phones) => { //接收获取手机号子组件的事件
+        console.log('接收获取手机号子组件的事件', phones);
+        this.phones = phones;
+        this.$apply();
       }
     };
 
@@ -246,7 +251,7 @@
       console.log('appUtils', appUtils);
       this.getIndexClothCategory();
       this.getWeappBanner();
-      this.getPhone();
+      // this.getPhone();
     }
 
     getIndexClothCategory() {

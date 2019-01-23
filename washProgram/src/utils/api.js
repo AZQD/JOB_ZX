@@ -4,6 +4,7 @@ export const  api = {
 
   //登录注册
   AUTH_LOGIN: ajaxDomain+'/Auth/login', //用户注册接口
+  BIND_MOBILE: ajaxDomain+'/User/bindMobile', //绑定手机号、获取手机号
 
   //个人中心
   USER_DETAIL: ajaxDomain+'/User/userDetail', //我的（个人基本信息接口）
@@ -14,8 +15,8 @@ export const  api = {
 
   //订单
   ORDER_LIST: ajaxDomain+'/User/orderList', //用户订单列表接口
+  GET_ORDER_EXPRESS: ajaxDomain+'/Order/getOrderExpress', //订单物流状态接口
 
   //价格表
   GET_CLOTH_CATEGORY: ajaxDomain+'/index/getClothCategory', //价格表
-  GET_ORDER_EXPRESS: ajaxDomain+'/Order/getOrderExpress', //订单物流状态接口
 };

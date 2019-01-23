@@ -40,19 +40,19 @@
         console.log('getPhoneNumber', res);
         let encryptedData = res.detail.encryptedData;
         let iv = res.detail.iv;
-        appUtils.requestPost('https://ttt.xihuo.ink/Weapp/User/bindMobile', {
+        appUtils.requestPost(appUtils.api.BIND_MOBILE, {
           encryptedData,
           iv,
           token: appUtils.globalData.token,
         }).then(function(res) {
-          console.log('getPhoneNumber数据', res);
-          /*if(res.data.code === 0){
-            console.log('登录成功！');
-            wx.setStorageSync("encryptedData", encryptedData);
-            wx.setStorageSync("iv", iv);
-            wx.setStorageSync("users", res.data.data);
-            that.$emit('usersActive', res.data.data)
-          }*/
+          console.log('获取手机号', res);
+          if(res.data.code === 0){
+            console.log('获取手机号成功！');
+            wx.setStorageSync("phones", res.data.data);
+            that.$emit('phonesActive', res.data.data)
+          }else{
+            console.log('获取手机号失败');
+          }
         });
       }
     }
