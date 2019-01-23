@@ -357,7 +357,8 @@
 
     }
 
-    onLoad() {
+    onLoad(options) {
+      this.activeMenu1 = options.activeMenu1 || 0;
       this.getClothCategory();
     }
 

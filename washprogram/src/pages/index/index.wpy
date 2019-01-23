@@ -142,7 +142,7 @@
 
     <view class="goodsBox">
       <block wx:for-items="{{categoryData}}" wx:for-index="index" wx:for-item="item" wx:key="id">
-        <view class="good_item" style="background:url({{ item.image_url }}) no-repeat center; background-size: cover" id="{{item.id}}">
+        <view class="good_item" style="background:url({{ item.image_url }}) no-repeat center; background-size: cover" catchtap="gotoPrice({{index}})">
           <view class="desc_item">
             <view class="desc1">{{item.title}}</view>
             <view class="desc2">{{item.alias_title}}</view>
@@ -230,6 +230,11 @@
       gotoYuYue(){
         wx.navigateTo({
           url:`../yuYue/yuYue`
+        });
+      },
+      gotoPrice(index){ //跳转价格表页面；
+        wx.navigateTo({
+          url:`../price/price?activeMenu1=${index}`
         });
       },
     }
