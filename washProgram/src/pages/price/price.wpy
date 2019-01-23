@@ -363,7 +363,7 @@
 
     getClothCategory() {
       appUtils.requestPost(appUtils.api.GET_CLOTH_CATEGORY, {
-        pid: 0
+        // pid: 0 //获取所有数据，pid可以不用传
       }).then(res => {
         console.log('价格表', res);
         if (res.data.code === 0) {
