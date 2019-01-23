@@ -17,4 +17,5 @@ export const  api = {
 
   //价格表
   GET_CLOTH_CATEGORY: ajaxDomain+'/index/getClothCategory', //价格表
+  GET_ORDER_EXPRESS: ajaxDomain+'/Order/getOrderExpress', //订单物流状态接口
 };

@@ -33,12 +33,11 @@
   }
 
   .statusBox{
+    height: 944rpx;
     padding: 8rpx 0;
     padding-left: 130rpx;
     margin: 0 30rpx;
     margin-top: 16rpx;
-    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/logistics/state_bg2.png) no-repeat left 45rpx center;
-    background-size: 30rpx auto;
     .statusItem{
       padding-top: 32rpx;
       padding-bottom: 80rpx;
@@ -59,6 +58,26 @@
       border-bottom: none;
     }
   }
+  .statusBg1{
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/logistics/state_bg1.png) no-repeat left 45rpx center;
+    background-size: 30rpx auto;
+  }
+  .statusBg2{
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/logistics/state_bg2.png) no-repeat left 45rpx center;
+    background-size: 30rpx auto;
+  }
+  .statusBg3{
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/logistics/state_bg3.png) no-repeat left 45rpx center;
+    background-size: 30rpx auto;
+  }
+  .statusBg4{
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/logistics/state_bg4.png) no-repeat left 45rpx center;
+    background-size: 30rpx auto;
+  }
+  .statusBg5{
+    background: #fff url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/logistics/state_bg5.png) no-repeat left 45rpx center;
+    background-size: 30rpx auto;
+  }
 
 </style>
 
@@ -67,16 +86,22 @@
 
     <view class="headerBox">
       <view class="left">
-        <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
+        <image class="good_img" src="{{logisticsData.image_url}}"></image>
       </view>
       <view class="right">
-        <view class="desc1">状态<text class="status">已签收</text></view>
-        <view class="desc2">订单编号：88991244880215</view>
+        <view class="desc1">状态<text class="status">{{logisticsData.state}}</text></view>
+        <view class="desc2">订单编号：{{logisticsData.order_sn}}</view>
       </view>
     </view>
 
-    <view class="statusBox">
-      <view class="statusItem active">
+    <view class="statusBox statusBg{{logisticsData.action_list.length}}">
+      <block wx:for-items="{{logisticsData.action_list}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <view class="statusItem active">
+          <view class="desc1">{{item.order_status_text}}</view>
+          <view class="desc2">{{item.action_time}}</view>
+        </view>
+      </block>
+      <!--<view class="statusItem active">
         <view class="desc1">收件中</view>
         <view class="desc2">2018-6-1 15:52::59</view>
       </view>
@@ -95,7 +120,7 @@
       <view class="statusItem">
         <view class="desc1">收件中</view>
         <view class="desc2">2018-6-1 15:52::59</view>
-      </view>
+      </view>-->
     </view>
 
   </view>
@@ -103,7 +128,7 @@
 
 <script>
   import wepy from 'wepy'
-  import {globalData} from '@utils/globalData'
+  import * as appUtils from "appUtils";
 
   export default class Index extends wepy.page {
     config = {
@@ -116,7 +141,8 @@
     mixins = []
 
     data = {
-      ossDomain:globalData.ossDomain
+      ossDomain:appUtils.globalData.ossDomain,
+      logisticsData: {}
     }
 
     computed = {
@@ -132,7 +158,20 @@
     }
 
     onLoad() {
-      let that = this
+      this.getOrderExpress();
+    }
+
+    getOrderExpress() {
+      appUtils.request(appUtils.api.GET_ORDER_EXPRESS, {
+        id: "39",
+        token: appUtils.globalData.token,
+      }).then(res => {
+        console.log('订单物流状态接口', res);
+        if (res.data.code === 0) {
+          this.logisticsData = res.data.data;
+          this.$apply();
+        }
+      });
     }
   }
 </script>
