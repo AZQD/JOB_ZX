@@ -70,7 +70,7 @@
 
     <view class="infoBox">
       <view class="statusBox">
-        <image class="success_icon" src="{{ossDomain}}/mine/head_img.png"></image>
+        <image class="success_icon" src="{{ossDomain}}/orderSuccess/success_icon.png"></image>
         <text class="success_text">下单成功</text>
       </view>
 
