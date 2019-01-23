@@ -204,7 +204,7 @@
 
 <script>
   import wepy from 'wepy'
-  import {globalData} from '@utils/globalData'
+  import * as appUtils from "appUtils";
 
   export default class Index extends wepy.page {
     config = {
@@ -217,7 +217,7 @@
     mixins = []
 
     data = {
-      ossDomain:globalData.ossDomain,
+      ossDomain:appUtils.globalData.ossDomain,
       activeMenu:0,//当前item
       listData:[666],
     }
@@ -237,7 +237,21 @@
     }
 
     onLoad() {
-      let self = this
+      this.getOrderList();
+    }
+
+    getOrderList() {
+      appUtils.requestPost(appUtils.api.ORDER_LIST, {
+        page: 1,
+        page_size: 10,
+        status: '',
+        token: appUtils.globalData.token,
+      }).then(res => {
+        console.log('用户订单列表接口', res);
+        if (res.data.code === 0) {
+          // this.categoryData = res.data.data;
+        }
+      });
     }
   }
 </script>

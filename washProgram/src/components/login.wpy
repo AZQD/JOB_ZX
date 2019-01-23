@@ -54,8 +54,9 @@
               console.log('登录数据', res);
               if(res.data.code === 0){
                 console.log('登录成功！');
+                wx.setStorageSync("encryptedData", encryptedData);
+                wx.setStorageSync("iv", iv);
                 wx.setStorageSync("users", res.data.data);
-                appUtils.globalData.userInfo = res.data.data;
                 that.$emit('usersActive', res.data.data)
               }
             });

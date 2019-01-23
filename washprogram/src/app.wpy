@@ -119,6 +119,7 @@
       if(users){
         console.log('已登录状态');
         appUtils.globalData.users = users
+        appUtils.globalData.token = users.token
       }else{
         console.log('未登录状态');
       }
