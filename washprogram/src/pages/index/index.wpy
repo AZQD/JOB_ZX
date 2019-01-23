@@ -108,15 +108,11 @@
 
     <view class="headerBox">
       <swiper duration="500" circular autoplay interval="3000">
-        <swiper-item>
-          <image class="slide-image" src="{{ossDomain}}/index/banner1.png" />
-        </swiper-item>
-        <swiper-item>
-          <image class="slide-image" src="{{ossDomain}}/index/banner2.png" />
-        </swiper-item>
-        <swiper-item>
-          <image class="slide-image" src="{{ossDomain}}/index/banner3.png" />
-        </swiper-item>
+        <block wx:for-items="{{bannerData}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+          <swiper-item>
+            <image class="slide-image" src="{{item.image_url}}" id="{{item.id}}" />
+          </swiper-item>
+        </block>
       </swiper>
     </view>
     <view class="menuBox">
@@ -143,7 +139,15 @@
     </view>
 
     <view class="goodsBox">
-      <view class="good_item good_item01">
+      <block wx:for-items="{{categoryData}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <view class="good_item" style="background:url({{ item.image_url }}) no-repeat center; background-size: cover" id="{{item.id}}">
+          <view class="desc_item">
+            <view class="desc1">{{item.title}}</view>
+            <view class="desc2">WASH THE FURNITURE</view>
+          </view>
+        </view>
+      </block>
+      <!--<view class="good_item good_item01">
         <view class="desc_item">
           <view class="desc1">洗衣</view>
           <view class="desc2">LAUNDRY</view>
@@ -178,7 +182,7 @@
           <view class="desc1">洗鞋</view>
           <view class="desc2">WASHOVER SHOE</view>
         </view>
-      </view>
+      </view>-->
     </view>
 
     <view class="ctrlBtnBox" catchtap="gotoYuYue">一键下单</view>
@@ -204,6 +208,8 @@
     data = {
       ossDomain: appUtils.globalData.ossDomain,
       users: appUtils.globalData.users,
+      bannerData: [],
+      categoryData: []
     };
 
     computed = {
@@ -232,8 +238,28 @@
     };
 
     onLoad() {
-      let that = this
       console.log('appUtils', appUtils);
+      this.getIndexClothCategory();
+      this.getWeappBanner();
     }
+
+    getIndexClothCategory() {
+      appUtils.request(appUtils.api.GET_INDEX_CLOTH_CATEGORY).then(res => {
+        console.log('获取小程序首页分类信息', res);
+        if (res.data.code === 0) {
+          this.categoryData = res.data.data;
+        }
+      });
+    }
+
+    getWeappBanner = () => {
+      appUtils.request(appUtils.api.GET_WEAPP_BANNER).then(res => {
+        console.log('获取小程序Banner列表', res);
+        if (res.data.code === 0) {
+          this.bannerData = res.data.data;
+          this.$apply();
+        }
+      });
+    };
   }
 </script>
