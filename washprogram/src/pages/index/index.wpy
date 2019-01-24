@@ -264,6 +264,7 @@
         console.log('获取小程序首页分类信息', res);
         if (res.data.code === 0) {
           this.categoryData = res.data.data;
+          this.$apply();
         }
       });
     }
