@@ -86,10 +86,6 @@
         padding: 12rpx 0;
         padding-right: 30rpx;
         display: flex;
-        .good_img{
-          width: 92rpx;
-          height: 92rpx;
-        }
         .good_desc{
           padding-left: 16rpx;
           flex-grow: 1;
@@ -327,18 +323,16 @@
       </view>
       <view class="bottom">
         <view class="item">
-          <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
           <view class="good_desc">
-            <view class="desc1">背心/上衣</view>
-            <view class="desc2"> x1</view>
+            <text class="desc1">背心/上衣</text>
+            <text class="desc2"> x1</text>
           </view>
           <view class="good_price">￥9.00</view>
         </view>
         <view class="item">
-          <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
           <view class="good_desc">
-            <view class="desc1">背心/上衣</view>
-            <view class="desc2"> x1</view>
+            <text class="desc1">背心/上衣</text>
+            <text class="desc2"> x1</text>
           </view>
           <view class="good_price">￥9.00</view>
         </view>
@@ -373,19 +367,9 @@
           <image class="item_check" src="{{ossDomain}}{{currentPay==0?'/recharge/checked.png':'/recharge/check.png'}}"></image>
         </view>
         <view class="wayItem" catchtap="payToggle(1)">
-          <image class="item_icon" src="{{ossDomain}}/yuYue/alipay_pay.png"></image>
-          <view class="item_name">支付宝</view>
-          <image class="item_check" src="{{ossDomain}}{{currentPay==1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-        </view>
-        <view class="wayItem" catchtap="payToggle(2)">
           <image class="item_icon" src="{{ossDomain}}/yuYue/account_pay.png"></image>
           <view class="item_name">账户余额</view>
-          <image class="item_check" src="{{ossDomain}}{{currentPay==2?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-        </view>
-        <view class="wayItem" catchtap="payToggle(3)">
-          <image class="item_icon" src="{{ossDomain}}/yuYue/online_pay.png"></image>
-          <view class="item_name">在线付款</view>
-          <image class="item_check" src="{{ossDomain}}{{currentPay==3?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_check" src="{{ossDomain}}{{currentPay==1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
         </view>
       </view>
     </view>
