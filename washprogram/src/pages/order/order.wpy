@@ -43,28 +43,41 @@
         }
       }
       .middle{
-        padding: 18rpx 30rpx;
+        border-bottom: 1rpx solid #E2E2E2;
+        padding: 12rpx 30rpx 12rpx 0;
+        margin-left: 30rpx;
         display: flex;
         .left{
           margin-right: 18rpx;
           background-color: #fff;
           .good_img{
-            width: 140rpx;
-            height: 140rpx;
+            width: 92rpx;
+            height: 92rpx;
           }
         }
         .right{
           flex-grow: 1;
           .desc1{
-            color: #000;
+            color: #333;
             font-size: 26rpx;
           }
           .desc2{
-            font-size:24rpx;
-            color: #666;
+            display: flex;
+            justify-content: space-between;
             padding-top: 16rpx;
+            .num{
+              font-size:20rpx;
+              color: #666;
+            }
+            .price{
+              font-size:26rpx;
+              color: #FF0505;
+            }
           }
         }
+      }
+      .middle:nth-last-of-type(2) {
+        border-bottom: none;
       }
       .bottom{
         background-color: #fff;
@@ -134,14 +147,57 @@
   <view class="wrapper" wx:if="{{ossDomain}}">
 
     <view class="menuBox">
-      <view catchtap="stateToggle(0)" class="{{activeMenu==0?'menu_item active':'menu_item'}}">全部</view>
-      <view catchtap="stateToggle(1)" class="{{activeMenu==1?'menu_item active':'menu_item'}}">待支付</view>
-      <view catchtap="stateToggle(2)" class="{{activeMenu==2?'menu_item active':'menu_item'}}">洗护中</view>
-      <view catchtap="stateToggle(3)" class="{{activeMenu==3?'menu_item active':'menu_item'}}">已完成</view>
-      <view catchtap="stateToggle(4)" class="{{activeMenu==4?'menu_item active':'menu_item'}}">取衣</view>
+      <view catchtap="stateToggle()" class="{{status==''?'menu_item active':'menu_item'}}">全部</view>
+      <view catchtap="stateToggle(1)" class="{{status==1?'menu_item active':'menu_item'}}">待支付</view>
+      <view catchtap="stateToggle(2)" class="{{status==2?'menu_item active':'menu_item'}}">洗护中</view>
+      <view catchtap="stateToggle(4)" class="{{status==4?'menu_item active':'menu_item'}}">已完成</view>
+      <view catchtap="stateToggle(3)" class="{{status==3?'menu_item active':'menu_item'}}">配送中</view>
     </view>
-    <view class="listBox" wx:if="{{listData.length>0}}">
-      <view class="good-item">
+    <view class="listBox" wx:if="{{listData.data.length>0}}">
+      <block wx:for-items="{{listData.data}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <view class="good-item">
+          <view class="top">
+            <view class="infoId">订单编号 : {{item.order_sn}}</view>
+            <view class="status">{{item.state}}</view>
+          </view>
+          <view class="middle">
+            <view class="left">
+              <image class="good_img" src="{{item.image_url}}"></image>
+            </view>
+            <view class="right">
+              <view class="desc1">待评价的衣服</view>
+              <view class="desc2">
+                <view class="num">X1</view>
+                <view class="price">￥9.00</view>
+              </view>
+            </view>
+          </view>
+          <view class="middle">
+            <view class="left">
+              <image class="good_img" src="{{item.image_url}}"></image>
+            </view>
+            <view class="right">
+              <view class="desc1">待评价的衣服</view>
+              <view class="desc2">
+                <view class="num">X1</view>
+                <view class="price">￥9.00</view>
+              </view>
+            </view>
+          </view>
+          <view class="bottom">
+            <view class="price">
+              共{{item.clothes_num}}件商品<text class="num">预约额:￥{{item.first_money}}</text>
+            </view>
+            <view class="ctrls">
+              <text class="ctrl greyBtn">取消</text>
+              <text class="ctrl blueBtn">洗货小哥</text>
+              <!--<text class="ctrl blueBtn">评价</text>-->
+              <!--<text class="ctrl blueBtn">查看物流</text>-->
+            </view>
+          </view>
+        </view>
+      </block>
+      <!--<view class="good-item">
         <view class="top">
           <view class="infoId">订单编号 : 201807230003</view>
           <view class="status">等待洗货小哥确认</view>
@@ -162,37 +218,11 @@
           <view class="ctrls">
             <text class="ctrl greyBtn">取消</text>
             <text class="ctrl blueBtn">洗货小哥</text>
-            <!--<text class="ctrl blueBtn">评价</text>-->
-            <!--<text class="ctrl blueBtn">查看物流</text>-->
+            &lt;!&ndash;<text class="ctrl blueBtn">评价</text>&ndash;&gt;
+            &lt;!&ndash;<text class="ctrl blueBtn">查看物流</text>&ndash;&gt;
           </view>
         </view>
-      </view>
-      <view class="good-item">
-        <view class="top">
-          <view class="infoId">订单编号 : 201807230003</view>
-          <view class="status">等待洗货小哥确认</view>
-        </view>
-        <view class="middle">
-          <view class="left">
-            <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
-          </view>
-          <view class="right">
-            <view class="desc1">待评价的衣服</view>
-            <view class="desc2">下单时间: 2018年07月23日 14:30:46</view>
-          </view>
-        </view>
-        <view class="bottom">
-          <view class="price">
-            共1件商品<text class="num">预约额:￥0.01</text>
-          </view>
-          <view class="ctrls">
-            <text class="ctrl greyBtn">取消</text>
-            <text class="ctrl blueBtn">洗货小哥</text>
-            <!--<text class="ctrl blueBtn">评价</text>-->
-            <!--<text class="ctrl blueBtn">查看物流</text>-->
-          </view>
-        </view>
-      </view>
+      </view>-->
     </view>
     <view class="emptyBox" wx:else>
       <image class="empty_img" src="{{ossDomain}}/order/noresult.png"></image>
@@ -217,18 +247,22 @@
     mixins = []
 
     data = {
-      ossDomain:appUtils.globalData.ossDomain,
-      activeMenu:0,//当前item
-      listData:[666],
-    }
+      ossDomain: appUtils.globalData.ossDomain,
+      page: 1, //当前页 ,默认1
+      page_size: 10, //每页显示数目 默认10
+      status: '',//订单状态
+      listData: {}
+    };
 
     computed = {
 
     }
 
     methods = {
-      stateToggle(type){
-        this.activeMenu = type;
+      stateToggle(status){
+        this.status = status;
+        this.getOrderList();
+        this.$apply();
       }
     }
 
@@ -240,16 +274,17 @@
       this.getOrderList();
     }
 
-    getOrderList() {
+    getOrderList=()=> {
       appUtils.requestPost(appUtils.api.ORDER_LIST, {
-        page: 1,
-        page_size: 10,
-        status: '',
+        page: this.page,
+        page_size: this.page_size,
+        status: this.status,
         token: appUtils.globalData.token,
       }).then(res => {
         console.log('用户订单列表接口', res);
         if (res.data.code === 0) {
-          // this.categoryData = res.data.data;
+          this.listData = res.data.data;
+          this.$apply();
         }
       });
     }
