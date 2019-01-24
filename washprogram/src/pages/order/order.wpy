@@ -165,7 +165,7 @@
               <image class="good_img" src="{{item.image_url}}"></image>
             </view>
             <view class="right">
-              <view class="desc1">待评价的衣服</view>
+              <view class="desc1">{{item.cate_name}}</view>
               <view class="desc2">
                 <view class="num">X1</view>
                 <view class="price">￥9.00</view>
@@ -177,7 +177,7 @@
               <image class="good_img" src="{{item.image_url}}"></image>
             </view>
             <view class="right">
-              <view class="desc1">待评价的衣服</view>
+              <view class="desc1">{{item.cate_name}}</view>
               <view class="desc2">
                 <view class="num">X1</view>
                 <view class="price">￥9.00</view>
@@ -186,13 +186,19 @@
           </view>
           <view class="bottom">
             <view class="price">
-              共{{item.clothes_num}}件商品<text class="num">预约额:￥{{item.first_money}}</text>
+              共{{item.clothes_num}}件商品
+              <text class="num" wx:if="{{item.status==0 || item.status==10 || item.status==11}}">预约金额:￥{{item.first_money}}</text>
+              <text class="num" wx:else>合计金额:￥{{item.must_money}} 优惠金额:￥{{item.youhui_money}}</text>
             </view>
             <view class="ctrls">
-              <text class="ctrl greyBtn">取消</text>
-              <text class="ctrl blueBtn">洗货小哥</text>
-              <!--<text class="ctrl blueBtn">评价</text>-->
-              <!--<text class="ctrl blueBtn">查看物流</text>-->
+              <text class="ctrl greyBtn" wx:if="{{item.status==0 || item.status==1 || item.status==10 || item.status==11}}" catchtap="cancelOrder({{item}})">取消</text>
+              <text class="ctrl blueBtn" wx:if="{{item.status==0 || item.status==10 || item.status==11}}" catchtap="phoneFun({{item}})">洗货小哥</text>
+              <text class="ctrl blueBtn" wx:if="{{item.status==6}}" catchtap="phoneFun({{item}})">送衣侠</text>
+              <text class="ctrl blueBtn" wx:if="{{item.status==8}}" catchtap="fuWeiKuan({{item}})">付尾款</text>
+              <text class="ctrl blueBtn" wx:if="{{item.status==8}}" catchtap="jiaJi({{item}})">加急</text>
+              <text class="ctrl blueBtn" wx:if="{{item.status==1 || item.status==2 || item.status==3 || item.status==4 || item.status==5 || item.status==9 || item.status==12}}" catchtap="gotoLogistics({{item}})">查看物流</text>
+              <text class="ctrl blueBtn" wx:if="{{item.status==7 && item.is_p==0}}" catchtap="gotoComment({{item}})">评价订单</text>
+              <text class="ctrl greyBtn" wx:if="{{item.status==7 && item.is_p==1}}">已评价</text>
             </view>
           </view>
         </view>
@@ -259,10 +265,53 @@
     }
 
     methods = {
+      //顶部分类切换
       stateToggle(status){
         this.status = status;
         this.getOrderList();
         this.$apply();
+      },
+      //取消订单
+      cancelOrder(item){
+        console.log('当前订单数据', item);
+        if(item.status == 10 || item.status == 11){
+          wx.showModal({
+            title: '提示',
+            content: '洗货小哥已出发,取消订单请联系洗货小哥',
+            showCancel: false
+          });
+        }else{ //调用取消订单接口
+
+        }
+      },
+      //拨打电话
+      phoneFun(item){
+        console.log('当前订单数据', item);
+        wx.makePhoneCall({
+          phoneNumber: item.worker_phone
+        })
+      },
+      //付尾款
+      fuWeiKuan(item){
+        console.log('当前订单数据', item);
+      },
+      //加急
+      jiaJi(item){
+        console.log('当前订单数据', item);
+      },
+      //查看物流
+      gotoLogistics(item){
+        console.log('当前订单数据', item);
+        wx.navigateTo({
+          url:`../logistics/logistics?id=${item.id}`
+        });
+      },
+      //评价订单
+      gotoComment(item){
+        console.log('当前订单数据', item);
+        wx.navigateTo({
+          url:`../comment/comment?id=${item.id}`
+        });
       }
     }
 

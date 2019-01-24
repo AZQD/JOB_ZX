@@ -157,13 +157,13 @@
 
     }
 
-    onLoad() {
-      this.getOrderExpress();
+    onLoad(options) {
+      this.getOrderExpress(options.id);
     }
 
-    getOrderExpress() {
+    getOrderExpress(id) {
       appUtils.request(appUtils.api.GET_ORDER_EXPRESS, {
-        id: "39",
+        id,
         token: appUtils.globalData.token,
       }).then(res => {
         console.log('订单物流状态接口', res);
