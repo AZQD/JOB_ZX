@@ -56,10 +56,17 @@
     padding-bottom: 18rpx;
     background-color: #fff;
     .title{
+      display: flex;
+      align-items: center;
       padding: 26rpx 0;
       color: #333;
       font-size:28rpx;
       line-height: 40rpx;
+      .desc{
+        color: #FF3030;
+        font-size: 18rpx;
+        padding-left: 14rpx;
+      }
     }
     .charges{
       display: flex;
@@ -67,6 +74,7 @@
       justify-content: space-between;
       overflow: hidden;
       .chargeItem{
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -87,8 +95,25 @@
           line-height: 28rpx;
           font-size: 22rpx;
         }
+        .vip_text{
+          position: absolute;
+          left: 14rpx;
+          top: 9rpx;
+          font-size: 18rpx;
+        }
+      }
+      .chargeItem2{
+        width: 334rpx;
+        .desc{
+          font-size: 18rpx;
+        }
       }
       .active{
+        color: #fff;
+        background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/recharge/rechargeBg.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .active2{
         color: #fff;
         background: url(http://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/recharge/rechargeBg.png) no-repeat;
         background-size: 100% 100%;
@@ -162,31 +187,33 @@
     </view>
 
     <view class="rechargeBox">
-      <view class="title">充值金额</view>
+      <view class="title">充值金额 <text class="desc">注（充值优惠活动仅限首次，充得越多越实惠呦~）</text></view>
       <view class="charges">
         <view catchtap="chargeToggle(0)" class="{{currentCharge==0?'chargeItem active':'chargeItem'}}">
-          <view class="money">50</view>
-          <view class="desc">充50送50新用户专享</view>
+          <view class="money">300</view>
+          <view class="desc">300送150</view>
         </view>
         <view catchtap="chargeToggle(1)" class="{{currentCharge==1?'chargeItem active':'chargeItem'}}">
-          <view class="money">100</view>
-          <view class="desc">充100送100</view>
+          <view class="money">500</view>
+          <view class="desc">500送300</view>
         </view>
         <view catchtap="chargeToggle(2)" class="{{currentCharge==2?'chargeItem active':'chargeItem'}}">
-          <view class="money">300</view>
-          <view class="desc">充300送300</view>
-        </view>
-        <view catchtap="chargeToggle(3)" class="{{currentCharge==3?'chargeItem active':'chargeItem'}}">
-          <view class="money">500</view>
-          <view class="desc">充500送500</view>
-        </view>
-        <view catchtap="chargeToggle(4)" class="{{currentCharge==4?'chargeItem active':'chargeItem'}}">
           <view class="money">1000</view>
-          <view class="desc">充1000送1000</view>
+          <view class="desc">1000送900</view>
         </view>
-        <view catchtap="chargeToggle(5)" class="{{currentCharge==5?'chargeItem active':'chargeItem'}}">
+      </view>
+      <view class="charges">
+        <view catchtap="chargeToggle(3)" class="{{currentCharge==3?'chargeItem chargeItem2 active2':'chargeItem chargeItem2'}}">
+          <text class="vip_text">VIP</text>
           <view class="money">2000</view>
           <view class="desc">充2000送2000</view>
+          <view class="desc">长期享受充多少送多少</view>
+        </view>
+        <view catchtap="chargeToggle(5)" class="{{currentCharge==5?'chargeItem chargeItem2 active2':'chargeItem chargeItem2'}}">
+          <text class="vip_text">尊享VIP</text>
+          <view class="money">5000</view>
+          <view class="desc">充5000送5000</view>
+          <view class="desc">长期享受充多少送多少另免服务费</view>
         </view>
       </view>
     </view>
@@ -228,7 +255,7 @@
 
     data = {
       ossDomain: globalData.ossDomain,
-      type: 0, //1：给自己充值；2：给他人充值；
+      type: 1, //1：给自己充值；2：给他人充值；
       currentCharge:0,//充值金额类型
       currentPay:0,//0：支付宝； 1：微信
       truePhone:false,//电话是否输入正确
