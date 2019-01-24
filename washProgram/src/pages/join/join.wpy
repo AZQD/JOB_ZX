@@ -1,0 +1,47 @@
+<style lang="less">
+    .joinBox{
+      .join_pic{
+        width: 750rpx;
+        height: 1219rpx;
+      }
+    }
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{ossDomain}}">
+
+    <view class="joinBox">
+      <image class="join_pic" src="{{ossDomain}}/join/join.png"></image>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy';
+  import * as appUtils from "appUtils";
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '派送招募'
+    };
+    components = {};
+
+    mixins = [];
+
+    data = {
+      ossDomain: appUtils.globalData.ossDomain
+    };
+
+    computed = {};
+
+    methods = {
+    };
+
+    events = {};
+
+    onLoad() {
+      let that = this;
+    }
+  }
+</script>
