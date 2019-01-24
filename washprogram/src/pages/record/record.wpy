@@ -44,10 +44,6 @@
         }
         .desc2{
           color:#333;
-          .realy{
-            color:#078FEE;
-            padding-left: 24rpx;
-          }
         }
       }
       .line2{
@@ -57,7 +53,7 @@
 
         }
         .desc4{
-
+          color:#078FEE;
         }
       }
     }
@@ -107,31 +103,31 @@
       <view class="chargeItem">
         <view class="line line1">
           <view class="desc1">为本账号充值</view>
-          <view class="desc2">到账:40.00<text class="realy">实付:40.00</text></view>
+          <view class="desc2">到账:40.00</view>
         </view>
         <view class="line line2">
           <view class="desc3">2018-07-09</view>
-          <view class="desc4">优惠:10折优惠</view>
+          <view class="desc4">实付:40.00</view>
         </view>
       </view>
       <view class="chargeItem">
         <view class="line line1">
           <view class="desc1">为本账号充值</view>
-          <view class="desc2">到账:40.00<text class="realy">实付:40.00</text></view>
+          <view class="desc2">到账:40.00</view>
         </view>
         <view class="line line2">
           <view class="desc3">2018-07-09</view>
-          <view class="desc4">优惠:10折优惠</view>
+          <view class="desc4">实付:40.00</view>
         </view>
       </view>
       <view class="chargeItem">
         <view class="line line1">
           <view class="desc1">为本账号充值</view>
-          <view class="desc2">到账:40.00<text class="realy">实付:40.00</text></view>
+          <view class="desc2">到账:40.00</view>
         </view>
         <view class="line line2">
           <view class="desc3">2018-07-09</view>
-          <view class="desc4">优惠:10折优惠</view>
+          <view class="desc4">实付:40.00</view>
         </view>
       </view>
     </view>
