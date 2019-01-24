@@ -272,8 +272,8 @@
     <view class="shadeBox2" wx:if="{{showShadeBtn2}}">
       <view class="shadeContent">
         <view class="title">
-          <view>预约金额不退还</view>
-          <view>洗货小哥上门后支付尾款哦</view>
+          <view>是否选择加急服务？</view>
+          <view>加急费每件30元，隔天送达</view>
         </view>
         <view class="btns">
           <view class="btn" catchtap="showShadeFun2({{false}})">取消</view>
