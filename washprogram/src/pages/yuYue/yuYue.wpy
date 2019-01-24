@@ -296,6 +296,52 @@
     }
   }
 
+
+  .shadeBox2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    .shadeContent{
+      width: 521rpx;
+      position: relative;
+      text-align: center;
+      border-radius:20rpx;
+      background-color: #fff;
+      .title{
+        color: #333;
+        font-size: 30rpx;
+        padding-top: 90rpx;
+        padding-bottom: 70rpx;
+        border-bottom: 2rpx solid #E1E1E1;
+      }
+        .btns{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 32rpx;
+        .btn{
+          padding: 22rpx 0;
+          flex-grow: 1;
+          color: #333;
+          border-right: 2rpx solid #E1E1E1;
+        }
+        .btn:last-child{
+          border-right: none;
+        }
+        .red{
+          color: #f00;
+        }
+      }
+    }
+  }
+
 </style>
 
 <template>
@@ -377,7 +423,7 @@
     <view class="heJiBox">
       <view class="content">
         <view class="left">合计：<text class="num">￥26.00</text></view>
-        <view class="right">确定</view>
+        <view class="right" catchtap="showShadeFun2({{true}})">确定</view>
       </view>
     </view>
 
@@ -406,6 +452,19 @@
       </view>
     </view>
 
+    <view class="shadeBox2" wx:if="{{showShadeBtn2}}">
+      <view class="shadeContent">
+        <view class="title">
+          <view>预约金额不退还</view>
+          <view>洗货小哥上门后支付尾款哦</view>
+        </view>
+        <view class="btns">
+          <view class="btn" catchtap="showShadeFun2({{false}})">取消</view>
+          <view class="btn red">删除</view>
+        </view>
+      </view>
+    </view>
+
 
   </view>
 </template>
@@ -428,6 +487,7 @@
       ossDomain:globalData.ossDomain,
       currentPay:0,//0：微信； 1：支付宝； 2：账户余额； 3：在线支付
       showShadeBtn: false,//是否显示上门时间选择器
+      showShadeBtn2: false,//预约金额不退还提示
     }
 
     computed = {
@@ -441,6 +501,11 @@
       },
       showShadeFun(flag){
         this.showShadeBtn = flag;
+        this.$apply();
+      },
+      showShadeFun2(flag){
+        console.log(123454, flag);
+        this.showShadeBtn2 = flag;
         this.$apply();
       },
       gotoAddressList(){
