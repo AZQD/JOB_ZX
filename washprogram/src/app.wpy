@@ -63,6 +63,7 @@
         'pages/buyBag/buyBag',//环保袋购买
         'pages/bagRecord/bagRecord',//环保袋购买记录
         'pages/price/price',//价格表
+        'pages/payLeft/payLeft',//支付尾款
         'pages/test/test'
       ],
       window: {

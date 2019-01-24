@@ -1,0 +1,334 @@
+<style lang="less">
+  .serviceBox{
+    margin-top: 14rpx;
+    .top{
+      padding: 24rpx 0;
+      display: flex;
+      background-color: #fff;
+      .left{
+        font-size:28rpx;
+        color: #333;
+        padding-left: 32rpx;
+        flex-grow: 1;
+        line-height:40rpx;
+      }
+      .right{
+        padding-right: 54rpx;
+        line-height:40rpx;
+        font-size: 24rpx;
+        color: #999;
+      }
+    }
+    .bottom{
+      padding-left: 30rpx;
+      .item{
+        border-bottom: 1rpx solid #E2E2E2;
+        padding: 12rpx 0;
+        padding-right: 30rpx;
+        display: flex;
+        .good_desc{
+          padding-left: 16rpx;
+          flex-grow: 1;
+          .desc1{
+            font-size: 26rpx;
+            color: #333333;
+          }
+          .desc2{
+            margin-top: 12rpx;
+            font-size: 20rpx;
+            color: #666;
+          }
+        }
+        .good_price{
+          display: flex;
+          align-items: flex-end;
+          color: #FF0505;
+          font-size: 26rpx;
+          line-height: 40rpx;
+        }
+      }
+      .item:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+  .descBox{
+    padding-left: 30rpx;
+    background-color: #fff;
+    .itemBox{
+      padding: 24rpx 0;
+      padding-right: 30rpx;
+      display: flex;
+      border-bottom: 1rpx solid #E2E2E2;
+      font-size: 26rpx;
+      .left{
+        color: #666;
+        flex-grow: 1;
+        line-height:40rpx;
+      }
+      .right{
+        line-height:40rpx;
+      }
+      .right1{
+        color: #666;
+      }
+      .right2{
+        color: #666;
+      }
+      .right3{
+        color: #FF0505;
+      }
+    }
+    .itemBox:last-child{
+      border-bottom: none;
+    }
+  }
+
+  .payBox{
+    margin: 26rpx 0;
+    padding-left: 30rpx;
+    background-color: #fff;
+    line-height: 40rpx;
+    font-size:28rpx;
+    .title{
+      padding: 28rpx 0;
+      color: #333;
+      border-bottom: 2rpx solid #ECECEC;
+    }
+    .ways{
+      .wayItem{
+        padding: 28rpx 0;
+        display: flex;
+        align-items: center;
+        border-bottom: 2rpx solid #ECECEC;
+        .item_icon{
+          width: 32rpx;
+          height: 32rpx;
+          margin-right: 16rpx;
+        }
+        .item_name{
+          flex-grow: 1;
+        }
+        .item_check{
+          width: 32rpx;
+          height: 32rpx;
+          padding-right: 30rpx;
+        }
+      }
+      .wayItem:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+  .heJiBox{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    bottom: 160rpx;
+    /*background: linear-gradient(270deg,rgba(3,181,243,1),rgba(16,149,250,1),rgba(16,149,250,1));*/
+    .content{
+      height: 90rpx;
+      display: flex;
+      align-items: center;
+      margin: 0 30rpx;
+      border-radius:45rpx;
+      background: #E3E3E3;
+      .left{
+        flex-grow: 1;
+        padding-left: 72rpx;
+        color: #666;
+        font-size: 26rpx;
+        .num{
+          color: #078FEE;
+        }
+      }
+      .right{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-radius:45rpx;
+        padding: 0 120rpx;
+        color: #fff;
+        font-size: 32rpx;
+        background-color: #078FEE;
+      }
+    }
+  }
+
+  .shadeBox2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    .shadeContent{
+      width: 521rpx;
+      position: relative;
+      text-align: center;
+      border-radius:20rpx;
+      background-color: #fff;
+      .title{
+        color: #333;
+        font-size: 30rpx;
+        padding-top: 90rpx;
+        padding-bottom: 70rpx;
+        border-bottom: 2rpx solid #E1E1E1;
+      }
+        .btns{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 32rpx;
+        .btn{
+          padding: 22rpx 0;
+          flex-grow: 1;
+          color: #333;
+          border-right: 2rpx solid #E1E1E1;
+        }
+        .btn:last-child{
+          border-right: none;
+        }
+        .red{
+          color: #f00;
+        }
+      }
+    }
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{ossDomain}}">
+
+    <view class="serviceBox">
+      <view class="top">
+        <view class="left">支付尾款</view>
+        <view class="right">共2件</view>
+      </view>
+      <view class="bottom">
+        <view class="item">
+          <view class="good_desc">
+            <text class="desc1">背心/上衣</text>
+            <text class="desc2"> x1</text>
+          </view>
+          <view class="good_price">￥9.00</view>
+        </view>
+        <view class="item">
+          <view class="good_desc">
+            <text class="desc1">背心/上衣</text>
+            <text class="desc2"> x1</text>
+          </view>
+          <view class="good_price">￥9.00</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="descBox">
+      <view class="itemBox">
+        <view class="left">下单时间</view>
+        <view class="right right1">2018-08-17 20:58:01</view>
+      </view>
+      <view class="itemBox">
+        <view class="left">订单编号</view>
+        <view class="right right2">1534510681</view>
+      </view>
+      <view class="itemBox">
+        <view class="left">预约金额</view>
+        <view class="right right3">￥5.00</view>
+      </view>
+    </view>
+
+    <view class="payBox">
+      <view class="title">支付方式</view>
+      <view class="ways">
+        <view class="wayItem" catchtap="payToggle(0)">
+          <image class="item_icon" src="{{ossDomain}}/yuYue/wechat_pay.png"></image>
+          <view class="item_name">微信支付</view>
+          <image class="item_check" src="{{ossDomain}}{{currentPay==0?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+        </view>
+        <view class="wayItem" catchtap="payToggle(1)">
+          <image class="item_icon" src="{{ossDomain}}/yuYue/account_pay.png"></image>
+          <view class="item_name">账户余额</view>
+          <image class="item_check" src="{{ossDomain}}{{currentPay==1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="heJiBox">
+      <view class="content">
+        <view class="left">合计：<text class="num">￥26.00</text></view>
+        <view class="right" catchtap="showShadeFun2({{true}})">确定</view>
+      </view>
+    </view>
+
+    <view class="shadeBox2" wx:if="{{showShadeBtn2}}">
+      <view class="shadeContent">
+        <view class="title">
+          <view>预约金额不退还</view>
+          <view>洗货小哥上门后支付尾款哦</view>
+        </view>
+        <view class="btns">
+          <view class="btn" catchtap="showShadeFun2({{false}})">取消</view>
+          <view class="btn red">删除</view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import {globalData} from '@utils/globalData'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '支付尾款'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      ossDomain:globalData.ossDomain,
+      currentPay:0,//0：微信； 1：支付宝； 2：账户余额； 3：在线支付
+      showShadeBtn: false,//是否显示上门时间选择器
+      showShadeBtn2: false,//预约金额不退还提示
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      payToggle(type){
+        this.currentPay = type;
+        this.$apply();
+      },
+      showShadeFun2(flag){
+        console.log(123454, flag);
+        this.showShadeBtn2 = flag;
+        this.$apply();
+      },
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+      let that = this
+    }
+  }
+</script>
