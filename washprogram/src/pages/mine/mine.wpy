@@ -5,19 +5,38 @@
     .avatar{
       padding: 0 30rpx;
       padding-top: 46rpx;
-      padding-bottom: 24rpx;
+      padding-bottom: 20rpx;
       display:flex;
-      align-items: center;
       &_icon{
          width:122rpx;
          height:122rpx;
          border-radius:50%;
          margin-right: 22rpx;
        }
-      &_name{
-         font-size:36rpx;
-         color:#FEFEFE;
-       }
+      .right{
+        flex-grow: 1;
+        height: 100%;
+        .top{
+          padding-bottom: 6rpx;
+          display: flex;
+          align-items: center;
+          .avatar_name{
+            font-size:36rpx;
+            color:#FEFEFE;
+            padding-right: 10rpx;
+          }
+          .vip_icon{
+            width: 36rpx;
+            height: 36rpx;
+            margin-right: 26rpx;
+          }
+        }
+        .vip_desc{
+          display: block;
+          width: 100%;
+          height: 80rpx;
+        }
+      }
     }
     .account{
       padding: 0 30rpx;
@@ -138,20 +157,28 @@
     <view class="headerBox">
       <view class="avatar">
         <image class="avatar_icon" src="{{userData.user_headimg}}"></image>
-        <text class="avatar_name">{{userData.user_name}}</text>
+        <view class="right">
+          <view class="top">
+            <text class="avatar_name">{{userData.user_name}}</text>
+            <image class="vip_icon" src="{{ossDomain}}/mine/VIP01.png"></image>
+            <image class="vip_icon" src="{{ossDomain}}/mine/VIP02.png"></image>
+            <image class="vip_icon" src="{{ossDomain}}/mine/VIP03.png"></image>
+          </view>
+          <image class="vip_desc" src="{{ossDomain}}/mine/VIP03.png"></image>
+        </view>
       </view>
       <text class="account">账户余额</text>
       <view class="recharge">
         <view class="left">{{userData.money}}</view>
-        <view class="right" catchtap="gotoRecharge(1)">
-          <image class="money_icon" src="{{ossDomain}}/mine/money_icon.png"></image>
-          <text class="text">在线充值</text>
+        <view class="right">
+          <!--<image class="money_icon" src="{{ossDomain}}/mine/money_icon.png"></image>-->
+          <text class="text">申请发票</text>
           <image class="more_white" src="{{ossDomain}}/mine/more_white.png"></image>
         </view>
       </view>
       <view class="tabs">
-        <view class="left" catchtap="gotoRecharge(2)">代他人充值</view>
-        <view class="right">申请发票</view>
+        <view class="left" catchtap="gotoRecharge(1)">在线充值</view>
+        <view class="right" catchtap="gotoRecharge(2)">代他人充值</view>
       </view>
     </view>
 
@@ -181,12 +208,12 @@
         </view>
         <view class="right">我的环保袋</view>
       </view>
-      <view class="item">
+      <!--<view class="item">
         <view class="left">
           <image class="item_icon" src="{{ossDomain}}/mine/storage.png"></image>
         </view>
         <view class="right">衣仓</view>
-      </view>
+      </view>-->
       <view class="item">
         <view class="left">
           <image class="item_icon" src="{{ossDomain}}/mine/setting.png"></image>
@@ -204,7 +231,7 @@
 
   export default class Index extends wepy.page {
     config = {
-      navigationBarTitleText: '我的'
+      navigationBarTitleText: '个人中心'
     }
     components = {
 
