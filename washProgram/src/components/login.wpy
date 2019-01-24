@@ -57,6 +57,8 @@
                 wx.setStorageSync("encryptedData", encryptedData);
                 wx.setStorageSync("iv", iv);
                 wx.setStorageSync("users", res.data.data);
+                appUtils.globalData.users = res.data.data
+                appUtils.globalData.token = res.data.data.token
                 that.$emit('usersActive', res.data.data)
               }
             });
