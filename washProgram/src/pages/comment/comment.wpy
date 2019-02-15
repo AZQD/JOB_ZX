@@ -1,0 +1,193 @@
+<style lang="less">
+  page{
+    padding-top: 15rpx;
+  }
+  .headerBox{
+    padding: 8rpx 25rpx;
+    border-top: 12rpx solid #fff;
+    display: flex;
+    .left{
+      margin-right: 18rpx;
+      background-color: #fff;
+      overflow: hidden;
+      border-radius:6rpx;
+      .good_img{
+        width:117rpx;
+        height:119rpx;
+      }
+    }
+    .right{
+      flex-grow: 1;
+      .desc1{
+        color: #078FEE;
+        font-size: 26rpx;
+      }
+      .desc2{
+        line-height: 24rpx;
+        color: #666;
+        font-size:24rpx;
+        padding-top: 10rpx;
+      }
+    }
+  }
+
+  .commentBox{
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0 30rpx;
+    padding-bottom: 12rpx;
+    textarea{
+      color: #999;
+      width: 100%;
+      height: 362rpx;
+      font-size: 24rpx;
+      box-sizing: border-box;
+      background-color: #F2F2F2;
+      padding: 22rpx 16rpx;
+      margin: 24rpx 0;
+    }
+    .title{
+      color: #333;
+      font-size: 28rpx;
+      padding-bottom: 22rpx;
+    }
+    .scoreBox{
+      display: flex;
+      align-items: center;
+      padding-bottom: 16rpx;
+      color: #666;
+      font-size: 26rpx;
+      .left{
+        width: 190rpx;
+      }
+      .right{
+        display: flex;
+        align-items: center;
+        .item_score{
+          width: 28rpx;
+          height: 28rpx;
+          margin-right: 25rpx;
+        }
+      }
+    }
+  }
+
+  .ctrlBtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-size:32rpx;
+    margin: 24rpx 30rpx;
+    height: 100rpx;
+    background:linear-gradient(180deg,rgba(0,153,255,1),rgba(114,208,255,1));
+    border-radius:50rpx;
+    box-shadow:0rpx 9rpx 14rpx 2rpx rgba(0,153,255,0.15);
+  }
+
+</style>
+
+<template>
+  <view class="wrapper" wx:if="{{ossDomain}}">
+
+    <view class="headerBox">
+      <view class="left">
+        <image class="good_img" src="{{ossDomain}}/order/good_img.png"></image>
+      </view>
+      <view class="right">
+        <view class="desc1">已完成订单</view>
+        <view class="desc2">订单编号: 2018081200002</view>
+        <view class="desc2">下单时间: 2018年12月29日 20:00</view>
+      </view>
+    </view>
+
+    <view class="commentBox">
+      <textarea
+        class="post-input-area"
+        name="content"
+        placeholder-style="color:#999"
+        placeholder-class="placeholderClass"
+        placeholder="衣服洗得你满意么？配送小哥的服务你满意么？"
+        value=""
+        maxlength="2000"
+        @input="handleInput('content')"
+        cursor-spacing="50"
+      />
+
+      <view class="title">评分服务</view>
+      <view class="scoreBox">
+        <view class="left">配送员服务</view>
+        <view class="right">
+          <image class="item_score" catchtap="chooseScore1(1)" src="{{ossDomain}}{{score1Num>=1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(2)" src="{{ossDomain}}{{score1Num>=2?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(3)" src="{{ossDomain}}{{score1Num>=3?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(4)" src="{{ossDomain}}{{score1Num>=4?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(5)" src="{{ossDomain}}{{score1Num>=5?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+        </view>
+      </view>
+      <view class="scoreBox">
+        <view class="left">洗衣服务质量</view>
+        <view class="right">
+          <image class="item_score" catchtap="chooseScore2(1)" src="{{ossDomain}}{{score2Num>=1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(2)" src="{{ossDomain}}{{score2Num>=2?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(3)" src="{{ossDomain}}{{score2Num>=3?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(4)" src="{{ossDomain}}{{score2Num>=4?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(5)" src="{{ossDomain}}{{score2Num>=5?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="ctrlBtnBox" catchtap="submitComment">发布评论</view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import * as appUtils from "appUtils";
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '评论'
+    }
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {
+      ossDomain:appUtils.globalData.ossDomain,
+      score1Num: 0,
+      score2Num: 0,
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      submitComment(){
+        console.log('发布评论');
+        /*wx.navigateTo({
+          url:`../index/index`
+        });*/
+      },
+      chooseScore1(scoreNum){
+        this.score1Num = scoreNum;
+        this.$apply();
+      },
+      chooseScore2(scoreNum){
+        this.score2Num = scoreNum;
+        this.$apply();
+      }
+    }
+
+    events = {
+
+    }
+
+    onLoad(options) {
+    }
+  }
+</script>
