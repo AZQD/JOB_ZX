@@ -65,6 +65,7 @@
         'pages/price/price',//价格表
         'pages/payLeft/payLeft',//支付尾款
         'pages/join/join',//派送招募
+        'pages/comment/comment',//评论
         'pages/test/test'
       ],
       window: {
