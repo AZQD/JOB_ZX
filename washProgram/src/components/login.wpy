@@ -1,5 +1,5 @@
 <style lang="less">
-  .loginBox{
+  .authorizationWrap{
     display: flex;
     width: 100%;
     height: 100vh;
@@ -10,17 +10,55 @@
     background-color: RGBA(0,0,0,.6);
     justify-content: center;
     align-items: center;
+    .authorizationBox{
+      background-color: #fff;
+      padding: 0 90rpx;
+      padding-bottom: 66rpx;
+      text-align: center;
+      font-size:32rpx;
+      position: relative;
+      border-radius:9rpx;
+      .close_icon{
+        position: absolute;
+        right: 18rpx;
+        top: 18rpx;
+        width: 42rpx;
+        height: 42rpx;
+      }
+      .authorization_img{
+        position: absolute;
+        left: calc(~"50% - 133rpx");
+        top: -173rpx;
+        width: 266rpx;
+        height: 346rpx;
+      }
+      .tips{
+        color: #333;
+        padding-top: 240rpx;
+        padding-bottom: 112rpx;
+      }
+    }
     button{
-      width: 80%;
+      color: #fff;
+      width:407rpx;
+      height:85rpx;
+      background:linear-gradient(180deg,rgba(114,208,255,1),rgba(0,153,255,1));
+      box-shadow:0rpx 9rpx 14rpx 2rpx rgba(0,153,255,0.15);
+      border-radius:43rpx;
     }
   }
 </style>
 <template>
-  <view class="loginBox">
-    <button
-      open-type="getUserInfo"
-      bindgetuserinfo="bindGetUserInfo"
-    >用户信息授权</button>
+  <view class="authorizationWrap">
+    <view class="authorizationBox">
+      <image class="close_icon" src="https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/common/close_icon.png" />
+      <image class="authorization_img" src="https://xihuo.oss-cn-qingdao.aliyuncs.com/xihuo/miniprogram/authorization/authorization_bg.png" />
+      <view class="tips">用户信息授权</view>
+      <button
+        open-type="getUserInfo"
+        bindgetuserinfo="bindGetUserInfo"
+      >去授权</button>
+    </view>
   </view>
 </template>
 <script>
