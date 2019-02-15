@@ -106,11 +106,10 @@
         class="post-input-area"
         name="content"
         placeholder-style="color:#999"
-        placeholder-class="placeholderClass"
         placeholder="衣服洗得你满意么？配送小哥的服务你满意么？"
         value=""
         maxlength="2000"
-        @input="handleInput('content')"
+        @input="handleInput"
         cursor-spacing="50"
       />
 
@@ -172,6 +171,9 @@
         /*wx.navigateTo({
           url:`../index/index`
         });*/
+      },
+      handleInput(e) {
+        console.log('输入内容', e.detail.value);
       },
       chooseScore1(scoreNum){
         this.score1Num = scoreNum;
