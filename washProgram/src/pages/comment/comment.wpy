@@ -117,21 +117,21 @@
       <view class="scoreBox">
         <view class="left">配送员服务</view>
         <view class="right">
-          <image class="item_score" catchtap="chooseScore1(1)" src="{{ossDomain}}{{score1Num>=1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-          <image class="item_score" catchtap="chooseScore1(2)" src="{{ossDomain}}{{score1Num>=2?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-          <image class="item_score" catchtap="chooseScore1(3)" src="{{ossDomain}}{{score1Num>=3?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-          <image class="item_score" catchtap="chooseScore1(4)" src="{{ossDomain}}{{score1Num>=4?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-          <image class="item_score" catchtap="chooseScore1(5)" src="{{ossDomain}}{{score1Num>=5?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(1)" src="{{ossDomain}}{{score1Num>=1?'/comment/star_active.png':'/comment/star.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(2)" src="{{ossDomain}}{{score1Num>=2?'/comment/star_active.png':'/comment/star.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(3)" src="{{ossDomain}}{{score1Num>=3?'/comment/star_active.png':'/comment/star.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(4)" src="{{ossDomain}}{{score1Num>=4?'/comment/star_active.png':'/comment/star.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore1(5)" src="{{ossDomain}}{{score1Num>=5?'/comment/star_active.png':'/comment/star.png'}}"></image>
         </view>
       </view>
       <view class="scoreBox">
         <view class="left">洗衣服务质量</view>
         <view class="right">
-          <image class="item_score" catchtap="chooseScore2(1)" src="{{ossDomain}}{{score2Num>=1?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-          <image class="item_score" catchtap="chooseScore2(2)" src="{{ossDomain}}{{score2Num>=2?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-          <image class="item_score" catchtap="chooseScore2(3)" src="{{ossDomain}}{{score2Num>=3?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-          <image class="item_score" catchtap="chooseScore2(4)" src="{{ossDomain}}{{score2Num>=4?'/recharge/checked.png':'/recharge/check.png'}}"></image>
-          <image class="item_score" catchtap="chooseScore2(5)" src="{{ossDomain}}{{score2Num>=5?'/recharge/checked.png':'/recharge/check.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(1)" src="{{ossDomain}}{{score2Num>=1?'/comment/star_active.png':'/comment/star.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(2)" src="{{ossDomain}}{{score2Num>=2?'/comment/star_active.png':'/comment/star.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(3)" src="{{ossDomain}}{{score2Num>=3?'/comment/star_active.png':'/comment/star.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(4)" src="{{ossDomain}}{{score2Num>=4?'/comment/star_active.png':'/comment/star.png'}}"></image>
+          <image class="item_score" catchtap="chooseScore2(5)" src="{{ossDomain}}{{score2Num>=5?'/comment/star_active.png':'/comment/star.png'}}"></image>
         </view>
       </view>
     </view>
