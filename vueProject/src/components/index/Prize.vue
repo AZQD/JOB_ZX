@@ -4,12 +4,12 @@
 
       <div class="left">
         <div class="topicBox">
-          <div class="topicItem" v-for="item in prizeData" :key="item.id">
+          <div class="topicItem" v-for="(item, itemIndex) in prizeData" :key="item.id">
             <div class="firstPart">
               <div class="text">{{item.name}}</div>
             </div>
             <div class="secondPart" v-if="item.son">
-              <div class="text" v-for="itemSon in item.son" :key="itemSon.id">{{itemSon.name}}</div>
+              <div class="text" v-on:click="chooseFun(itemSon, itemIndex, itemSonIndex)" v-for="(itemSon, itemSonIndex) in item.son" :key="itemSon.id">{{itemSon.name}}</div>
               <!--<div class="text">分类2</div>-->
               <!--<div class="text">分类3</div>-->
             </div>
@@ -39,14 +39,17 @@
 
       <div class="middle">
         <div class="title">答题活动</div>
-        <div class="question">题目：“什么是我们党的初心和使命？我们为什么要进行‘不忘初心、牢记使命’主题教育？怎样在‘不忘初心、牢记使命’主题教育中，解决我们目前存在的问题？”</div>
-        <div class="showAnsBtn">查看答案</div>
-        <div class="answer">答案：了解了为中国人民谋幸福、为中华民族谋复兴的初心使命是怎么来的，就能体会到进行“不忘初心、牢记使命”主题教育对于共产党来说，是一个永恒的命题。</div>
+        <div v-if="prizeData.length">
+          <div class="question">题目：{{this.prizeData[itemIndex].son[itemSonIndex].questions[chooseIndex].question}}</div>
+          <div class="showAnsBtn" v-if="!loading" v-on:click="showAnswerFun(true)">查看答案</div>
+          <div class="answer" v-if="showAnswer">答案：{{this.prizeData[itemIndex].son[itemSonIndex].questions[chooseIndex].answer}}</div>
+        </div>
       </div>
 
-      <div class="right">
-        <div class="btnBox">选择<br/>题目</div>
-        <div class="numBox">12/30</div>
+      <div class="right" v-if="prizeData.length">
+        <div class="btnBox" v-if="!loading" v-on:click="changeQuestionFun(false)">选择<br/>题目</div>
+        <div class="btnBox" v-if="loading" v-on:click="changeQuestionFun(true)">停止</div>
+        <div class="numBox">剩余{{this.prizeData[itemIndex].son[itemSonIndex].questions.length}}题</div>
       </div>
     </div>
   </div>
@@ -54,12 +57,20 @@
 
 <script>
 import axios from 'axios'
+var timer = null
 export default {
   name: 'Index',
   data () {
     return {
       prizeData: [], // 抽奖数组数据
-      currentQuestionArr: [] // 当前题库
+      showAnswer: false, // 是否展示答案
+      loading: false, // 是否正在抽题
+      timer: null, // 定时器
+
+      itemIndex: 0,
+      itemSonIndex: 0,
+      chooseIndex: 0
+
     }
   },
   created () {
@@ -75,11 +86,57 @@ export default {
     })
   },
   methods: {
-    codeCtrl: function (type) {
-      // console.log(666, type)
-      this.codeType = type
-      console.log(111, this.codeType)
-      // this.data.codeType = type
+    // 左侧菜单类别选择
+    chooseFun: function (itemSon, itemIndex, itemSonIndex) {
+      // console.log(itemSon, itemSonIndex)
+
+      // 修改原数据
+      let prizeData = this.prizeData
+      // prizeData[itemIndex].son[itemSonIndex].questions[0].checked = true
+      this.itemIndex = itemIndex
+      this.itemSonIndex = itemSonIndex
+      this.chooseIndex = 0
+      this.prizeData = prizeData
+      this.showAnswerFun(false)
+    },
+    // 选择题目
+    changeQuestionFun: function (type) {
+      this.showAnswerFun(false)
+
+      if (type) {
+        console.log('结束了')
+        clearInterval(timer)
+        this.loading = !this.loading
+      } else {
+        console.log('抽题中...')
+
+        let prizeData = this.prizeData
+        let questions = prizeData[this.itemIndex].son[this.itemSonIndex].questions
+        if (questions.length === 1) {
+          alert('该题型都答完了')
+          clearInterval(timer)
+          return
+        }
+        let newQuestion = questions.filter((item, index) => {
+          return this.chooseIndex !== index
+        })
+        prizeData[this.itemIndex].son[this.itemSonIndex].questions = newQuestion
+        this.prizeData = prizeData
+
+        timer = setInterval(() => {
+          let currentQuestionArr = this.prizeData[this.itemIndex].son[this.itemSonIndex].questions
+          this.chooseIndex = this.sum(0, currentQuestionArr.length - 1)
+        }, 10)
+        this.loading = !this.loading
+      }
+    },
+    // 是否显示答案
+    showAnswerFun: function (flag) {
+      this.showAnswer = flag
+    },
+    // 生成随机数
+    sum: function (start, end) {
+      return Math.floor(Math.random() * (start - end) + end)
     }
   }
 }
@@ -90,8 +147,8 @@ export default {
   .container {
     min-width: 800px;
     height: 100vh;
-    background: url(./../../assets/images/prize/bodyBg.png) no-repeat;
-    background-size: 100% 100%;
+    background: url(http://dati.xihuo.ink/uploads/bg.jpg) no-repeat;
+    background-size: auto 100%;
     .wrapper{
       height: 100%;
       display: flex;
@@ -160,6 +217,7 @@ export default {
           padding-top: 40px;
           font-size: 30px;
           font-weight: bold;
+          text-align: justify;
         }
         .showAnsBtn{
           display: inline-block;
@@ -173,6 +231,7 @@ export default {
           font-size: 30px;
           font-weight: bold;
           color: red;
+          text-align: justify;
         }
       }
       .right{
