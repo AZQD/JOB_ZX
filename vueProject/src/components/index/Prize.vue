@@ -78,6 +78,15 @@ export default {
       console.log('接口返回数据：', res)
       if (res.data.code === 1) {
         this.prizeData = res.data.data
+        // for (let i = 0; i < this.prizeData.length; i++) {
+        //   let item1 = this.prizeData[i]
+        //   for (let j = 0; j < item1.son.length; j++) {
+        //     let item2 = item1.son[j].questions
+        //     for (let k = 0; k < item2.length; k++) {
+        //       console.log(1111, item2[k].question)
+        //     }
+        //   }
+        // }
       } else {
         alert('接口请求异常')
       }
