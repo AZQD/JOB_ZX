@@ -1,0 +1,302 @@
+body {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+body {
+  font-size: 0;
+  background-color: #d2000f;
+}
+html,
+body {
+  min-height: 100vh;
+}
+.index-wrapper {
+  margin: 0 auto;
+  width: 10rem;
+  background: #d2000f url("../images/redPacket/redPacketBg02.png") no-repeat;
+  background-size: 100% auto;
+}
+.index-wrapper .part-content {
+  display: none;
+}
+.index-wrapper .part1-content {
+  padding: 3.68357488rem 0.43478261rem 0;
+}
+.index-wrapper .part1-content .vrLogoBox {
+  margin: 0 auto;
+  position: relative;
+  width: 6.49758454rem;
+  height: 5.57971014rem;
+  background: url("../images/redPacket/vr_container.png") no-repeat;
+  background-size: 100% 100%;
+}
+.index-wrapper .part1-content .vrLogoBox .vr_icon {
+  position: absolute;
+  left: 0.84541063rem;
+  top: 2.06521739rem;
+  width: 3.8647343rem;
+  height: 3.8647343rem;
+}
+.index-wrapper .part1-content .timeBox {
+  height: 0.9057971rem;
+  background: linear-gradient(0deg, #f6c48a, #fffdfb);
+  border-radius: 0.12077295rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.38647343rem;
+}
+.index-wrapper .part1-content .timeBox .left {
+  font-size: 0.36231884rem;
+  font-family: PingFang;
+  font-weight: 800;
+  color: #e2312c;
+}
+.index-wrapper .part1-content .timeBox .right {
+  display: flex;
+  align-items: center;
+  padding-right: 0.14492754rem;
+}
+.index-wrapper .part1-content .timeBox .right .number {
+  display: inline-block;
+  text-align: center;
+  width: 0.4589372rem;
+  height: 0.64009662rem;
+  line-height: 0.64009662rem;
+  background: #EA3A2C;
+  box-shadow: 0rem 0.6884058rem 1.24396135rem 0rem rgba(135, 25, 16, 0.83);
+  border-radius: 0.12077295rem;
+  font-size: 0.38647343rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #fffb96;
+}
+.index-wrapper .part1-content .timeBox .right .space {
+  margin-left: 0.06038647rem;
+}
+.index-wrapper .part1-content .timeBox .right .unit {
+  font-size: 0.36231884rem;
+  font-family: PingFang;
+  font-weight: 800;
+  color: #e2312c;
+  padding: 0 0.12077295rem;
+}
+.index-wrapper .part1-content .formBox {
+  background: linear-gradient(180deg, #f6c48a, #fff0df);
+  border-radius: 0.12077295rem;
+  padding: 0.14492754rem 0.54347826rem 0.31400966rem;
+  margin-top: 0.60386473rem;
+}
+.index-wrapper .part1-content .formBox input {
+  border: none;
+  outline: none;
+}
+.index-wrapper .part1-content .formBox input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: rgba(255, 255, 255, 0.25);
+}
+.index-wrapper .part1-content .formBox input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(255, 255, 255, 0.25);
+}
+.index-wrapper .part1-content .formBox input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(255, 255, 255, 0.25);
+}
+.index-wrapper .part1-content .formBox input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: rgba(255, 255, 255, 0.25);
+}
+.index-wrapper .part1-content .formBox .titleIpt {
+  font-size: 0.28985507rem;
+  font-family: PingFang;
+  font-weight: bold;
+  color: #e3312c;
+  padding-top: 0.24154589rem;
+}
+.index-wrapper .part1-content .formBox .itemIpt {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 0.86956522rem;
+  line-height: 0.86956522rem;
+  background: #EA3A2C;
+  box-shadow: 0rem 0.16908213rem 0.28985507rem 0rem rgba(135, 25, 16, 0.28);
+  border-radius: 0.12077295rem;
+  font-size: 0.36231884rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #fffb96;
+  padding-left: 0.31400966rem;
+  padding-top: 0.12077295rem;
+}
+.index-wrapper .part1-content .formBox .submitBtn {
+  margin-top: 0.39855072rem;
+  height: 0.96618357rem;
+  background: linear-gradient(0deg, #e1312c 0%, #ffa800 100%);
+  border-radius: 0.12077295rem;
+  font-size: 0.43478261rem;
+  font-family: PingFang;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.index-wrapper .part1-content .formBox .tips {
+  padding-top: 0.28985507rem;
+  font-size: 0.2173913rem;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #e3312c;
+}
+.index-wrapper .part1-content .formBox .tips .link {
+  color: #e3312c;
+  border-bottom: 0.01207729rem solid #e3312c;
+}
+.index-wrapper .part1-content .ruleBox {
+  margin-top: 0.72463768rem;
+  margin-bottom: 0.89371981rem;
+  background: linear-gradient(0deg, #f6c48a, #fff0df);
+  border-radius: 0.12077295rem;
+  padding: 0.42270531rem 0.54347826rem 0.62801932rem;
+}
+.index-wrapper .part1-content .ruleBox .ruleTitle {
+  text-align: center;
+  font-size: 0.48309179rem;
+  font-family: PingFang;
+  font-weight: bold;
+  color: #e3312c;
+}
+.index-wrapper .part1-content .ruleBox .ruleContent {
+  text-align: justify;
+  padding-top: 0.48309179rem;
+  font-size: 0.33816425rem;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #e3312c;
+  line-height: 0.43478261rem;
+}
+.index-wrapper .part2-content {
+  padding: 3.62318841rem 0.43478261rem 0;
+}
+.index-wrapper .part2-content .couponBox {
+  margin: 0 auto;
+  width: 7.00483092rem;
+  height: 2.25845411rem;
+  background: url("../images/redPacket/couponBg.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  top: 1.352657rem;
+  display: flex;
+  z-index: 1;
+}
+.index-wrapper .part2-content .couponBox .left .price {
+  text-align: right;
+  min-width: 2.53623188rem;
+  display: inline-block;
+  font-size: 0.65217391rem;
+  font-family: RTWS ShangGothic G0v1;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 0.57971014rem;
+  padding-top: 0.65217391rem;
+}
+.index-wrapper .part2-content .couponBox .middle {
+  padding-left: 0.09661836rem;
+  line-height: 0.24154589rem;
+}
+.index-wrapper .part2-content .couponBox .middle .desc1 {
+  font-size: 0.25362319rem;
+  font-family: PingFang;
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 0.62801932rem;
+}
+.index-wrapper .part2-content .couponBox .middle .desc2 {
+  font-size: 0.24154589rem;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #fffefe;
+  margin-top: 0.09661836rem;
+}
+.index-wrapper .part2-content .couponBox .right {
+  width: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0.60386473rem;
+  padding-top: 0.60386473rem;
+}
+.index-wrapper .part2-content .couponBox .right .desc {
+  display: inline-block;
+  width: 1.03864734rem;
+  height: 0.79710145rem;
+  border: 0.01811594rem solid #c20e0a;
+  border-radius: 0.12077295rem;
+  font-size: 0.30193237rem;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #c20e0a;
+  line-height: 0.33816425rem;
+  text-align: center;
+  padding: 0.07246377rem 0;
+}
+.index-wrapper .part2-content .infoBox {
+  background: linear-gradient(0deg, #f6c48a, #fff0df);
+  border-radius: 0.12077295rem;
+  padding-top: 1.49758454rem;
+  padding-left: 1.71497585rem;
+  padding-bottom: 0.72463768rem;
+  position: relative;
+}
+.index-wrapper .part2-content .infoBox .couponBag {
+  width: 2.23429952rem;
+  height: 2.43961353rem;
+  position: absolute;
+  left: -0.38647343rem;
+  bottom: -0.33816425rem;
+}
+.index-wrapper .part2-content .infoBox .desc {
+  font-size: 0.36231884rem;
+  font-family: PingFang;
+  font-weight: bold;
+  color: #f3a600;
+  padding-bottom: 0.24154589rem;
+  line-height: 0.36231884rem;
+}
+.index-wrapper .part2-content .infoBox .desc .light {
+  color: #E3312C;
+}
+.index-wrapper .part2-content .infoBox .desc .account {
+  border-bottom: 0.02415459rem solid #E3312C;
+}
+.index-wrapper .part2-content .infoBox .desc2 {
+  padding-left: 0.72463768rem;
+}
+.index-wrapper .part2-content .ruleBox {
+  margin-top: 1.12318841rem;
+  margin-bottom: 1.46135266rem;
+  background: linear-gradient(0deg, #f6c48a, #fff0df);
+  border-radius: 0.12077295rem;
+  padding: 0.41062802rem 0.54347826rem 0.78502415rem;
+}
+.index-wrapper .part2-content .ruleBox .ruleTitle {
+  text-align: center;
+  font-size: 0.48309179rem;
+  font-family: PingFang;
+  font-weight: bold;
+  color: #e3312c;
+}
+.index-wrapper .part2-content .ruleBox .ruleContent {
+  text-align: justify;
+  padding-top: 0.48309179rem;
+  font-size: 0.33816425rem;
+  font-family: PingFang;
+  font-weight: 400;
+  color: #e3312c;
+  line-height: 0.43478261rem;
+}

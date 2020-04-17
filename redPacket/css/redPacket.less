@@ -1,0 +1,308 @@
+body {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+@rem: 82.8rem;
+@placeholderColor: RGBA(255, 255, 255, 0.25);
+@bgColor: RGBA(210, 0, 15, 1);
+body {
+  font-size: 0;
+  background-color: @bgColor;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+.index-wrapper {
+  margin: 0 auto;
+  width: 828/@rem;
+  background: @bgColor url("./../images/redPacket/redPacketBg02.png") no-repeat;
+  background-size: 100% auto;
+  .part-content {
+    display: none;
+  }
+  .part1-content {
+    padding: 305/@rem 36/@rem 0;
+    .vrLogoBox {
+      margin: 0 auto;
+      position: relative;
+      width: 538/@rem;
+      height: 462/@rem;
+      background: url("./../images/redPacket/vr_container.png") no-repeat;
+      background-size: 100% 100%;
+      .vr_icon {
+        position: absolute;
+        left: 70/@rem;
+        top: 171/@rem;
+        width: 320/@rem;
+        height: 320/@rem;
+      }
+    }
+    .timeBox {
+      height: 75/@rem;
+      background: linear-gradient(0deg, rgba(246, 196, 138, 1), rgba(255, 253, 251, 1));
+      border-radius: 10/@rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32/@rem;
+      .left {
+        font-size: 30/@rem;
+        font-family: PingFang;
+        font-weight: 800;
+        color: rgba(226, 49, 44, 1);
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        padding-right: 12/@rem;
+        .number {
+          display: inline-block;
+          text-align: center;
+          width: 38/@rem;
+          height: 53/@rem;
+          line-height: 53/@rem;
+          background: #EA3A2C;
+          //background: #EA3A2C linear-gradient(180deg,#871910 10%,#EA3A2C 90%, #871910 100%);
+          box-shadow: 0/@rem 57/@rem 103/@rem 0/@rem rgba(135, 25, 16, 0.83);
+          border-radius: 10/@rem;
+          font-size: 32/@rem;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: rgba(255, 251, 150, 1);
+        }
+        .space {
+          margin-left: 5/@rem;
+        }
+        .unit {
+          font-size: 30/@rem;
+          font-family: PingFang;
+          font-weight: 800;
+          color: rgba(226, 49, 44, 1);
+          padding: 0 10/@rem;
+        }
+      }
+    }
+    .formBox {
+      background: linear-gradient(180deg, rgba(246, 196, 138, 1), rgba(255, 240, 223, 1));
+      border-radius: 10/@rem;
+      padding: 12/@rem 45/@rem 26/@rem;
+      margin-top: 50/@rem;
+      input {
+        border: none;
+        outline: none;
+        &::-webkit-input-placeholder { /* WebKit browsers */
+          color: @placeholderColor;
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: @placeholderColor;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: @placeholderColor;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10+ */
+          color: @placeholderColor;
+        }
+      }
+      .titleIpt {
+        font-size: 24/@rem;
+        font-family: PingFang;
+        font-weight: bold;
+        color: rgba(227, 49, 44, 1);
+        padding-top: 20/@rem;
+      }
+      .itemIpt {
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 72/@rem;
+        line-height: 72/@rem;
+        background: #EA3A2C;
+        box-shadow: 0/@rem 14/@rem 24/@rem 0/@rem rgba(135, 25, 16, 0.28);
+        border-radius: 10/@rem;
+        font-size: 30/@rem;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: rgba(255, 251, 150, 1);
+        padding-left: 26/@rem;
+        padding-top: 10/@rem;
+      }
+      .submitBtn {
+        margin-top: 33/@rem;
+        height: 80/@rem;
+        background: linear-gradient(0deg, rgba(225, 49, 44, 1) 0%, rgba(255, 168, 0, 1) 100%);
+        border-radius: 10/@rem;
+        font-size: 36/@rem;
+        font-family: PingFang;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .tips {
+        padding-top: 24/@rem;
+        font-size: 18/@rem;
+        font-family: PingFang;
+        font-weight: 400;
+        color: rgba(227, 49, 44, 1);
+        .link {
+          color: rgba(227, 49, 44, 1);
+          border-bottom: 1/@rem solid rgba(227, 49, 44, 1);
+        }
+      }
+    }
+    .ruleBox {
+      margin-top: 60/@rem;
+      margin-bottom: 74/@rem;
+      background: linear-gradient(0deg, rgba(246, 196, 138, 1), rgba(255, 240, 223, 1));
+      border-radius: 10/@rem;
+      padding: 35/@rem 45/@rem 52/@rem;
+      .ruleTitle {
+        text-align: center;
+        font-size: 40/@rem;
+        font-family: PingFang;
+        font-weight: bold;
+        color: rgba(227, 49, 44, 1);
+      }
+      .ruleContent {
+        text-align: justify;
+        padding-top: 40/@rem;
+        font-size: 28/@rem;
+        font-family: PingFang;
+        font-weight: 400;
+        color: rgba(227, 49, 44, 1);
+        line-height: 36/@rem;
+      }
+    }
+  }
+
+  .part2-content {
+    padding: 300/@rem 36/@rem 0;
+    .couponBox {
+      margin: 0 auto;
+      width: 580/@rem;
+      height: 187/@rem;
+      background: url("./../images/redPacket/couponBg.png") no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      top: 112/@rem;
+      display: flex;
+      z-index: 1;
+      .left {
+        .price {
+          text-align: right;
+          min-width: 210/@rem;
+          display: inline-block;
+          font-size: 54/@rem;
+          font-family: RTWS ShangGothic G0v1;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 1);
+          line-height: 48/@rem;
+          padding-top: 54/@rem;
+        }
+      }
+      .middle {
+        padding-left: 8/@rem;
+        line-height: 20/@rem;
+        .desc1 {
+          font-size: 21/@rem;
+          font-family: PingFang;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 1);
+          padding-top: 52/@rem;
+        }
+        .desc2 {
+          font-size: 20/@rem;
+          font-family: PingFang;
+          font-weight: 400;
+          color: rgba(255, 254, 254, 1);
+          margin-top: 8/@rem;
+        }
+      }
+      .right {
+        width: 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50/@rem;
+        padding-top: 50/@rem;
+        .desc {
+          display: inline-block;
+          width: 86/@rem;
+          height: 66/@rem;
+          border: 1.5/@rem solid rgba(194, 14, 10, 1);
+          border-radius: 10/@rem;
+          font-size: 25/@rem;
+          font-family: PingFang;
+          font-weight: 400;
+          color: rgba(194, 14, 10, 1);
+          line-height: 28/@rem;
+          text-align: center;
+          padding: 6/@rem 0;
+        }
+      }
+    }
+    .infoBox {
+      background: linear-gradient(0deg, rgba(246, 196, 138, 1), rgba(255, 240, 223, 1));
+      border-radius: 10/@rem;
+      padding-top: 124/@rem;
+      padding-left: 142/@rem;
+      padding-bottom: 60/@rem;
+      position: relative;
+      .couponBag {
+        width: 185/@rem;
+        height: 202/@rem;
+        position: absolute;
+        left: -32/@rem;
+        bottom: -28/@rem;
+      }
+      .desc {
+        font-size: 30/@rem;
+        font-family: PingFang;
+        font-weight: bold;
+        color: rgba(243, 166, 0, 1);
+        padding-bottom: 20/@rem;
+        line-height: 30/@rem;
+        .light {
+          color: #E3312C;
+        }
+        .account {
+          border-bottom: 2/@rem solid #E3312C;
+        }
+      }
+      .desc2 {
+        padding-left: 60/@rem;
+      }
+    }
+    .ruleBox {
+      margin-top: 93/@rem;
+      margin-bottom: 121/@rem;
+      background: linear-gradient(0deg, rgba(246, 196, 138, 1), rgba(255, 240, 223, 1));
+      border-radius: 10/@rem;
+      padding: 34/@rem 45/@rem 65/@rem;
+      .ruleTitle {
+        text-align: center;
+        font-size: 40/@rem;
+        font-family: PingFang;
+        font-weight: bold;
+        color: rgba(227, 49, 44, 1);
+      }
+      .ruleContent {
+        text-align: justify;
+        padding-top: 40/@rem;
+        font-size: 28/@rem;
+        font-family: PingFang;
+        font-weight: 400;
+        color: rgba(227, 49, 44, 1);
+        line-height: 36/@rem;
+      }
+    }
+  }
+}
