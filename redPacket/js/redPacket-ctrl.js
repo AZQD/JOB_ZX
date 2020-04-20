@@ -1,11 +1,11 @@
 $(function () {
   $('.part-content').eq(0).show();
-  let startTime = '2020/04/17 10:00:00';  //开始时间
+  let startTime = '2020/04/20 15:06:00';  //开始时间
   let endTime = new Date();    //结束时间
   let diffTime = endTime.getTime() - new Date(startTime).getTime();   //时间差的毫秒数
   let timer = setInterval(() => {
     diffTime = diffTime - 1000;
-    if (diffTime > 0) {
+    if (diffTime >= 0) {
       getYMDHMS(diffTime);
     } else {
       clearInterval(timer);
