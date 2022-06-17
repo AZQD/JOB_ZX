@@ -1,0 +1,84 @@
+body {
+  background-color: #F4F4F4;
+}
+.container {
+  min-height: 100vh;
+  background: url("../image/list/body_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.container .listBox {
+  overflow: auto;
+  padding: 0.61333333rem 0.64rem 0;
+}
+.container .listBox .listItem {
+  margin-bottom: 0.53333333rem;
+  background: url("../image/list/part_bg.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 0.37333333rem;
+  position: relative;
+}
+.container .listBox .listItem .logoInfo {
+  position: absolute;
+  left: 0.81333333rem;
+  top: 0.77333333rem;
+  display: flex;
+  align-items: center;
+}
+.container .listBox .listItem .logoInfo .logo1 {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-right: 0.12rem;
+}
+.container .listBox .listItem .logoInfo .logo2 {
+  width: 1.57333333rem;
+  height: 0.41333333rem;
+}
+.container .listBox .listItem .img {
+  width: 100%;
+}
+.container .listBox .listItem .desc {
+  display: flex;
+  align-items: stretch;
+  padding-top: 0.33333333rem;
+}
+.container .listBox .listItem .desc .left .icon {
+  width: 1.22666667rem;
+  height: 1.28rem;
+}
+.container .listBox .listItem .desc .right {
+  padding-left: 0.32rem;
+  padding-right: 1.33333333rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .listBox .listItem .desc .right .desc1 {
+  font-size: 0.42666667rem;
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: #163848;
+}
+.container .listBox .listItem .desc .right .desc2 {
+  padding-top: 0.13333333rem;
+  font-size: 0.37333333rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #163848;
+  opacity: 0.6;
+}
+.container .listBox .listItem .ctrlInfo {
+  width: 1.25333333rem;
+  height: 1.25333333rem;
+  background: #6FC4E7;
+  border-radius: 50%;
+  position: absolute;
+  right: 0.08rem;
+  bottom: -0.24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .listBox .listItem .ctrlInfo .icon_ctrl {
+  width: 0.4rem;
+  height: 0.4rem;
+}

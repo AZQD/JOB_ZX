@@ -1,0 +1,129 @@
+body {
+  background-color: #F4F4F4;
+}
+.container {
+  min-height: 100vh;
+  background: url("../image/list/body_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.container .listBox {
+  overflow: auto;
+  padding: 0.50666667rem 0.6rem;
+}
+.container .listBox .listItem {
+  margin-bottom: 0.53333333rem;
+  background: url("../image/detail/part_bg.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 0.56rem 0.56rem 0.64rem;
+  position: relative;
+}
+.container .listBox .listItem .desc {
+  display: flex;
+  align-items: stretch;
+}
+.container .listBox .listItem .desc .left .icon {
+  width: 1.50666667rem;
+  height: 1.50666667rem;
+}
+.container .listBox .listItem .desc .right {
+  padding-left: 0.36rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .listBox .listItem .desc .right .desc1 {
+  font-size: 0.34666667rem;
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: #163848;
+}
+.container .listBox .listItem .desc .right .desc2 {
+  padding-top: 0.26666667rem;
+}
+.container .listBox .listItem .desc .right .desc2 .progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .listBox .listItem .desc .right .desc2 .progress .start,
+.container .listBox .listItem .desc .right .desc2 .progress .end {
+  font-size: 0.29333333rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #163848;
+  opacity: 0.6;
+}
+.container .listBox .listItem .desc .right .desc2 .progress .progress-bar {
+  position: relative;
+  cursor: pointer;
+  width: 2.44rem;
+  height: 0.05333333rem;
+  background: #E3F0FC;
+  border-radius: 0.02666667rem;
+  margin-left: 0.26666667rem;
+  margin-right: 0.34666667rem;
+}
+.container .listBox .listItem .desc .right .desc2 .progress .progress-bar .now {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 0.05333333rem;
+  background: #6FC4E7;
+}
+.container .listBox .listItem .desc .right .desc2 .progress .progress-bar .now::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: -0.13333333rem;
+  width: 0.28rem;
+  height: 0.28rem;
+  background: #6FC4E7;
+  box-shadow: 0.04rem 0.01333333rem 0.10666667rem 0rem rgba(122, 128, 130, 0.16);
+  border-radius: 50%;
+}
+.container .listBox .listItem .ctrlInfo {
+  width: 1.25333333rem;
+  height: 1.25333333rem;
+  background: #6FC4E7;
+  border-radius: 50%;
+  position: absolute;
+  right: 0.08rem;
+  bottom: -0.24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .listBox .listItem .ctrlInfo .icon_ctrl {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+.container .listBox .textInfo {
+  background: #FFFFFF;
+  opacity: 0.6;
+  border-radius: 0.58666667rem;
+  padding: 0.64rem 0.73333333rem;
+}
+.container .listBox .textInfo .title {
+  font-size: 0.48rem;
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+}
+.container .listBox .textInfo .author {
+  font-size: 0.37333333rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  padding-top: 0.32rem;
+  text-align: center;
+}
+.container .listBox .textInfo .desc {
+  font-size: 0.37333333rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  padding-top: 0.42666667rem;
+  line-height: 0.56rem;
+  text-align: justify;
+}
