@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>郑韩故城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" type="text/css" href="__ZHCSS__/mybase.css?v=0.1">
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" type="text/css" href="__ZHCSS__/zhgcMain.css?v=0.4">
+    <script src="https://webapi.amap.com/maps?v=1.3&key=5c6cfa66619509388182bbc5255ca3fb&plugin=AMap.AdvancedInfoWindow"></script>
+</head>
+<body>
+	<div class="bootanimation mybg" style="opacity: 0">
+		<img src="/Public/Wechat/zhgc/images/kj_01.png" class="k1" style="display: none">
+		<div style="position: absolute;bottom: 1em;left: 50%;transform: translate(-50%,0);text-align: center;">
+			<p style="font-size: 12px;color: #bd7b3e;"><span style="font-size: 16px;vertical-align: middle;color: #bd7b3e;">©</span>新郑市旅游和文物局</p>
+			<p style="font-size: 12px;color: #bd7b3e;white-space: nowrap;" >北京游呗科技有限公司技术支持</p>
+		</div>
+	</div>
+	<div  id="container" style="width: 100%;height: 100%; "></div>
+	<div class="show" style="display: none">
+		<div class="show_img mybg"></div>
+		<p>{$pv}</p>
+	</div>
+	<div class="choose clearfix" style="display: none">
+		<div class="left view_switch">
+			<i class="left"></i><span class="right">景点筛选</span>
+		</div>
+		<div class="right list_switch" data-url="https://www.uobay.com/Wechat/Zhgc/zghc_list">
+			 <span class="left" >讲解列表</span><i class="right"></i>
+		</div>
+		<div class="c_line"></div>
+	</div>
+	<div class="about_view" data-language="zh" style="display: none">
+		<a href="javascript:;">
+			<div class="v_img  mybg"></div>
+			<div class="v_p" data-ch="关于景区" >关于景区</div>
+		</a>
+	</div>
+	<div class="bar clearfix" style="display: none">
+		<div class="left play mybg" id="player"  style="background-image: url({$senic_info.thumbnail});">
+			<img src="/Public/Wechat/zhgc/images/bwg_17.png" >
+		</div>
+		<div class="left  intro" data-zh="{$senic_info.name}" data-en="{$relate_senic_info.name}">
+			 {$senic_info.name}
+		</div>
+		<div class="right time  current">
+		</div>
+	</div>
+	<div class="explain" style="display: none">
+		<a href="javascript:;">
+			<div class="v_img  mybg"></div>
+			<div class="v_p">英文讲解</div>
+		</a>
+	</div>
+	<img src="" id="img" style="display: none; width: {$senic_info.img_width}px; height: {$senic_info.img_height}px;"> 
+	<audio style="display: none;" id="audioID" src="{$senic_info.sound}"></audio>
+	<div id="yw_mobal">
+		<div class="box">
+			<div class="top">素材正在制作中敬请期待</div>
+			<div class="bot">
+				<button>确定</button>
+			</div>
+		</div>
+	</div>
+	<div id="ze_mobal">
+		<div class="box">
+			<div class="top">已切换成中文</div>
+		</div>
+	</div>
+	<div id="myMobal">
+		<div class="close mybg"></div>
+		<ul class="mob_list">
+		<li data-pos="景点"><div class="opt" data-zh="景点" data-en="Parking lot">景点</div></li>
+		<li data-pos="卫生间"><div class="opt" data-zh="卫生间" data-en="Public lavatory">卫生间</div></li>
+		<li data-pos="停车场"><div class="opt" data-zh="停车场" data-en="Scenic spot">停车场</div></li>
+		<li data-pos="全部"><div class="opt" data-zh="全部" data-en="All">全部</div></li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="__ZHJS__/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<script type="text/javascript">
+	if (sessionStorage.getItem("key") == null) {
+		$(".bootanimation").css("opacity", 1).show();
+	} else {
+		$(".bootanimation").hide();
+	}
+</script>
+<script type="text/javascript">
+
+    var head= document.getElementsByTagName('html')[0]; 
+    var script= document.createElement('script'); 
+    script.type= 'text/javascript'; 
+    script.src= '__ZHJS__/zhgcMain.js'; 
+    head.appendChild(script); 
+	wx.config({
+          debug: false, 
+          appId: '{$signPackage["appId"]}',
+          timestamp: {$signPackage["timestamp"]},
+          nonceStr: '{$signPackage["nonceStr"]}',
+          signature: '{$signPackage["signature"]}',
+          jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] 
+    });
+    wx.ready(function(){
+         // 朋友圈
+          wx.onMenuShareTimeline({
+               title: '郑韩故城智慧语音讲解', 
+               link:  window.location.href, 
+               imgUrl: '{$signPackage["thumbnail"]}', 
+               success: function () { 
+                   
+               },
+               cancel: function () { 
+                  
+               }
+          });
+          wx.onMenuShareAppMessage({
+              title: '郑韩故城智慧语音讲解', 
+              desc: '我正在使用郑韩故城免费智慧语音讲解服务，体验超棒，你也来试试吧', 
+              link:  window.location.href, 
+              imgUrl: '{$signPackage["thumbnail"]}', 
+              type: '', 
+              dataUrl: '', 
+              success: function () { 
+                  
+              },
+              cancel: function () { 
+                  
+              }
+          });
+    });
+</script>
+</html>
