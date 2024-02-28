@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import xss from 'xss'
+
 import formCreate from '@form-create/element-ui'
 import FcDesigner from '@form-create/designer'
 // Vue.prototype.$xss = xss
