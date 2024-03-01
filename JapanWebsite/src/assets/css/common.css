@@ -58,3 +58,40 @@ body{
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
 }
+
+
+
+.opacityChangeClass {
+  animation: opacityChangeName 3s ease forwards;
+}
+.scaleBigClass {
+  animation: scaleBigName 3s ease forwards;
+}
+.translateYClass {
+  animation: translateYName 3s ease forwards;
+}
+
+@keyframes opacityChangeName {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scaleBigName {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes translateYName {
+  0%   { opacity: 0.1; transform: translateY(50px); } /* 初始状态 */
+  100% { opacity: 1; transform: translateY(0); } /* 最终状态 */
+}

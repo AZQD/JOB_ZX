@@ -31,6 +31,22 @@ import 'vue-super-flow/lib/index.css'
 
 Vue.use(SuperFlow)
 
+Vue.prototype.observerDOMFun = (selectorName, animateClass) => {
+  const targetElement = document.querySelectorAll(selectorName); // 获取目标元素
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.target.classList.contains('animatedDone')) return;
+      if (entry.isIntersecting) { // 如果目标元素进入了可视区域
+        entry.target.classList.add(animateClass); // 触发动画
+        entry.target.classList.add('animatedDone');
+      } else {
+        entry.target.classList.remove(animateClass); // 停止动画
+      }
+    });
+  });
+  targetElement.forEach(nodeItem => observer.observe(nodeItem));
+}
+
 new Vue({
   router,
   store, // 将共享数据挂载到Vue实例中

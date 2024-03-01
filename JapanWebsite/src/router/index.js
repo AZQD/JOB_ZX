@@ -27,28 +27,6 @@ const routes = [
       next();
     }
   },
-
-  // 学习重点：router-link、router-view、获取参数
-  {
-    path: '/demo01',
-    name: 'Demo01',
-    // components：可匹配多路由，router-view组件根据name属性渲染对应组件
-    components: {
-      default: () => import('../views/Demo01.vue'), // 路由懒加载：动态import
-      demo01AddComp: () => import('../views/Demo01.vue')
-    },
-  },
-
-
-  // 学习重点：获取参数；this.$router多种跳转方式；
-  {
-    path: '/demo02/:type', // type为动态参数
-    name: 'Demo02',
-    meta: {
-      keepAlive: true
-    },
-    component: () => import('../views/Demo02.vue')
-  },
 ]
 
 const router = new VueRouter({
